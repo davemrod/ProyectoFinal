@@ -6,5 +6,6 @@ public class Prueba {
         System.out.println("HOLA BICHOS");
         System.out.println("Simmmmm");
         System.out.println("Samantha Delgado");
+        System.out.println("Ricardo Ledesma");
     }
 }
