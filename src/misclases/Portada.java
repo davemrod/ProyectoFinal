@@ -5,10 +5,6 @@
  */
 package misclases;
 
-/**
- *
- * @author Sammy Guergachi <sguergachi at gmail.com>
- */
 public class Portada extends javax.swing.JFrame {
 
     /**
