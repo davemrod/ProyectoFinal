@@ -45,6 +45,7 @@ public class Login extends JFrame {
     private void initComponents() {
         super.setSize(1200, 800);
         super.setLayout(null);
+  
         
         // Boton Ingresar
         JButtonIngresar = new JButton("INGRESAR");//boton local
@@ -63,13 +64,14 @@ public class Login extends JFrame {
         this.add(JTextFieldUsuario);
         this.add(JPasswordFieldContra);
         
-        /*    botoncito.addActionListener(new ActionListener(){
+        JButtonIngresar.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Imprimimos en consola
-                JOptionPane.showMessageDialog(label, "Rammstein 2019, Opción 2");
+                 new Hotel().setVisible(true);
+                 dispose();
             }            
-        }); */
+        });
 
         label = new JLabel();
         label.setBounds(0, 0, 1200, 800);
