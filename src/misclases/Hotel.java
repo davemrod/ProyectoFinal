@@ -16,6 +16,7 @@ public class Hotel extends javax.swing.JFrame {
      */
     public Hotel() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
