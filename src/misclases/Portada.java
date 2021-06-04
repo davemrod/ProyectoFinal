@@ -22,7 +22,7 @@ public class Portada extends JFrame {
     public Portada() {
 
         initComponents();
-        this.setLocationRelativeTo(this);
+        this.setLocationRelativeTo(null);
     }
 
     public void crearFondo() {
@@ -40,13 +40,14 @@ public class Portada extends JFrame {
         botoncito.setBounds(650, 700, 100, 30);
         this.add(botoncito);
         
-        /*    botoncito.addActionListener(new ActionListener(){
+        botoncito.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Imprimimos en consola
-                JOptionPane.showMessageDialog(label, "Rammstein 2019, Opción 2");
+                //JOptionPane.showMessageDialog(label, "Rammstein 2019, Opción 2");
+                new Login().setVisible(true);
             }            
-        }); */
+        });
 
         label = new JLabel();
         label.setBounds(0, 0, 800, 800);
