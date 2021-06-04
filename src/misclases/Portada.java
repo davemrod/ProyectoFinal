@@ -46,6 +46,7 @@ public class Portada extends JFrame {
                 //Imprimimos en consola
                 //JOptionPane.showMessageDialog(label, "Rammstein 2019, Opción 2");
                 new Login().setVisible(true);
+                dispose();
             }            
         });
 
