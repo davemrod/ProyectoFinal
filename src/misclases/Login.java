@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
@@ -24,8 +25,9 @@ public class Login extends JFrame {
     private ImageIcon imagen;
     private Icon icono;
     private JLabel label;
-    private JButton botoncito;
-    private JTextField usuario;
+    private JButton JButtonIngresar;
+    private JTextField JTextFieldUsuario;
+    private JPasswordField JPasswordFieldContra;
 
     public Login() {
 
@@ -43,11 +45,23 @@ public class Login extends JFrame {
     private void initComponents() {
         super.setSize(1200, 800);
         super.setLayout(null);
-
-        botoncito = new JButton("INGRESAR");//boton local
-        botoncito.setBounds(550, 720, 100, 30);
         
-        this.add(botoncito);
+        // Boton Ingresar
+        JButtonIngresar = new JButton("INGRESAR");//boton local
+        JButtonIngresar.setBounds(550, 720, 100, 30);
+        
+        // TextField Usuario
+        this.JTextFieldUsuario = new JTextField();
+        this.JTextFieldUsuario.setBounds(500,490,300,40);
+        //this.panelJtext.add(this.JTextFieldUsuario);
+        
+        // Password
+        this.JPasswordFieldContra = new JPasswordField();
+        this.JPasswordFieldContra.setBounds(500,630,300,40);
+        
+        this.add(JButtonIngresar);
+        this.add(JTextFieldUsuario);
+        this.add(JPasswordFieldContra);
         
         /*    botoncito.addActionListener(new ActionListener(){
             @Override
@@ -60,7 +74,6 @@ public class Login extends JFrame {
         label = new JLabel();
         label.setBounds(0, 0, 1200, 800);
         add(label);
-
         crearFondo();
     } 
 
