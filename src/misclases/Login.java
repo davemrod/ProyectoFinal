@@ -47,21 +47,21 @@ public class Login extends JFrame {
     }
 
     private void initComponents() {
-        super.setSize(1200, 800);
+        super.setSize(1100, 700);
         super.setLayout(null);
   
         // Boton Ingresar
         JButtonIngresar = new JButton("INGRESAR");//boton local
-        JButtonIngresar.setBounds(550, 720, 100, 30);
+        JButtonIngresar.setBounds(510, 620, 100, 30);
         
         // TextField Usuario
         this.JTextFieldUsuario = new JTextField();
-        this.JTextFieldUsuario.setBounds(500,490,300,40);
+        this.JTextFieldUsuario.setBounds(450,420,300,40);
         //this.panelJtext.add(this.JTextFieldUsuario);
         
         // Password
         this.JPasswordFieldContra = new JPasswordField();
-        this.JPasswordFieldContra.setBounds(500,630,300,40);
+        this.JPasswordFieldContra.setBounds(450,550,300,40);
         
         this.add(JButtonIngresar);
         this.add(JTextFieldUsuario);
@@ -97,7 +97,7 @@ public class Login extends JFrame {
         });
 
         label = new JLabel();
-        label.setBounds(0, 0, 1200, 800);
+        label.setBounds(0, 0, 1100, 700);
         add(label);
         crearFondo();
     } 
