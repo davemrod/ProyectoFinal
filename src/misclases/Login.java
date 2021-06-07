@@ -81,7 +81,8 @@ public class Login extends JFrame {
         this.add(JPasswordFieldContra);
         this.add(JButtonPlay);
         this.add(JButtonStop);    
-         
+        
+        // Botoncitos
         JButtonPlay.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent ae) {
