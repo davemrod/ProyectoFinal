@@ -20,9 +20,12 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import org.apache.commons.codec.digest.DigestUtils;
+import java.applet.AudioClip;
+
 
 public class Login extends JFrame {
 
+    AudioClip cancion;
     private MySqlConn conn;
     
     // Atributos
@@ -32,6 +35,8 @@ public class Login extends JFrame {
     private JButton JButtonIngresar;
     private JTextField JTextFieldUsuario;
     private JPasswordField JPasswordFieldContra;
+    private JButton JButtonPlay;
+    private JButton JButtonStop;
 
     public Login() {
         this.conn= new MySqlConn();
@@ -63,9 +68,34 @@ public class Login extends JFrame {
         this.JPasswordFieldContra = new JPasswordField();
         this.JPasswordFieldContra.setBounds(450,550,300,40);
         
+        //Botones de play y pausa
+        JButtonPlay = new JButton("PLAY");
+        JButtonPlay.setBounds(50, 50, 70, 30);
+        
+        JButtonStop = new JButton("STOP");
+        JButtonStop.setBounds(150, 50, 70, 30);
+        
+        
         this.add(JButtonIngresar);
         this.add(JTextFieldUsuario);
         this.add(JPasswordFieldContra);
+        this.add(JButtonPlay);
+        this.add(JButtonStop);    
+         
+        JButtonPlay.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/Amor mio.wav"));
+                cancion.play(); 
+            }
+        });
+        
+        JButtonStop.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+               cancion.stop();
+            }
+        });
         
         JButtonIngresar.addActionListener(new ActionListener(){
             @Override
