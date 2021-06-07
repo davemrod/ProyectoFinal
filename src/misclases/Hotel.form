@@ -72,12 +72,12 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="1189" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1192" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="696" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1343" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
@@ -192,7 +192,7 @@
                           </Group>
                           <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                           <Component id="jButton1" min="-2" pref="41" max="-2" attributes="0"/>
-                          <EmptySpace pref="76" max="32767" attributes="0"/>
+                          <EmptySpace pref="691" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -400,7 +400,7 @@
                               <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelMostrarCargosExtras" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="162" max="32767" attributes="0"/>
+                          <EmptySpace pref="809" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabelMostrarTotalPago" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -542,7 +542,7 @@
                               <Component id="jButtonPorcentajeOcupacion" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButtonPorcentajeOcupacionActual" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="122" max="32767" attributes="0"/>
+                          <EmptySpace pref="737" max="32767" attributes="0"/>
                           <Component id="jButtonGaleria" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                       </Group>
@@ -649,7 +649,7 @@
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="696" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="1343" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
