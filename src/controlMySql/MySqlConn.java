@@ -22,7 +22,7 @@ public class MySqlConn {
                             "jdbc:mysql://148.211.152.233/progsist?"
                             +"user=isc&password=isc";*/
             String connectionUrl =
-                            "jdbc:mysql://localhost/hospital?"
+                            "jdbc:mysql://localhost/hotel_atlantis?"
                             +"user=root&password=";
 
             // conexion con la bd
