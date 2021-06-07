@@ -105,7 +105,7 @@ public class Login extends JFrame {
                 
                 String cuenta, contraseña, query;
                 cuenta = JTextFieldUsuario.getText().trim();
-                query = "select * from cuentas where cuenta = " + "'" + cuenta + "'";
+                query = "select * from cuentas where usuario = " + "'" + cuenta + "'";
                 conn.Consult(query);
                 try {
                     String contraseñaMySql = conn.rs.getString(2);
