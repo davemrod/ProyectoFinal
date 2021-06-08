@@ -56,7 +56,7 @@ public class Login extends JFrame {
     }
 
     private void initComponents() {
-        super.setSize(1100, 700);
+        super.setSize(1090, 662);
             try
 		{
 			URL url = this.getClass().getResource("/misclases/rolita.wav");
@@ -147,7 +147,7 @@ public class Login extends JFrame {
         });
 
         label = new JLabel();
-        label.setBounds(0, 0, 1100, 700);
+        label.setBounds(0, 0, 1090, 662);
         add(label);
         crearFondo();
     } 
