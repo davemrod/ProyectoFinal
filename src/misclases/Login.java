@@ -53,7 +53,7 @@ public class Login extends JFrame {
 
     private void initComponents() {
         super.setSize(1100, 700);
-        cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/Amor mio.wav"));
+        cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/rolita.wav"));
         cancion.play(); 
         super.setLayout(null);
   
