@@ -49,7 +49,7 @@ public class Login extends JFrame {
     }
 
     public void crearFondo() {
-        this.imagen = new ImageIcon("src/imagenes/login.jpg");
+        this.imagen = new ImageIcon("src/imagenes/loginusuario.jpg");
         this.icono = new ImageIcon(this.imagen.getImage().getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_DEFAULT));
         this.label.setIcon(this.icono);
         this.repaint();
