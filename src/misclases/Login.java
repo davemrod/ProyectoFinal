@@ -29,7 +29,7 @@ import javax.sound.sampled.Clip;
 
 public class Login extends JFrame {
 
-    //AudioClip cancion;
+    AudioClip cancion;
     private MySqlConn conn;
     
     // Atributos
@@ -68,7 +68,9 @@ public class Login extends JFrame {
             //cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/rolita.wav"));
             //cancion.play();
         }
-        catch(Exception e) { }
+        catch(Exception e) {
+        e.printStackTrace();
+        }
         
         super.setLayout(null);
   
