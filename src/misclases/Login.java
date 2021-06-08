@@ -21,11 +21,15 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import org.apache.commons.codec.digest.DigestUtils;
 import java.applet.AudioClip;
+import java.net.URL;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 
 public class Login extends JFrame {
 
-    AudioClip cancion;
+    //AudioClip cancion;
     private MySqlConn conn;
     
     // Atributos
@@ -53,10 +57,16 @@ public class Login extends JFrame {
 
     private void initComponents() {
         super.setSize(1100, 700);
-        try
-	{
-        cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/rolita.wav"));
-        cancion.play();
+            try
+		{
+			URL url = this.getClass().getResource("/misclases/rolita.wav");
+			AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
+			Clip clip = AudioSystem.getClip();
+			clip.open(audioIn);
+			clip.start(); 
+            
+            //cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/rolita.wav"));
+            //cancion.play();
         }
         catch(Exception e) { }
         
