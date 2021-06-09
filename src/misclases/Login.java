@@ -102,7 +102,7 @@ public class Login extends JFrame {
         this.add(JButtonStop);    
         
         // Botoncitos
-       /* JButtonPlay.addActionListener(new ActionListener(){
+        JButtonPlay.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent ae) {
                 cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/Amor mio.wav"));
@@ -115,7 +115,7 @@ public class Login extends JFrame {
             public void actionPerformed(ActionEvent ae) {
                cancion.stop();
             }
-        }); */
+        }); 
         
         JButtonIngresar.addActionListener(new ActionListener(){
             @Override
