@@ -5,6 +5,9 @@
  */
 package misclases;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 /**
  *
  * @author David Emilio
@@ -43,17 +46,18 @@ public class Hotel extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButtonRecibo = new javax.swing.JButton();
         jLabelFechaSalida = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
+        jDateChooserIngresar = new com.toedter.calendar.JDateChooser();
         jTextFieldDiasHospedaje = new javax.swing.JTextField();
-        jLabel14 = new javax.swing.JLabel();
+        jLabelSalida = new javax.swing.JLabel();
         jRadioButtonSencilla = new javax.swing.JRadioButton();
         jRadioButtonDoble = new javax.swing.JRadioButton();
         jRadioButtonTriple = new javax.swing.JRadioButton();
         jComboBoxSencilla = new javax.swing.JComboBox<>();
         jComboBoxDoble = new javax.swing.JComboBox<>();
         jComboBoxTriple = new javax.swing.JComboBox<>();
+        jButtonRegistrar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -115,7 +119,7 @@ public class Hotel extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel13.setText("Fecha de salida:");
 
-        jButton1.setText("Recibo");
+        jButtonRecibo.setText("Generar recibo");
 
         buttonGroupTipoHabitacion.add(jRadioButtonSencilla);
         jRadioButtonSencilla.setText("Sencilla");
@@ -132,6 +136,13 @@ public class Hotel extends javax.swing.JFrame {
 
         jComboBoxTriple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 persona", "2 personas", "3 personas", "4 personas", "5 personas" }));
 
+        jButtonRegistrar.setText("Registrar huesped");
+        jButtonRegistrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -139,7 +150,6 @@ public class Hotel extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,14 +158,9 @@ public class Hotel extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel12)
-                            .addComponent(jLabel13)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel13))
                         .addGap(47, 47, 47)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel14)
-                                .addGap(245, 245, 245)
-                                .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jTextFieldNombreHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldCiudadOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldDiasHospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -165,17 +170,26 @@ public class Hotel extends javax.swing.JFrame {
                                 .addComponent(jRadioButtonDoble)
                                 .addGap(55, 55, 55)
                                 .addComponent(jRadioButtonTriple))
-                            .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jComboBoxDoble, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabelSalida))
+                                .addGap(245, 245, 245)
+                                .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jButtonRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel14, jLabelFechaSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jComboBoxDoble, jComboBoxSencilla, jComboBoxTriple});
 
@@ -210,7 +224,7 @@ public class Hotel extends javax.swing.JFrame {
                             .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(43, 43, 43)
                         .addComponent(jLabel12))
-                    .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -219,18 +233,22 @@ public class Hotel extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel13)
-                        .addComponent(jLabel14))
+                        .addComponent(jLabelSalida))
                     .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(98, Short.MAX_VALUE))
+                .addGap(48, 48, 48)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonRegistrar))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel14, jLabelFechaSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jComboBoxDoble, jComboBoxSencilla, jComboBoxTriple});
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jRadioButtonDoble, jRadioButtonSencilla, jRadioButtonTriple});
+
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonRecibo, jButtonRegistrar});
 
         jTabbedPane1.addTab("Registro", jPanel2);
 
@@ -431,6 +449,37 @@ public class Hotel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
+        // TODO add your handling code here:
+        
+        String huesped, ciudad, habitacion, diaLlegada, tipoHabitacion, totalPersonas, diasHospedaje, diaSalida;
+        huesped = this.jTextFieldCiudadOrigen.getText().trim();
+        ciudad = this.jTextFieldCiudadOrigen.getText().trim();
+        //tipoHabitacion = this.jRadioButtonSencilla.isSelected();
+        diasHospedaje = this.jTextFieldDiasHospedaje.getText().trim();
+        //totalPersonas = this.
+        
+        //Obtener fecha
+        int dia2=Integer.valueOf(diasHospedaje);    
+        int d=this.jDateChooserIngresar.getCalendar().get(Calendar.DAY_OF_MONTH);
+        int m=this.jDateChooserIngresar.getCalendar().get(Calendar.MONTH);
+        int a=this.jDateChooserIngresar.getCalendar().get(Calendar.YEAR);
+        
+        String dia = String.valueOf(d);
+        String mes = String.valueOf(m);
+        String ani = String.valueOf(a);
+        String fecha = ani +"-"+mes+"-"+dia;
+        String[] f = fecha.split("-");
+        
+        Calendar calendario = Calendar.getInstance();
+        calendario.set( Integer.parseInt(f[0]), Integer.parseInt(f[1]), Integer.parseInt(f[2]) );
+        calendario.add(Calendar.DAY_OF_MONTH, dia2);
+        SimpleDateFormat fechaObtenida = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy"); 
+        this.jLabelSalida.setText(fechaObtenida.format(calendario.getTime()));
+        //this.jTextFieldDias.setText("");
+        
+    }//GEN-LAST:event_jButtonRegistrarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -465,10 +514,11 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
     }
+    
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupTipoHabitacion;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -479,16 +529,17 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JButton jButtonListaHuespedes;
     private javax.swing.JButton jButtonPorcentajeOcupacion;
     private javax.swing.JButton jButtonPorcentajeOcupacionActual;
+    private javax.swing.JButton jButtonRecibo;
+    private javax.swing.JButton jButtonRegistrar;
     private javax.swing.JComboBox<String> jComboBoxDoble;
     private javax.swing.JComboBox<String> jComboBoxSencilla;
     private javax.swing.JComboBox<String> jComboBoxTriple;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    private com.toedter.calendar.JDateChooser jDateChooserIngresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -500,6 +551,7 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelFechaSalida;
     private javax.swing.JLabel jLabelMostrarCargosExtras;
     private javax.swing.JLabel jLabelMostrarTotalPago;
+    private javax.swing.JLabel jLabelSalida;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
