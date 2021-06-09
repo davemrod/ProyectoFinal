@@ -133,7 +133,7 @@ public class Login extends JFrame {
                     String contraseñaencriptada = DigestUtils.md5Hex(contraseña);
                     if (contraseñaMySql.equals(contraseñaencriptada)) {
                         JOptionPane.showMessageDialog(null, "Bienvenido " + conn.rs.getString(1)+" al sistema");
-                        new Hotel().setVisible(true);
+                        new InicioFondo().setVisible(true);
                         dispose();
                     }
                     else
