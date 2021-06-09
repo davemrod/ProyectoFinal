@@ -5,10 +5,14 @@
  */
 package misclases;
 
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -19,9 +23,11 @@ public class Hotel extends javax.swing.JFrame {
     /**
      * Creates new form Hotel
      */
+
     public Hotel() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -36,7 +42,6 @@ public class Hotel extends javax.swing.JFrame {
         buttonGroupTipoHabitacion = new javax.swing.ButtonGroup();
         jPanelRegistro = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextFieldNombreHuesped = new javax.swing.JTextField();
@@ -83,19 +88,6 @@ public class Hotel extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Atlantis Resort");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1192, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 759, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Inicio", jPanel1);
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("Nombre de huesped:");
@@ -309,7 +301,7 @@ public class Hotel extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabelMostrarCargosExtras, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(346, Short.MAX_VALUE))
+                .addContainerGap(839, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -430,7 +422,7 @@ public class Hotel extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1189, Short.MAX_VALUE)
+            .addGap(0, 1682, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -470,7 +462,7 @@ public class Hotel extends javax.swing.JFrame {
 
     private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
         // TODO add your handling code here:
-        
+
         String huesped, ciudad, habitacion, diaLlegada, tipoHabitacion, totalPersonas, diasHospedaje, diaSalida;
         huesped = this.jTextFieldNombreHuesped.getText().trim();
         ciudad = this.jTextFieldCiudadOrigen.getText().trim();
@@ -493,37 +485,37 @@ public class Hotel extends javax.swing.JFrame {
         }
         System.out.println(tipoHabitacion+"\n");
         System.out.println(totalPersonas+"\n");
-        
+
         // Obtener fecha
         diasHospedaje = this.jTextFieldDiasHospedaje.getText().trim();
 
-        int dia2=Integer.valueOf(diasHospedaje);    
+        int dia2=Integer.valueOf(diasHospedaje);
         int d=this.jDateChooserIngresar.getCalendar().get(Calendar.DAY_OF_MONTH);
         int m=this.jDateChooserIngresar.getCalendar().get(Calendar.MONTH);
         int a=this.jDateChooserIngresar.getCalendar().get(Calendar.YEAR);
-        
+
         String dia = String.valueOf(d);
         String mes = String.valueOf(m);
         String ani = String.valueOf(a);
         String fecha = ani +"-"+mes+"-"+dia;
         String[] f = fecha.split("-");
-        
+
         Calendar calendario = Calendar.getInstance();
         calendario.set( Integer.parseInt(f[0]), Integer.parseInt(f[1]), Integer.parseInt(f[2]) );
         calendario.add(Calendar.DAY_OF_MONTH, dia2);
-        SimpleDateFormat fechaObtenida = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy"); 
+        SimpleDateFormat fechaObtenida = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy");
         this.jLabelSalida.setText(fechaObtenida.format(calendario.getTime()));
         //this.jTextFieldDias.setText("");
-        
+
     }//GEN-LAST:event_jButtonRegistrarActionPerformed
 
-    private void jRadioButtonSencillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSencillaActionPerformed
+    private void jRadioButtonTripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTripleActionPerformed
         // TODO add your handling code here:
- 
-        this.jComboBoxSencilla.setEnabled(true);
+
+        this.jComboBoxSencilla.setEnabled(false);
         this.jComboBoxDoble.setEnabled(false);
-        this.jComboBoxTriple.setEnabled(false);
-    }//GEN-LAST:event_jRadioButtonSencillaActionPerformed
+        this.jComboBoxTriple.setEnabled(true);
+    }//GEN-LAST:event_jRadioButtonTripleActionPerformed
 
     private void jRadioButtonDobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDobleActionPerformed
         // TODO add your handling code here:
@@ -533,13 +525,13 @@ public class Hotel extends javax.swing.JFrame {
         this.jComboBoxTriple.setEnabled(false);
     }//GEN-LAST:event_jRadioButtonDobleActionPerformed
 
-    private void jRadioButtonTripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTripleActionPerformed
+    private void jRadioButtonSencillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSencillaActionPerformed
         // TODO add your handling code here:
 
-        this.jComboBoxSencilla.setEnabled(false);
+        this.jComboBoxSencilla.setEnabled(true);
         this.jComboBoxDoble.setEnabled(false);
-        this.jComboBoxTriple.setEnabled(true);
-    }//GEN-LAST:event_jRadioButtonTripleActionPerformed
+        this.jComboBoxTriple.setEnabled(false);
+    }//GEN-LAST:event_jRadioButtonSencillaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -613,7 +605,6 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelMostrarCargosExtras;
     private javax.swing.JLabel jLabelMostrarTotalPago;
     private javax.swing.JLabel jLabelSalida;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
