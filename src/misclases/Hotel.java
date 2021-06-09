@@ -5,6 +5,8 @@
  */
 package misclases;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
@@ -121,14 +123,31 @@ public class Hotel extends javax.swing.JFrame {
 
         jButtonRecibo.setText("Generar recibo");
 
+        jLabelSalida.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+
         buttonGroupTipoHabitacion.add(jRadioButtonSencilla);
         jRadioButtonSencilla.setText("Sencilla");
+        jRadioButtonSencilla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonSencillaActionPerformed(evt);
+            }
+        });
 
         buttonGroupTipoHabitacion.add(jRadioButtonDoble);
         jRadioButtonDoble.setText("Doble");
+        jRadioButtonDoble.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonDobleActionPerformed(evt);
+            }
+        });
 
         buttonGroupTipoHabitacion.add(jRadioButtonTriple);
         jRadioButtonTriple.setText("Triple");
+        jRadioButtonTriple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButtonTripleActionPerformed(evt);
+            }
+        });
 
         jComboBoxSencilla.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 persona", "2 personas", "3 personas" }));
 
@@ -453,13 +472,31 @@ public class Hotel extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         String huesped, ciudad, habitacion, diaLlegada, tipoHabitacion, totalPersonas, diasHospedaje, diaSalida;
-        huesped = this.jTextFieldCiudadOrigen.getText().trim();
+        huesped = this.jTextFieldNombreHuesped.getText().trim();
         ciudad = this.jTextFieldCiudadOrigen.getText().trim();
-        //tipoHabitacion = this.jRadioButtonSencilla.isSelected();
-        diasHospedaje = this.jTextFieldDiasHospedaje.getText().trim();
-        //totalPersonas = this.
+        System.out.println(huesped+"\n");
+        System.out.println(ciudad+"\n");
+        if (this.jRadioButtonSencilla.isSelected() )
+        {
+            tipoHabitacion = "Sencilla";
+            totalPersonas = (String)this.jComboBoxSencilla.getSelectedItem();
+        }
+        else if (this.jRadioButtonDoble.isSelected() )
+        {
+            tipoHabitacion = "Doble";
+            totalPersonas = (String)this.jComboBoxDoble.getSelectedItem();
+        }
+        else
+        {
+            tipoHabitacion = "Triple";
+            totalPersonas = (String)this.jComboBoxTriple.getSelectedItem();
+        }
+        System.out.println(tipoHabitacion+"\n");
+        System.out.println(totalPersonas+"\n");
         
-        //Obtener fecha
+        // Obtener fecha
+        diasHospedaje = this.jTextFieldDiasHospedaje.getText().trim();
+
         int dia2=Integer.valueOf(diasHospedaje);    
         int d=this.jDateChooserIngresar.getCalendar().get(Calendar.DAY_OF_MONTH);
         int m=this.jDateChooserIngresar.getCalendar().get(Calendar.MONTH);
@@ -479,6 +516,30 @@ public class Hotel extends javax.swing.JFrame {
         //this.jTextFieldDias.setText("");
         
     }//GEN-LAST:event_jButtonRegistrarActionPerformed
+
+    private void jRadioButtonSencillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSencillaActionPerformed
+        // TODO add your handling code here:
+ 
+        this.jComboBoxSencilla.setEnabled(true);
+        this.jComboBoxDoble.setEnabled(false);
+        this.jComboBoxTriple.setEnabled(false);
+    }//GEN-LAST:event_jRadioButtonSencillaActionPerformed
+
+    private void jRadioButtonDobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDobleActionPerformed
+        // TODO add your handling code here:
+
+        this.jComboBoxSencilla.setEnabled(false);
+        this.jComboBoxDoble.setEnabled(true);
+        this.jComboBoxTriple.setEnabled(false);
+    }//GEN-LAST:event_jRadioButtonDobleActionPerformed
+
+    private void jRadioButtonTripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTripleActionPerformed
+        // TODO add your handling code here:
+
+        this.jComboBoxSencilla.setEnabled(false);
+        this.jComboBoxDoble.setEnabled(false);
+        this.jComboBoxTriple.setEnabled(true);
+    }//GEN-LAST:event_jRadioButtonTripleActionPerformed
 
     /**
      * @param args the command line arguments
