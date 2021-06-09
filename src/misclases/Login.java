@@ -80,13 +80,13 @@ public class Login extends JFrame {
         
         // TextField Usuario
         this.JTextFieldUsuario = new JTextField();
-        this.JTextFieldUsuario.setBounds(750,415,200,40);
+        this.JTextFieldUsuario.setBounds(750,320,200,40);
         //this.panelJtext.add(this.JTextFieldUsuario);
-        
         // Password
         this.JPasswordFieldContra = new JPasswordField();
-        this.JPasswordFieldContra.setBounds(750,320,200,40);
+        this.JPasswordFieldContra.setBounds(750,415,200,40);
         
+        //750,320,200,40
         //Botones de play y pausa
         JButtonPlay = new JButton("PLAY");
         JButtonPlay.setBounds(50, 50, 70, 30);
