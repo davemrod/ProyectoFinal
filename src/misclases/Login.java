@@ -57,20 +57,20 @@ public class Login extends JFrame {
 
     private void initComponents() {
         super.setSize(1100, 669);
-            try
-		{
-			URL url = this.getClass().getResource("/misclases/rolita.wav");
-			AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
-			Clip clip = AudioSystem.getClip();
-			clip.open(audioIn);
-			clip.start(); 
-            
-            //cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/rolita.wav"));
-            //cancion.play();
-        }
-        catch(Exception e) {
-        e.printStackTrace();
-        }
+//            try
+//		{
+//			URL url = this.getClass().getResource("/misclases/rolita.wav");
+//			AudioInputStream audioIn = AudioSystem.getAudioInputStream(url);
+//			Clip clip = AudioSystem.getClip();
+//			clip.open(audioIn);
+//			clip.start(); 
+//            
+//            //cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/rolita.wav"));
+//            //cancion.play();
+//        }
+//        catch(Exception e) {
+//        e.printStackTrace();
+//        }
         
         super.setLayout(null);
   
