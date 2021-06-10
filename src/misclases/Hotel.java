@@ -160,6 +160,11 @@ public class Hotel extends javax.swing.JFrame {
         });
 
         jButtonElegirHabitacion.setText("Elegir");
+        jButtonElegirHabitacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonElegirHabitacionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -560,6 +565,12 @@ public class Hotel extends javax.swing.JFrame {
         this.jComboBoxDoble.setEnabled(false);
         this.jComboBoxTriple.setEnabled(false);
     }//GEN-LAST:event_jRadioButtonSencillaActionPerformed
+
+    private void jButtonElegirHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonElegirHabitacionActionPerformed
+        // TODO add your handling code here:
+        
+        new Habitaciones().setVisible(true);
+    }//GEN-LAST:event_jButtonElegirHabitacionActionPerformed
 
     /**
      * @param args the command line arguments
