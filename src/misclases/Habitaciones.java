@@ -60,8 +60,10 @@ public class Habitaciones extends javax.swing.JFrame {
         jRadioButton213 = new javax.swing.JRadioButton();
         jRadioButton214 = new javax.swing.JRadioButton();
         jRadioButton215 = new javax.swing.JRadioButton();
+        jButtonSeleccionarHabitacion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Habitaciones");
 
         buttonGroupPiso1.add(jRadioButton101);
         jRadioButton101.setText("101");
@@ -156,14 +158,17 @@ public class Habitaciones extends javax.swing.JFrame {
         buttonGroupPiso2.add(jRadioButton215);
         jRadioButton215.setText("215");
 
+        jButtonSeleccionarHabitacion.setText("Seleccionar habitación");
+        jButtonSeleccionarHabitacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSeleccionarHabitacionActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(189, 189, 189)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -220,6 +225,15 @@ public class Habitaciones extends javax.swing.JFrame {
                                     .addComponent(jRadioButton211)
                                     .addComponent(jRadioButton212))
                                 .addContainerGap())))))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(58, 58, 58)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(311, 311, 311)
+                        .addComponent(jButtonSeleccionarHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -280,11 +294,19 @@ public class Habitaciones extends javax.swing.JFrame {
                 .addComponent(jRadioButton206)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton207)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(jButtonSeleccionarHabitacion)
+                .addGap(34, 34, 34))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonSeleccionarHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeleccionarHabitacionActionPerformed
+        // TODO add your handling code here:
+        
+        dispose();
+    }//GEN-LAST:event_jButtonSeleccionarHabitacionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -324,6 +346,7 @@ public class Habitaciones extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupPiso1;
     private javax.swing.ButtonGroup buttonGroupPiso2;
+    private javax.swing.JButton jButtonSeleccionarHabitacion;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JRadioButton jRadioButton101;
     private javax.swing.JRadioButton jRadioButton102;
