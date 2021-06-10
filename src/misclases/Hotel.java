@@ -78,6 +78,8 @@ public class Hotel extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabelMostrarCargosExtras = new javax.swing.JLabel();
         jLabelMostrarTotalPago = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jButtonGaleria = new javax.swing.JButton();
         jButtonHabitacionesDisponibles = new javax.swing.JButton();
@@ -94,35 +96,75 @@ public class Hotel extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Atlantis Resort");
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTabbedPane1.setBackground(new java.awt.Color(0, 0, 0));
+        jTabbedPane1.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
+        jTabbedPane1.setForeground(new java.awt.Color(157, 139, 5));
+        jTabbedPane1.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+
+        jPanel2.setBackground(new java.awt.Color(21, 19, 19));
+
+        jLabel1.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(157, 139, 5));
         jLabel1.setText("Nombre de huesped:");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextFieldNombreHuesped.setBackground(new java.awt.Color(21, 19, 19));
+        jTextFieldNombreHuesped.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jTextFieldNombreHuesped.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldNombreHuesped.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(157, 139, 5));
         jLabel2.setText("Tipo de habitación:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(157, 139, 5));
         jLabel3.setText("Ciudad de origen:");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextFieldCiudadOrigen.setBackground(new java.awt.Color(21, 19, 19));
+        jTextFieldCiudadOrigen.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jTextFieldCiudadOrigen.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldCiudadOrigen.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+
+        jLabel4.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(157, 139, 5));
         jLabel4.setText("Total de personas:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(157, 139, 5));
         jLabel5.setText("Total de días de hospedaje:");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jLabel6.setBackground(new java.awt.Color(161, 146, 5));
+        jLabel6.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 48)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(157, 139, 5));
         jLabel6.setText("Check-in");
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(157, 139, 5));
         jLabel12.setText("Fecha de ingreso:");
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(157, 139, 5));
         jLabel13.setText("Fecha de salida:");
 
+        jButtonRecibo.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonRecibo.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jButtonRecibo.setForeground(new java.awt.Color(255, 255, 255));
         jButtonRecibo.setText("Generar recibo");
+        jButtonRecibo.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
 
-        jLabelSalida.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jTextFieldDiasHospedaje.setBackground(new java.awt.Color(21, 19, 19));
+        jTextFieldDiasHospedaje.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jTextFieldDiasHospedaje.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldDiasHospedaje.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+
+        jLabelSalida.setBackground(new java.awt.Color(21, 19, 19));
+        jLabelSalida.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jLabelSalida.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelSalida.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
         buttonGroupTipoHabitacion.add(jRadioButtonSencilla);
+        jRadioButtonSencilla.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jRadioButtonSencilla.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonSencilla.setText("Sencilla 400€ ");
         jRadioButtonSencilla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -131,6 +173,8 @@ public class Hotel extends javax.swing.JFrame {
         });
 
         buttonGroupTipoHabitacion.add(jRadioButtonDoble);
+        jRadioButtonDoble.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jRadioButtonDoble.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonDoble.setText("Doble 500€");
         jRadioButtonDoble.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -139,6 +183,8 @@ public class Hotel extends javax.swing.JFrame {
         });
 
         buttonGroupTipoHabitacion.add(jRadioButtonTriple);
+        jRadioButtonTriple.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jRadioButtonTriple.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButtonTriple.setText("Triple 700€");
         jRadioButtonTriple.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -146,20 +192,40 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jComboBoxSencilla.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBoxSencilla.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jComboBoxSencilla.setForeground(new java.awt.Color(0, 0, 0));
         jComboBoxSencilla.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 persona", "2 personas", "3 personas" }));
+        jComboBoxSencilla.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
 
+        jComboBoxDoble.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBoxDoble.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jComboBoxDoble.setForeground(new java.awt.Color(0, 0, 0));
         jComboBoxDoble.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 persona", "2 personas", "3 personas", "4 personas" }));
+        jComboBoxDoble.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
 
+        jComboBoxTriple.setBackground(new java.awt.Color(255, 255, 255));
+        jComboBoxTriple.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jComboBoxTriple.setForeground(new java.awt.Color(0, 0, 0));
         jComboBoxTriple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 persona", "2 personas", "3 personas", "4 personas", "5 personas" }));
+        jComboBoxTriple.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
 
+        jButtonRegistrar.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonRegistrar.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jButtonRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         jButtonRegistrar.setText("Registrar huesped");
+        jButtonRegistrar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
         jButtonRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrarActionPerformed(evt);
             }
         });
 
+        jButtonElegirHabitacion.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonElegirHabitacion.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jButtonElegirHabitacion.setForeground(new java.awt.Color(255, 255, 255));
         jButtonElegirHabitacion.setText("Elegir");
+        jButtonElegirHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(163, 144, 0)));
         jButtonElegirHabitacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonElegirHabitacionActionPerformed(evt);
@@ -171,46 +237,51 @@ public class Hotel extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(72, 72, 72)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(72, 72, 72)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel13))
-                        .addGap(47, 47, 47)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextFieldNombreHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldCiudadOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jRadioButtonSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButtonDoble)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jRadioButtonTriple)
-                                .addGap(50, 50, 50)
-                                .addComponent(jButtonElegirHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel13)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextFieldNombreHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jTextFieldCiudadOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jRadioButtonSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(47, 47, 47)
+                                        .addComponent(jRadioButtonDoble)
+                                        .addGap(66, 66, 66)
+                                        .addComponent(jRadioButtonTriple)
+                                        .addGap(92, 92, 92)
+                                        .addComponent(jButtonElegirHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(54, 54, 54)
+                                        .addComponent(jComboBoxDoble, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(65, 65, 65)
+                                        .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jLabelSalida))
+                                        .addGap(245, 245, 245)
+                                        .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextFieldDiasHospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(54, 54, 54)
-                                .addComponent(jComboBoxDoble, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(65, 65, 65)
-                                .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelSalida))
-                                .addGap(245, 245, 245)
-                                .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextFieldDiasHospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButtonRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(100, 100, 100)
+                                .addComponent(jButtonRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(494, 494, 494)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -221,9 +292,9 @@ public class Hotel extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
+                .addGap(37, 37, 37)
                 .addComponent(jLabel6)
-                .addGap(54, 54, 54)
+                .addGap(48, 48, 48)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,7 +334,7 @@ public class Hotel extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRegistrar))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
@@ -276,24 +347,46 @@ public class Hotel extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Registro", jPanel2);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        jPanel3.setBackground(new java.awt.Color(21, 19, 19));
+
+        jLabel7.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 48)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(157, 139, 5));
         jLabel7.setText("Check-out");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(157, 139, 5));
         jLabel8.setText("Número de habitación:");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(157, 139, 5));
         jLabel9.setText("Total a pagar:");
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(157, 139, 5));
         jLabel10.setText("Días de estadia:");
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(157, 139, 5));
         jLabel11.setText("Cargos extras:");
 
-        jLabelMostrarCargosExtras.setText("jLabel12");
+        jLabelMostrarCargosExtras.setBackground(new java.awt.Color(21, 19, 19));
+        jLabelMostrarCargosExtras.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabelMostrarCargosExtras.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jLabelMostrarTotalPago.setText("jLabel12");
+        jLabelMostrarTotalPago.setBackground(new java.awt.Color(21, 19, 19));
+        jLabelMostrarTotalPago.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabelMostrarTotalPago.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMostrarTotalPago.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+
+        jLabel14.setBackground(new java.awt.Color(21, 19, 19));
+        jLabel14.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+
+        jLabel15.setBackground(new java.awt.Color(21, 19, 19));
+        jLabel15.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -302,71 +395,112 @@ public class Hotel extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE))
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(62, 62, 62)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelMostrarCargosExtras, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(839, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE))
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(62, 62, 62)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelMostrarCargosExtras, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel15))
+                .addContainerGap(343, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(431, 431, 431))
         );
+
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel14, jLabel15, jLabelMostrarCargosExtras, jLabelMostrarTotalPago});
+
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(67, 67, 67)
+                .addGap(63, 63, 63)
                 .addComponent(jLabel7)
-                .addGap(57, 57, 57)
-                .addComponent(jLabel8)
-                .addGap(47, 47, 47)
-                .addComponent(jLabel10)
                 .addGap(61, 61, 61)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel14))
+                .addGap(53, 53, 53)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel15))
+                .addGap(55, 55, 55)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jLabelMostrarCargosExtras))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 225, Short.MAX_VALUE)
+                    .addComponent(jLabelMostrarCargosExtras, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jLabelMostrarTotalPago))
                 .addGap(142, 142, 142))
         );
 
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel14, jLabel15, jLabelMostrarCargosExtras, jLabelMostrarTotalPago});
+
         jTabbedPane1.addTab("Salida", jPanel3);
+
+        jPanel4.setBackground(new java.awt.Color(21, 19, 19));
 
         jButtonGaleria.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButtonGaleria.setText("Galeria");
 
-        jButtonHabitacionesDisponibles.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonHabitacionesDisponibles.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonHabitacionesDisponibles.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonHabitacionesDisponibles.setForeground(new java.awt.Color(255, 255, 255));
         jButtonHabitacionesDisponibles.setText("Habitaciones disponibles");
+        jButtonHabitacionesDisponibles.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButtonEstatusHabitacion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonEstatusHabitacion.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonEstatusHabitacion.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonEstatusHabitacion.setForeground(new java.awt.Color(255, 255, 255));
         jButtonEstatusHabitacion.setText("Estatus de habitación");
+        jButtonEstatusHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButtonIngresos.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonIngresos.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonIngresos.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonIngresos.setForeground(new java.awt.Color(255, 255, 255));
         jButtonIngresos.setText("Ingresos");
+        jButtonIngresos.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButtonListaHuespedes.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonListaHuespedes.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonListaHuespedes.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonListaHuespedes.setForeground(new java.awt.Color(255, 255, 255));
         jButtonListaHuespedes.setText("Consultar lista de huespedes");
+        jButtonListaHuespedes.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton2.setBackground(new java.awt.Color(21, 19, 19));
+        jButton2.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Total de habitaciones");
+        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButtonPorcentajeOcupacion.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonPorcentajeOcupacion.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonPorcentajeOcupacion.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonPorcentajeOcupacion.setForeground(new java.awt.Color(255, 255, 255));
         jButtonPorcentajeOcupacion.setText("Porcentaje de ocupación");
+        jButtonPorcentajeOcupacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButtonPorcentajeOcupacionActual.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonPorcentajeOcupacionActual.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonPorcentajeOcupacionActual.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonPorcentajeOcupacionActual.setForeground(new java.awt.Color(255, 255, 255));
         jButtonPorcentajeOcupacionActual.setText("Porcentaje de ocupación actual");
+        jButtonPorcentajeOcupacionActual.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton3.setBackground(new java.awt.Color(21, 19, 19));
+        jButton3.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Buscar huesped");
+        jButton3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton4.setBackground(new java.awt.Color(21, 19, 19));
+        jButton4.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Costos de habitación");
+        jButton4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -374,72 +508,77 @@ public class Hotel extends javax.swing.JFrame {
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
+                        .addGap(544, 544, 544)
+                        .addComponent(jButtonGaleria)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
                         .addGap(72, 72, 72)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jButtonHabitacionesDisponibles)
-                                .addGap(121, 121, 121)
-                                .addComponent(jButton4))
+                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHabitacionesDisponibles)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
                                 .addComponent(jButton2)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonEstatusHabitacion)
-                        .addGap(33, 33, 33))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                        .addGap(544, 544, 544)
-                        .addComponent(jButtonGaleria))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                        .addGap(116, 116, 116)
-                        .addComponent(jButton3)
-                        .addGap(141, 141, 141)
+                        .addGap(40, 40, 40)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jButtonPorcentajeOcupacion)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jButtonPorcentajeOcupacionActual))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jButtonListaHuespedes)
+                                .addComponent(jButton4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonEstatusHabitacion)
+                                .addGap(10, 10, 10))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jButtonListaHuespedes)
+                                .addGap(73, 73, 73)
                                 .addComponent(jButtonIngresos)
-                                .addGap(63, 63, 63)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, Short.MAX_VALUE)))))
                 .addGap(63, 63, 63))
         );
+
+        jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton2, jButton3, jButton4, jButtonEstatusHabitacion, jButtonHabitacionesDisponibles, jButtonIngresos, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual});
+
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(119, 119, 119)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonListaHuespedes)
                     .addComponent(jButtonIngresos))
-                .addGap(123, 123, 123)
+                .addGap(134, 134, 134)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonHabitacionesDisponibles)
                     .addComponent(jButton4)
                     .addComponent(jButtonEstatusHabitacion))
-                .addGap(144, 144, 144)
+                .addGap(133, 133, 133)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButtonPorcentajeOcupacion)
                     .addComponent(jButtonPorcentajeOcupacionActual))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 185, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 162, Short.MAX_VALUE)
                 .addComponent(jButtonGaleria)
                 .addGap(40, 40, 40))
         );
 
+        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton2, jButton3, jButton4, jButtonEstatusHabitacion, jButtonHabitacionesDisponibles, jButtonIngresos, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual});
+
         jTabbedPane1.addTab("Consultas", jPanel4);
+
+        jPanel5.setBackground(new java.awt.Color(21, 19, 19));
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1682, Short.MAX_VALUE)
+            .addGap(0, 1186, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 759, Short.MAX_VALUE)
+            .addGap(0, 768, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Salir", jPanel5);
@@ -632,6 +771,8 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
