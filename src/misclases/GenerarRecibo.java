@@ -31,7 +31,7 @@ public class GenerarRecibo extends JFrame {
     }
     
     private void initComponents(){
-        super.setSize(600, 650);
+        super.setSize(750, 950);
         
          // Boton Ingresar
         //JButtonIngresar = new JButton("INGRESAR");//boton local
@@ -50,7 +50,7 @@ public class GenerarRecibo extends JFrame {
         
         
         label = new JLabel();
-        label.setBounds(0, 0, 600, 650);
+        label.setBounds(0, 0, 750, 950);
         add(label);
         crearFondo();
     }
