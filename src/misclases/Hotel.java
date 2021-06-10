@@ -24,17 +24,14 @@ public class Hotel extends javax.swing.JFrame {
     /**
      * Creates new form Hotel
      */
-    
     private MySqlConn conn;
-    
 
     public Hotel() {
-        
-        this.conn= new MySqlConn();
+
+        this.conn = new MySqlConn();
         initComponents();
         this.setLocationRelativeTo(null);
-        
-        
+
     }
 
     /**
@@ -72,6 +69,7 @@ public class Hotel extends javax.swing.JFrame {
         jComboBoxDoble = new javax.swing.JComboBox<>();
         jComboBoxTriple = new javax.swing.JComboBox<>();
         jButtonRegistrar = new javax.swing.JButton();
+        jButtonElegirHabitacion = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -161,6 +159,8 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jButtonElegirHabitacion.setText("Elegir");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -181,13 +181,14 @@ public class Hotel extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextFieldNombreHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 492, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldCiudadOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldDiasHospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jRadioButtonSencilla)
-                                .addGap(46, 46, 46)
+                                .addComponent(jRadioButtonSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jRadioButtonDoble)
-                                .addGap(55, 55, 55)
-                                .addComponent(jRadioButtonTriple))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jRadioButtonTriple)
+                                .addGap(50, 50, 50)
+                                .addComponent(jButtonElegirHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -200,18 +201,17 @@ public class Hotel extends javax.swing.JFrame {
                                     .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabelSalida))
                                 .addGap(245, 245, 245)
-                                .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextFieldDiasHospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jButtonRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldNombreHuesped});
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jComboBoxDoble, jComboBoxSencilla, jComboBoxTriple});
-
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jRadioButtonDoble, jRadioButtonSencilla, jRadioButtonTriple});
 
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -229,7 +229,8 @@ public class Hotel extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(jRadioButtonSencilla)
                             .addComponent(jRadioButtonDoble)
-                            .addComponent(jRadioButtonTriple))
+                            .addComponent(jRadioButtonTriple)
+                            .addComponent(jButtonElegirHabitacion))
                         .addGap(34, 34, 34)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -257,7 +258,7 @@ public class Hotel extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRegistrar))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
@@ -472,64 +473,67 @@ public class Hotel extends javax.swing.JFrame {
 
         String huesped, ciudad, habitacion, tipoHabitacion, totalPersonas, diasHospedaje;
         int piso, totalconCargos, totalsinCargos;
-        //String diaLlegada=""+jDateChooserIngresar.getDate(), 'yyyy-MM-dd';
+
+        String diaLlegada = "" + jDateChooserIngresar.getDate();
         SimpleDateFormat Date_Format = new SimpleDateFormat("yyyy-MM-dd");
-        
-        
+        diaLlegada = Date_Format.format(jDateChooserIngresar.getDate());
+
         huesped = this.jTextFieldNombreHuesped.getText().trim();
         ciudad = this.jTextFieldCiudadOrigen.getText().trim();
-        System.out.println(huesped+"\n");
-        System.out.println(ciudad+"\n");
-        if (this.jRadioButtonSencilla.isSelected() )
-        {
+        System.out.println(huesped + "\n");
+        System.out.println(ciudad + "\n");
+        if (this.jRadioButtonSencilla.isSelected()) {
             tipoHabitacion = "Sencilla";
-            totalPersonas = (String)this.jComboBoxSencilla.getSelectedItem();
-        }
-        else if (this.jRadioButtonDoble.isSelected() )
-        {
+            totalPersonas = (String) this.jComboBoxSencilla.getSelectedItem();
+        } else if (this.jRadioButtonDoble.isSelected()) {
             tipoHabitacion = "Doble";
-            totalPersonas = (String)this.jComboBoxDoble.getSelectedItem();
-        }
-        else
-        {
+            totalPersonas = (String) this.jComboBoxDoble.getSelectedItem();
+        } else {
             tipoHabitacion = "Triple";
-            totalPersonas = (String)this.jComboBoxTriple.getSelectedItem();
+            totalPersonas = (String) this.jComboBoxTriple.getSelectedItem();
         }
-        System.out.println(tipoHabitacion+"\n");
-        System.out.println(totalPersonas+"\n");
+        System.out.println(tipoHabitacion + "\n");
+        System.out.println(totalPersonas + "\n");
 
         // Obtener fecha
         diasHospedaje = this.jTextFieldDiasHospedaje.getText().trim();
 
-        int dia2=Integer.valueOf(diasHospedaje);
-        int d=this.jDateChooserIngresar.getCalendar().get(Calendar.DAY_OF_MONTH);
-        int m=this.jDateChooserIngresar.getCalendar().get(Calendar.MONTH);
-        int a=this.jDateChooserIngresar.getCalendar().get(Calendar.YEAR);
+        int dia2 = Integer.valueOf(diasHospedaje);
+        int d = this.jDateChooserIngresar.getCalendar().get(Calendar.DAY_OF_MONTH);
+        int m = this.jDateChooserIngresar.getCalendar().get(Calendar.MONTH);
+        int a = this.jDateChooserIngresar.getCalendar().get(Calendar.YEAR);
 
         String dia = String.valueOf(d);
         String mes = String.valueOf(m);
         String ani = String.valueOf(a);
-        String fecha = ani +"-"+mes+"-"+dia;
+        String fecha = ani + "-" + mes + "-" + dia;
         String[] f = fecha.split("-");
 
         Calendar calendario = Calendar.getInstance();
-        calendario.set( Integer.parseInt(f[0]), Integer.parseInt(f[1]), Integer.parseInt(f[2]) );
+        calendario.set(Integer.parseInt(f[0]), Integer.parseInt(f[1]), Integer.parseInt(f[2]));
         calendario.add(Calendar.DAY_OF_MONTH, dia2);
-        SimpleDateFormat diaSalida = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy");
-        this.jLabelSalida.setText(diaSalida.format(calendario.getTime()));
-        //diaLlegada = Date_Format.format(diaSalida.getDate());
-        //this.jTextFieldDias.setText("");
+        
+        SimpleDateFormat diaMostrar = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy");
+        this.jLabelSalida.setText(diaMostrar.format(calendario.getTime()));
+        
+        SimpleDateFormat diaSalida = new SimpleDateFormat("yyyy-MM-dd");
+        diaSalida.format(calendario.getTime());
+        String diaSalida2 = diaSalida.format(calendario.getTime());
         
         habitacion = "500";
         piso = 1;
-        totalconCargos =2;
-        totalsinCargos =3;
-        
+        totalconCargos = 2;
+        totalsinCargos = 3;
+
         String parte1 = "Insert into huespedes (nombre, ciudad, fechaingreso, fechasalida, numhabitacion, piso, tipohabitacion, ocupantes, totalsincargos, totalconcargos) VALUES (";
-        String parte2 = "'"+huesped+"','"+ciudad+"','"+diaLlegada+"', '"+diaLlegada+"', '"+habitacion+"', '"+piso+"', '"+tipoHabitacion+"', '"+totalPersonas+"','"+totalsinCargos+"', '"+totalconCargos+"')";
+        String parte2 = "'" + huesped + "','" + ciudad + "','" + diaLlegada + "','" + diaSalida2+ "','" + habitacion + "', '" + piso + "', '" + tipoHabitacion + "', '" + totalPersonas + "','" + totalsinCargos + "', '" + totalconCargos + "')";
         String querry = parte1 + parte2;
-        int j= this.conn.Update(querry);
-        System.out.println("Numero de registros afectados por la accion: "+j);
+        int j = this.conn.Update(querry);
+        System.out.println("Numero de registros afectados por la accion: " + j);
+        
+        this.jTextFieldNombreHuesped.setText("");
+        this.jTextFieldCiudadOrigen.setText("");
+        this.jTextFieldDiasHospedaje.setText("");
 
     }//GEN-LAST:event_jButtonRegistrarActionPerformed
 
@@ -591,14 +595,14 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
     }
-    
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupTipoHabitacion;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonElegirHabitacion;
     private javax.swing.JButton jButtonEstatusHabitacion;
     private javax.swing.JButton jButtonGaleria;
     private javax.swing.JButton jButtonHabitacionesDisponibles;
