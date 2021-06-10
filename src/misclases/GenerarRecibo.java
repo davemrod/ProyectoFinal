@@ -31,18 +31,18 @@ public class GenerarRecibo extends JFrame {
     }
     
     private void initComponents(){
-        super.setSize(1100, 669);
+        super.setSize(600, 650);
         
          // Boton Ingresar
         //JButtonIngresar = new JButton("INGRESAR");//boton local
         //JButtonIngresar.setBounds(780,494, 100, 30);
         
         // TextField Usuario
-        this.JTextFieldUsuario = new JTextField();
-        this.JTextFieldUsuario.setBounds(750,320,200,40);
+        //this.JTextFieldUsuario = new JTextField();
+        //this.JTextFieldUsuario.setBounds(750,320,200,40);
         
-        this.add(JButtonIngresar);
-        this.add(JTextFieldUsuario);
+        //this.add(JButtonIngresar);
+        //this.add(JTextFieldUsuario);
         
         
         
@@ -50,12 +50,12 @@ public class GenerarRecibo extends JFrame {
         
         
         label = new JLabel();
-        label.setBounds(0, 0, 1100, 629);
+        label.setBounds(0, 0, 600, 650);
         add(label);
         crearFondo();
     }
     
     public static void main(String[] args) {
-        new Login().setVisible(true);
+        new GenerarRecibo().setVisible(true);
     }
 }
