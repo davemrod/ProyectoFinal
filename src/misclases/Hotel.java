@@ -5,6 +5,7 @@
  */
 package misclases;
 
+import controlMySql.MySqlConn;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -23,10 +24,16 @@ public class Hotel extends javax.swing.JFrame {
     /**
      * Creates new form Hotel
      */
+    
+    private MySqlConn conn;
+    
 
     public Hotel() {
+        
+        this.conn= new MySqlConn();
         initComponents();
         this.setLocationRelativeTo(null);
+        
         
     }
 
@@ -463,7 +470,12 @@ public class Hotel extends javax.swing.JFrame {
     private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
         // TODO add your handling code here:
 
-        String huesped, ciudad, habitacion, diaLlegada, tipoHabitacion, totalPersonas, diasHospedaje, diaSalida;
+        String huesped, ciudad, habitacion, tipoHabitacion, totalPersonas, diasHospedaje;
+        int piso, totalconCargos, totalsinCargos;
+        //String diaLlegada=""+jDateChooserIngresar.getDate(), 'yyyy-MM-dd';
+        SimpleDateFormat Date_Format = new SimpleDateFormat("yyyy-MM-dd");
+        
+        
         huesped = this.jTextFieldNombreHuesped.getText().trim();
         ciudad = this.jTextFieldCiudadOrigen.getText().trim();
         System.out.println(huesped+"\n");
@@ -503,9 +515,21 @@ public class Hotel extends javax.swing.JFrame {
         Calendar calendario = Calendar.getInstance();
         calendario.set( Integer.parseInt(f[0]), Integer.parseInt(f[1]), Integer.parseInt(f[2]) );
         calendario.add(Calendar.DAY_OF_MONTH, dia2);
-        SimpleDateFormat fechaObtenida = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy");
-        this.jLabelSalida.setText(fechaObtenida.format(calendario.getTime()));
+        SimpleDateFormat diaSalida = new SimpleDateFormat("EEEE, d 'de' MMMM 'de' yyyy");
+        this.jLabelSalida.setText(diaSalida.format(calendario.getTime()));
+        //diaLlegada = Date_Format.format(diaSalida.getDate());
         //this.jTextFieldDias.setText("");
+        
+        habitacion = "500";
+        piso = 1;
+        totalconCargos =2;
+        totalsinCargos =3;
+        
+        String parte1 = "Insert into huespedes (nombre, ciudad, fechaingreso, fechasalida, numhabitacion, piso, tipohabitacion, ocupantes, totalsincargos, totalconcargos) VALUES (";
+        String parte2 = "'"+huesped+"','"+ciudad+"','"+diaLlegada+"', '"+diaLlegada+"', '"+habitacion+"', '"+piso+"', '"+tipoHabitacion+"', '"+totalPersonas+"','"+totalsinCargos+"', '"+totalconCargos+"')";
+        String querry = parte1 + parte2;
+        int j= this.conn.Update(querry);
+        System.out.println("Numero de registros afectados por la accion: "+j);
 
     }//GEN-LAST:event_jButtonRegistrarActionPerformed
 
