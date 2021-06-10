@@ -151,6 +151,11 @@ public class Hotel extends javax.swing.JFrame {
         jButtonRecibo.setForeground(new java.awt.Color(255, 255, 255));
         jButtonRecibo.setText("Generar recibo");
         jButtonRecibo.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
+        jButtonRecibo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonReciboActionPerformed(evt);
+            }
+        });
 
         jTextFieldDiasHospedaje.setBackground(new java.awt.Color(21, 19, 19));
         jTextFieldDiasHospedaje.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
@@ -710,6 +715,11 @@ public class Hotel extends javax.swing.JFrame {
         
         new Habitaciones().setVisible(true);
     }//GEN-LAST:event_jButtonElegirHabitacionActionPerformed
+
+    private void jButtonReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReciboActionPerformed
+        // TODO add your handling code here:
+        new GenerarRecibo().setVisible(true);
+    }//GEN-LAST:event_jButtonReciboActionPerformed
 
     /**
      * @param args the command line arguments
