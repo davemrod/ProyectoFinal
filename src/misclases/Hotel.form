@@ -102,10 +102,10 @@
                                       </Group>
                                       <Component id="jDateChooserIngresar" alignment="0" min="-2" pref="243" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jComboBoxSencilla" linkSize="3" min="-2" pref="104" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jComboBoxSencilla" linkSize="3" min="-2" pref="116" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                                           <Component id="jComboBoxDoble" linkSize="3" min="-2" pref="93" max="-2" attributes="0"/>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                                           <Component id="jComboBoxTriple" linkSize="3" min="-2" pref="94" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -181,7 +181,7 @@
                               <Component id="jButtonRecibo" linkSize="7" alignment="3" min="-2" pref="41" max="-2" attributes="0"/>
                               <Component id="jButtonRegistrar" linkSize="7" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="80" max="32767" attributes="0"/>
+                          <EmptySpace pref="103" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -278,7 +278,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroupTipoHabitacion"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Sencilla"/>
+                    <Property name="text" type="java.lang.String" value="Sencilla 400&#x20ac; "/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonSencillaActionPerformed"/>
@@ -289,7 +289,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroupTipoHabitacion"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Doble"/>
+                    <Property name="text" type="java.lang.String" value="Doble 500&#x20ac;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonDobleActionPerformed"/>
@@ -300,7 +300,7 @@
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                       <ComponentRef name="buttonGroupTipoHabitacion"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Triple"/>
+                    <Property name="text" type="java.lang.String" value="Triple 700&#x20ac;"/>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButtonTripleActionPerformed"/>

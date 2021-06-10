@@ -118,7 +118,7 @@ public class Hotel extends javax.swing.JFrame {
         jLabelSalida.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
 
         buttonGroupTipoHabitacion.add(jRadioButtonSencilla);
-        jRadioButtonSencilla.setText("Sencilla");
+        jRadioButtonSencilla.setText("Sencilla 400€ ");
         jRadioButtonSencilla.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonSencillaActionPerformed(evt);
@@ -126,7 +126,7 @@ public class Hotel extends javax.swing.JFrame {
         });
 
         buttonGroupTipoHabitacion.add(jRadioButtonDoble);
-        jRadioButtonDoble.setText("Doble");
+        jRadioButtonDoble.setText("Doble 500€");
         jRadioButtonDoble.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonDobleActionPerformed(evt);
@@ -134,7 +134,7 @@ public class Hotel extends javax.swing.JFrame {
         });
 
         buttonGroupTipoHabitacion.add(jRadioButtonTriple);
-        jRadioButtonTriple.setText("Triple");
+        jRadioButtonTriple.setText("Triple 700€");
         jRadioButtonTriple.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButtonTripleActionPerformed(evt);
@@ -183,10 +183,10 @@ public class Hotel extends javax.swing.JFrame {
                                 .addComponent(jRadioButtonTriple))
                             .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(54, 54, 54)
                                 .addComponent(jComboBoxDoble, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addGap(65, 65, 65)
                                 .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -250,7 +250,7 @@ public class Hotel extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonRegistrar))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
