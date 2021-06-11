@@ -3,6 +3,7 @@ package misclases;
 
 //import controlMySql.MySqlConn;
 import java.awt.Image;
+import java.util.ArrayList;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -10,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import misclases.Hotel;
+import misclases.Constructores;
 
 public class GenerarRecibo extends JFrame {
     private ImageIcon imagen;
@@ -18,8 +20,9 @@ public class GenerarRecibo extends JFrame {
     private JButton JButtonIngresar;
     private JTextField JTextFieldUsuario;
     
+    ArrayList <Constructores>lista;
+    
     public GenerarRecibo() {
-        //this.conn= new MySqlConn();
         initComponents(); 
         this.setLocationRelativeTo(this);
     }
@@ -33,9 +36,13 @@ public class GenerarRecibo extends JFrame {
     
     private void initComponents(){
         super.setSize(750, 950);
-        //this.jLabelHuesped = new JLabel(this.huesped);
-        //this.jLabelHuesped.setBounds(10,120,300,80);
-        //this.add(jLabelHuesped);
+        for(int i=0; i < this.lista.size(); i++) {
+        jLabelHuesped = new JLabel(lista.get(i).getHuesped());     
+        jLabelHuesped.setBounds(10,120,300,80);
+        add(jLabelHuesped);
+        }
+  
+
         
          // Boton Ingresar
         //JButtonIngresar = new JButton("INGRESAR");//boton local
@@ -51,7 +58,7 @@ public class GenerarRecibo extends JFrame {
         label = new JLabel();
         label.setBounds(0, 0, 750, 950);
         add(label);
-        crearFondo();
+        crearFondo();       
     }
     
     public static void main(String[] args) {
