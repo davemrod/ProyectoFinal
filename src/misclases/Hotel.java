@@ -27,6 +27,7 @@ public class Hotel extends javax.swing.JFrame {
      */
     private MySqlConn conn;
     int totalPersonas;
+    String huesped;
     
     public Hotel() {
 
