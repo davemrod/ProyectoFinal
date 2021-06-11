@@ -14,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -25,13 +26,13 @@ public class Hotel extends javax.swing.JFrame {
      * Creates new form Hotel
      */
     private MySqlConn conn;
-
+    int totalPersonas;
+    
     public Hotel() {
 
         this.conn = new MySqlConn();
         initComponents();
         this.setLocationRelativeTo(null);
-
     }
 
     /**
@@ -167,6 +168,7 @@ public class Hotel extends javax.swing.JFrame {
         jLabelSalida.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSalida.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
+        jRadioButtonSencilla.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupTipoHabitacion.add(jRadioButtonSencilla);
         jRadioButtonSencilla.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jRadioButtonSencilla.setForeground(new java.awt.Color(255, 255, 255));
@@ -177,6 +179,7 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jRadioButtonDoble.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupTipoHabitacion.add(jRadioButtonDoble);
         jRadioButtonDoble.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jRadioButtonDoble.setForeground(new java.awt.Color(255, 255, 255));
@@ -187,6 +190,7 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jRadioButtonTriple.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupTipoHabitacion.add(jRadioButtonTriple);
         jRadioButtonTriple.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jRadioButtonTriple.setForeground(new java.awt.Color(255, 255, 255));
@@ -197,23 +201,32 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
-        jComboBoxSencilla.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxSencilla.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jComboBoxSencilla.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBoxSencilla.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 ", "2 ", "3 " }));
+        jComboBoxSencilla.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3" }));
         jComboBoxSencilla.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
+        jComboBoxSencilla.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxSencillaActionPerformed(evt);
+            }
+        });
 
-        jComboBoxDoble.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxDoble.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jComboBoxDoble.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBoxDoble.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 ", "2 ", "3 ", "4 " }));
+        jComboBoxDoble.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4" }));
         jComboBoxDoble.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
+        jComboBoxDoble.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxDobleActionPerformed(evt);
+            }
+        });
 
-        jComboBoxTriple.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxTriple.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jComboBoxTriple.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBoxTriple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 ", "2 ", "3 ", "4 ", "5 " }));
+        jComboBoxTriple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5" }));
         jComboBoxTriple.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
+        jComboBoxTriple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxTripleActionPerformed(evt);
+            }
+        });
 
         jButtonRegistrar.setBackground(new java.awt.Color(21, 19, 19));
         jButtonRegistrar.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
@@ -543,7 +556,7 @@ public class Hotel extends javax.swing.JFrame {
                                 .addComponent(jButtonListaHuespedes)
                                 .addGap(73, 73, 73)
                                 .addComponent(jButtonIngresos)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 4, Short.MAX_VALUE)))))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                 .addGap(63, 63, 63))
         );
 
@@ -623,8 +636,8 @@ public class Hotel extends javax.swing.JFrame {
     private void jButtonRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarActionPerformed
         // TODO add your handling code here:
 
-        String huesped, ciudad, habitacion, tipoHabitacion, totalPersonas, diasHospedaje;
-        int piso, totalconCargos, totalsinCargos;
+        String huesped, ciudad, habitacion, tipoHabitacion, diasHospedaje, aux;
+        int piso, totalconCargos, totalsinCargos, totalPersonas, parcial=0;
 
         String diaLlegada = "" + jDateChooserIngresar.getDate();
         SimpleDateFormat Date_Format = new SimpleDateFormat("yyyy-MM-dd");
@@ -636,13 +649,25 @@ public class Hotel extends javax.swing.JFrame {
         System.out.println(ciudad + "\n");
         if (this.jRadioButtonSencilla.isSelected()) {
             tipoHabitacion = "Sencilla";
-            totalPersonas = (String) this.jComboBoxSencilla.getSelectedItem();
+            parcial+=400;
+            aux = (String) this.jComboBoxSencilla.getSelectedItem();
+            totalPersonas = Integer.parseInt (aux);
+            if(totalPersonas>1)
+                parcial+=70*(totalPersonas-1);
         } else if (this.jRadioButtonDoble.isSelected()) {
             tipoHabitacion = "Doble";
-            totalPersonas = (String) this.jComboBoxDoble.getSelectedItem();
+            parcial+=500;
+            aux = (String) this.jComboBoxDoble.getSelectedItem();
+            totalPersonas = Integer.parseInt (aux);
+            if(totalPersonas>2)
+                parcial+=70*(totalPersonas-2);           
         } else {
             tipoHabitacion = "Triple";
-            totalPersonas = (String) this.jComboBoxTriple.getSelectedItem();
+            parcial+=700;
+            aux = (String) this.jComboBoxTriple.getSelectedItem();
+            totalPersonas = Integer.parseInt (aux);
+            if(totalPersonas>3)
+                parcial+=70*(totalPersonas-3); 
         }
         System.out.println(tipoHabitacion + "\n");
         System.out.println(totalPersonas + "\n");
@@ -675,8 +700,8 @@ public class Hotel extends javax.swing.JFrame {
         habitacion = "500";
         piso = 1;
         totalconCargos = 2;
-        totalsinCargos = 3;
-
+        totalsinCargos = parcial;
+     
         String parte1 = "Insert into huespedes (nombre, ciudad, fechaingreso, fechasalida, numhabitacion, piso, tipohabitacion, ocupantes, totalsincargos, totalconcargos) VALUES (";
         String parte2 = "'" + huesped + "','" + ciudad + "','" + diaLlegada + "','" + diaSalida2+ "','" + habitacion + "', '" + piso + "', '" + tipoHabitacion + "', '" + totalPersonas + "','" + totalsinCargos + "', '" + totalconCargos + "')";
         String querry = parte1 + parte2;
@@ -691,7 +716,7 @@ public class Hotel extends javax.swing.JFrame {
 
     private void jRadioButtonTripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTripleActionPerformed
         // TODO add your handling code here:
-
+        
         this.jComboBoxSencilla.setEnabled(false);
         this.jComboBoxDoble.setEnabled(false);
         this.jComboBoxTriple.setEnabled(true);
@@ -723,6 +748,27 @@ public class Hotel extends javax.swing.JFrame {
         // TODO add your handling code here:
         new GenerarRecibo().setVisible(true);
     }//GEN-LAST:event_jButtonReciboActionPerformed
+
+    private void jComboBoxSencillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxSencillaActionPerformed
+        // TODO add your handling code here:
+                  
+        if(this.jComboBoxSencilla.getSelectedItem()=="2"||this.jComboBoxSencilla.getSelectedItem()=="3")
+            JOptionPane.showMessageDialog(null, "Capacidad máxima de 1 huesped\nCada persona extra pagará 70€");
+    }//GEN-LAST:event_jComboBoxSencillaActionPerformed
+
+    private void jComboBoxDobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDobleActionPerformed
+        // TODO add your handling code here:
+        
+        if(this.jComboBoxDoble.getSelectedItem()=="3"||this.jComboBoxDoble.getSelectedItem()=="4")
+            JOptionPane.showMessageDialog(null, "Capacidad máxima de 2 huespedes\nCada persona extra pagará 70€");
+    }//GEN-LAST:event_jComboBoxDobleActionPerformed
+
+    private void jComboBoxTripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTripleActionPerformed
+        // TODO add your handling code here:
+        
+        if(this.jComboBoxTriple.getSelectedItem()=="4"||this.jComboBoxTriple.getSelectedItem()=="5")
+            JOptionPane.showMessageDialog(null, "Capacidad máxima de 3 huespedes\nCada persona extra pagará 70€");
+    }//GEN-LAST:event_jComboBoxTripleActionPerformed
 
     /**
      * @param args the command line arguments
