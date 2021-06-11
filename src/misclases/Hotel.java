@@ -450,8 +450,11 @@ public class Hotel extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(21, 19, 19));
 
-        jButtonGaleria.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButtonGaleria.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonGaleria.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonGaleria.setForeground(new java.awt.Color(255, 255, 255));
         jButtonGaleria.setText("Galeria");
+        jButtonGaleria.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
         jButtonHabitacionesDisponibles.setBackground(new java.awt.Color(21, 19, 19));
         jButtonHabitacionesDisponibles.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -544,7 +547,7 @@ public class Hotel extends javax.swing.JFrame {
                 .addGap(63, 63, 63))
         );
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton2, jButton3, jButton4, jButtonEstatusHabitacion, jButtonHabitacionesDisponibles, jButtonIngresos, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual});
+        jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton2, jButton3, jButton4, jButtonEstatusHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresos, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual});
 
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -569,7 +572,7 @@ public class Hotel extends javax.swing.JFrame {
                 .addGap(40, 40, 40))
         );
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton2, jButton3, jButton4, jButtonEstatusHabitacion, jButtonHabitacionesDisponibles, jButtonIngresos, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual});
+        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton2, jButton3, jButton4, jButtonEstatusHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresos, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual});
 
         jTabbedPane1.addTab("Consultas", jPanel4);
 
