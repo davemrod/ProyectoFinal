@@ -6,12 +6,14 @@
 package misclases;
 
 import controlMySql.MySqlConn;
+import misclases.Constructores;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -26,8 +28,7 @@ public class Hotel extends javax.swing.JFrame {
      * Creates new form Hotel
      */
     private MySqlConn conn;
-    int totalPersonas;
-    String huesped;
+    ArrayList <Constructores> lista = new ArrayList();
     
     public Hotel() {
 
@@ -712,6 +713,11 @@ public class Hotel extends javax.swing.JFrame {
         this.jTextFieldNombreHuesped.setText("");
         this.jTextFieldCiudadOrigen.setText("");
         this.jTextFieldDiasHospedaje.setText("");
+        
+        Constructores obj;
+        obj = new Constructores(huesped,ciudad, habitacion, tipoHabitacion, diasHospedaje, diaLlegada, diaSalida2, piso, totalconCargos, totalsinCargos, totalPersonas);
+        lista.add(obj);
+        //GenerarRecibo.RecibirLista(lista);
 
     }//GEN-LAST:event_jButtonRegistrarActionPerformed
 
