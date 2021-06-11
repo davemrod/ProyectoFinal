@@ -9,11 +9,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import misclases.Hotel;
 
 public class GenerarRecibo extends JFrame {
     private ImageIcon imagen;
     private Icon icono;
-    private JLabel label;
+    private JLabel label, jLabelHuesped;
     private JButton JButtonIngresar;
     private JTextField JTextFieldUsuario;
     
@@ -32,6 +33,9 @@ public class GenerarRecibo extends JFrame {
     
     private void initComponents(){
         super.setSize(750, 950);
+        //this.jLabelHuesped = new JLabel(this.huesped);
+        //this.jLabelHuesped.setBounds(10,120,300,80);
+        //this.add(jLabelHuesped);
         
          // Boton Ingresar
         //JButtonIngresar = new JButton("INGRESAR");//boton local
@@ -43,11 +47,6 @@ public class GenerarRecibo extends JFrame {
         
         //this.add(JButtonIngresar);
         //this.add(JTextFieldUsuario);
-        
-        
-        
-        
-        
         
         label = new JLabel();
         label.setBounds(0, 0, 750, 950);
