@@ -200,19 +200,19 @@ public class Hotel extends javax.swing.JFrame {
         jComboBoxSencilla.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxSencilla.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jComboBoxSencilla.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBoxSencilla.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 persona", "2 personas", "3 personas" }));
+        jComboBoxSencilla.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 ", "2 ", "3 " }));
         jComboBoxSencilla.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
 
         jComboBoxDoble.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxDoble.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jComboBoxDoble.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBoxDoble.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 persona", "2 personas", "3 personas", "4 personas" }));
+        jComboBoxDoble.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 ", "2 ", "3 ", "4 " }));
         jComboBoxDoble.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
 
         jComboBoxTriple.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxTriple.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jComboBoxTriple.setForeground(new java.awt.Color(0, 0, 0));
-        jComboBoxTriple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 persona", "2 personas", "3 personas", "4 personas", "5 personas" }));
+        jComboBoxTriple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1 ", "2 ", "3 ", "4 ", "5 " }));
         jComboBoxTriple.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
 
         jButtonRegistrar.setBackground(new java.awt.Color(21, 19, 19));
