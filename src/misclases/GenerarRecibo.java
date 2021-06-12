@@ -20,9 +20,12 @@ public class GenerarRecibo extends JFrame {
     private JButton JButtonIngresar;
     private JTextField JTextFieldUsuario;
     
-    ArrayList <Constructores>lista;
+    String huesped;
     
-    public GenerarRecibo() {
+    private ArrayList <Constructores>lista;
+    
+    public GenerarRecibo(ArrayList lista) {
+        this.lista = lista;
         initComponents(); 
         this.setLocationRelativeTo(this);
     }
@@ -34,13 +37,17 @@ public class GenerarRecibo extends JFrame {
         this.repaint();
     }
     
+    /*public void RecibirDatos(String huesped)
+    {
+       this.huesped = huesped;
+    }*/
+    
     private void initComponents(){
         super.setSize(750, 950);
-        for(int i=0; i < this.lista.size(); i++) {
-        jLabelHuesped = new JLabel(lista.get(i).getHuesped());     
+        jLabelHuesped = new JLabel(lista.get(0).getHuesped());     
         jLabelHuesped.setBounds(10,120,300,80);
         add(jLabelHuesped);
-        }
+        
   
 
         
@@ -61,7 +68,7 @@ public class GenerarRecibo extends JFrame {
         crearFondo();       
     }
     
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         new GenerarRecibo().setVisible(true);
-    }
+    }*/
 }
