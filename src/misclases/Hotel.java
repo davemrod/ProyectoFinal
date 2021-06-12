@@ -31,6 +31,8 @@ public class Hotel extends javax.swing.JFrame {
     ArrayList <Constructores> lista = new ArrayList();
     
     public Hotel() {
+        
+        //simmmm
 
         this.conn = new MySqlConn();
         initComponents();
