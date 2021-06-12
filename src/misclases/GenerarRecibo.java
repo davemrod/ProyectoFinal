@@ -17,7 +17,7 @@ import misclases.Constructores;
 public class GenerarRecibo extends JFrame {
     private ImageIcon imagen;
     private Icon icono;
-    private JLabel label, jLabelHuesped, jLabelCiudad, jLabelFechas, jLabelFechal, jLabelNum, jLabelTipo, jLabelOcu, jLabelPiso, jLabelLimi;
+    private JLabel label, jLabelHuesped, jLabelCiudad, jLabelFechas, jLabelFechal, jLabelNum, jLabelTipo, jLabelOcu, jLabelPiso, jLabelLimi, jLabelTipoG, jLabelHabiG;
     private JButton JButtonIngresar;
     private JTextField JTextFieldUsuario;
     
@@ -29,6 +29,12 @@ public class GenerarRecibo extends JFrame {
     String fechal="15-05-2021";
     String tipo="Sencilla";
     String ocupa="5";
+    String piso="1";
+    String limi="3";
+    String sencillaG = "Habitación sencilla";
+    String dobleG = "Habitación doble";
+    String tripleG = "Habitación triple";
+    String habiG = "201";
     
     private ArrayList <Constructores>lista;
     
@@ -73,21 +79,44 @@ public class GenerarRecibo extends JFrame {
         jLabelFechas.setForeground(Color.RED);
         add(jLabelFechas);
         
-        jLabelNum = new JLabel(habi);     
-        jLabelNum .setBounds(227,707,300,80);
-        jLabelNum .setForeground(Color.RED);
-        add(jLabelNum);
+        jLabelPiso = new JLabel(habi);     
+        jLabelPiso.setBounds(227,707,300,80);
+        jLabelPiso.setForeground(Color.RED);
+        add(jLabelPiso );
         
         jLabelTipo = new JLabel(tipo);     
-        jLabelTipo .setBounds(227,732,300,80);
-        jLabelTipo .setForeground(Color.RED);
+        jLabelTipo.setBounds(227,732,300,80);
+        jLabelTipo.setForeground(Color.RED);
         add(jLabelTipo);
         
         jLabelOcu = new JLabel(ocupa);     
-        jLabelOcu .setBounds(235,753,300,80);
-        jLabelOcu .setForeground(Color.RED);
+        jLabelOcu.setBounds(235,753,300,80);
+        jLabelOcu.setForeground(Color.RED);
         add(jLabelOcu);
-
+        
+        jLabelNum = new JLabel(piso);     
+        jLabelNum.setBounds(340,707,300,80);
+        jLabelNum.setForeground(Color.RED);
+        add(jLabelNum);
+        
+        jLabelLimi = new JLabel(limi);     
+        jLabelLimi.setBounds(350,732,300,80);
+        jLabelLimi.setForeground(Color.RED);
+        add(jLabelLimi);
+        
+        //if(lista.get().getTipo="Sencilla")
+            jLabelTipoG = new JLabel(sencillaG);     
+            jLabelTipoG.setBounds(120, 450,300,80);
+            jLabelTipoG.setForeground(Color.RED);
+            jLabelTipoG.setFont(new java.awt.Font("Lucida Fax", 1, 16));
+            add(jLabelTipoG);
+        //}
+            jLabelHabiG = new JLabel(habiG);     
+            jLabelHabiG.setBounds(345,450,300,80);
+            jLabelHabiG.setForeground(Color.RED);
+            jLabelHabiG.setFont(new java.awt.Font("Lucida Fax", 1, 16));
+            add(jLabelHabiG);        
+        
         
          // Boton Ingresar
         //JButtonIngresar = new JButton("INGRESAR");//boton local
