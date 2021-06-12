@@ -717,7 +717,9 @@ public class Hotel extends javax.swing.JFrame {
         Constructores obj;
         obj = new Constructores(huesped,ciudad, habitacion, tipoHabitacion, diasHospedaje, diaLlegada, diaSalida2, piso, totalconCargos, totalsinCargos, totalPersonas);
         lista.add(obj);
-        //GenerarRecibo.RecibirLista(lista);
+        //RecibirDatos(huesped);
+        /*for(int i=0; i<lista.size(); i++)
+            System.out.println(" Lista "+lista.get(i).getHuesped());*/
 
     }//GEN-LAST:event_jButtonRegistrarActionPerformed
 
@@ -753,7 +755,8 @@ public class Hotel extends javax.swing.JFrame {
 
     private void jButtonReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReciboActionPerformed
         // TODO add your handling code here:
-        new GenerarRecibo().setVisible(true);
+        new GenerarRecibo(lista).setVisible(true);
+        
     }//GEN-LAST:event_jButtonReciboActionPerformed
 
     private void jComboBoxSencillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxSencillaActionPerformed
