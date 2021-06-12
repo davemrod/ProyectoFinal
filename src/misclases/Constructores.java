@@ -13,8 +13,8 @@ import java.io.Serializable;
  */
 public class Constructores implements Serializable {
     
-    private String huesped,  ciudad, habitacion, tipoHabitacion, diasHospedaje, diaLlegada, diaSalida2;
-    private int piso, totalconCargos, totalsinCargos, totalPersonas;
+    private String huesped,  ciudad, tipoHabitacion, diasHospedaje, diaLlegada, diaSalida2;
+    private int piso, totalconCargos, totalsinCargos, totalPersonas, habitacion;
 
     public String getHuesped() {
         return huesped;
@@ -32,11 +32,11 @@ public class Constructores implements Serializable {
         this.ciudad = ciudad;
     }
 
-    public String getHabitacion() {
+    public int getHabitacion() {
         return habitacion;
     }
 
-    public void setHabitacion(String habitacion) {
+    public void setHabitacion(int habitacion) {
         this.habitacion = habitacion;
     }
 
@@ -104,7 +104,7 @@ public class Constructores implements Serializable {
         this.totalPersonas = totalPersonas;
     }
 
-    public Constructores(String huesped, String ciudad, String habitacion, String tipoHabitacion, String diasHospedaje, String diaLlegada, String diaSalida2, int piso, int totalconCargos, int totalsinCargos, int totalPersonas) {
+    public Constructores(String huesped, String ciudad, int habitacion, String tipoHabitacion, String diasHospedaje, String diaLlegada, String diaSalida2, int piso, int totalconCargos, int totalsinCargos, int totalPersonas) {
         this.huesped = huesped;
         this.ciudad = ciudad;
         this.habitacion = habitacion;
