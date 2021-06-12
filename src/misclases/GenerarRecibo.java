@@ -17,7 +17,7 @@ import misclases.Constructores;
 public class GenerarRecibo extends JFrame {
     private ImageIcon imagen;
     private Icon icono;
-    private JLabel label, jLabelHuesped, jLabelCiudad, jLabelFechas, jLabelFechal, jLabelNum, jLabelTipo, jLabelOcu;
+    private JLabel label, jLabelHuesped, jLabelCiudad, jLabelFechas, jLabelFechal, jLabelNum, jLabelTipo, jLabelOcu, jLabelPiso, jLabelLimi;
     private JButton JButtonIngresar;
     private JTextField JTextFieldUsuario;
     
