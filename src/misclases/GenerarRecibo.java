@@ -44,6 +44,7 @@ public class GenerarRecibo extends JFrame {
     
     private void initComponents(){
         super.setSize(750, 950);
+        
         jLabelHuesped = new JLabel(lista.get(0).getHuesped());     
         jLabelHuesped.setBounds(10,120,300,80);
         add(jLabelHuesped);
