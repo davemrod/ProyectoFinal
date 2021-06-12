@@ -728,37 +728,47 @@ public class Hotel extends javax.swing.JFrame {
     private void jRadioButtonTripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTripleActionPerformed
         // TODO add your handling code here:
         
+        String band;
         this.jComboBoxSencilla.setEnabled(false);
         this.jComboBoxDoble.setEnabled(false);
         this.jComboBoxTriple.setEnabled(true);
+        band="3";
+        new Habitaciones(band).setVisible(true);
     }//GEN-LAST:event_jRadioButtonTripleActionPerformed
 
     private void jRadioButtonDobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDobleActionPerformed
         // TODO add your handling code here:
-
+        
+        String band;
         this.jComboBoxSencilla.setEnabled(false);
         this.jComboBoxDoble.setEnabled(true);
         this.jComboBoxTriple.setEnabled(false);
+        band="2";
+        new Habitaciones(band).setVisible(true);
     }//GEN-LAST:event_jRadioButtonDobleActionPerformed
 
     private void jRadioButtonSencillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSencillaActionPerformed
         // TODO add your handling code here:
-
+        
+        
+        String band;
         this.jComboBoxSencilla.setEnabled(true);
         this.jComboBoxDoble.setEnabled(false);
         this.jComboBoxTriple.setEnabled(false);
+        band="1";
+        new Habitaciones(band).setVisible(true);
     }//GEN-LAST:event_jRadioButtonSencillaActionPerformed
 
     private void jButtonElegirHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonElegirHabitacionActionPerformed
         // TODO add your handling code here:
         
-        new Habitaciones().setVisible(true);
+        
     }//GEN-LAST:event_jButtonElegirHabitacionActionPerformed
 
     private void jButtonReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReciboActionPerformed
         // TODO add your handling code here:
         //new GenerarRecibo(lista).setVisible(true);
-        new GenerarRecibo().setVisible(true);
+        new GenerarRecibo(lista).setVisible(true);
         
     }//GEN-LAST:event_jButtonReciboActionPerformed
 
