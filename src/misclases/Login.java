@@ -105,7 +105,7 @@ public class Login extends JFrame {
         JButtonPlay.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent ae) {
-                cancion=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/Amor mio.wav"));
+                cancion=java.applet.Applet.newAudioClip(getClass().getResource("src/misclases/Amormio.wav"));
                 cancion.play(); 
             }
         });
