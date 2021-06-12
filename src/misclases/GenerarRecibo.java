@@ -17,7 +17,7 @@ import misclases.Constructores;
 public class GenerarRecibo extends JFrame {
     private ImageIcon imagen;
     private Icon icono;
-    private JLabel label, jLabelHuesped, jLabelCiudad, jLabelFechas, jLabelFechal, jLabelNum, jLabelTipo, jLabelOcu, jLabelPiso, jLabelLimi, jLabelTipoG, jLabelHabiG, jLabelPrecioG;
+    private JLabel label, jLabelHuesped, jLabelCiudad, jLabelFechas, jLabelFechal, jLabelHabi, jLabelTipo, jLabelOcu, jLabelPiso, jLabelLimi, jLabelTipoG, jLabelHabiG, jLabelPrecioG;
     private JButton JButtonIngresar;
     private JTextField JTextFieldUsuario;
     
@@ -79,12 +79,13 @@ public class GenerarRecibo extends JFrame {
         jLabelFechas.setForeground(Color.RED);
         add(jLabelFechas);
         
-        int pisoEn = lista.get(0).getPiso(); 
+        // Numero de habitacion
+        int pisoEn = lista.get(0).getHabitacion(); 
         String aux = Integer.toString(pisoEn);
-        jLabelPiso = new JLabel(aux);     
-        jLabelPiso.setBounds(227,707,300,80);
-        jLabelPiso.setForeground(Color.RED);
-        add(jLabelPiso );
+        jLabelHabi = new JLabel(aux);     
+        jLabelHabi.setBounds(227,707,300,80);
+        jLabelHabi.setForeground(Color.RED);
+        add(jLabelHabi );
         
         jLabelTipo = new JLabel(lista.get(0).getTipoHabitacion());     
         jLabelTipo.setBounds(227,732,300,80);
@@ -98,17 +99,21 @@ public class GenerarRecibo extends JFrame {
         jLabelOcu.setForeground(Color.RED);
         add(jLabelOcu);
      
+        int pisoNum = lista.get(0).getPiso(); 
+        String aux3 = Integer.toString(pisoNum);
+        
     if(lista.get(0).getPiso()>115) {
-        jLabelNum = new JLabel(piso2);     
-        jLabelNum.setBounds(340,707,300,80);
-        jLabelNum.setForeground(Color.RED);
-        add(jLabelNum);
+        
+        jLabelPiso = new JLabel(aux3);     
+        jLabelPiso.setBounds(340,707,300,80);
+        jLabelPiso.setForeground(Color.RED);
+        add(jLabelPiso);
     }
     else {
-        jLabelNum = new JLabel(piso1);     
-        jLabelNum.setBounds(340,707,300,80);
-        jLabelNum.setForeground(Color.RED);
-        add(jLabelNum);
+        jLabelPiso = new JLabel(aux3);     
+        jLabelPiso.setBounds(340,707,300,80);
+        jLabelPiso.setForeground(Color.RED);
+        add(jLabelPiso);
     }
         jLabelLimi = new JLabel(limi);     
         jLabelLimi.setBounds(350,732,300,80);
@@ -154,8 +159,8 @@ public class GenerarRecibo extends JFrame {
             jLabelPrecioG.setFont(new java.awt.Font("Lucida Fax", 1, 16));
             add(jLabelPrecioG); 
         }
-        
-            jLabelHabiG = new JLabel(habiG);     
+            // Arreglar esto aux3
+            jLabelHabiG = new JLabel(aux3);     
             jLabelHabiG.setBounds(345,450,300,80);
             jLabelHabiG.setForeground(Color.RED);
             jLabelHabiG.setFont(new java.awt.Font("Lucida Fax", 1, 16));
