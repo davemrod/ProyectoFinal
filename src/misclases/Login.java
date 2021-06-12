@@ -21,6 +21,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import org.apache.commons.codec.digest.DigestUtils;
 import java.applet.AudioClip;
+import java.awt.Color;
 import java.net.URL;
 import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
@@ -76,15 +77,24 @@ public class Login extends JFrame {
   
         // Boton Ingresar
         JButtonIngresar = new JButton("INGRESAR");//boton local
-        JButtonIngresar.setBounds(780,494, 100, 30);
+        JButtonIngresar.setBounds(790,480, 100, 30);
+        JButtonIngresar.setBackground(Color.black);
+        JButtonIngresar.setForeground(new java.awt.Color(184, 148, 79));
+        JButtonIngresar.setFocusable(false);
         
         // TextField Usuario
-        this.JTextFieldUsuario = new JTextField();
-        this.JTextFieldUsuario.setBounds(750,320,200,40);
-        //this.panelJtext.add(this.JTextFieldUsuario);
+        JTextFieldUsuario = new JTextField();
+        JTextFieldUsuario.setBounds(750,320,200,40);
+        JTextFieldUsuario.setBackground(Color.black);
+        JTextFieldUsuario.setForeground(Color.white);
+        JTextFieldUsuario.setCaretColor(Color.white);
+ 
         // Password
-        this.JPasswordFieldContra = new JPasswordField();
-        this.JPasswordFieldContra.setBounds(750,415,200,40);
+        JPasswordFieldContra = new JPasswordField();
+        JPasswordFieldContra.setBounds(750,415,200,40);
+        JPasswordFieldContra.setBackground(Color.black);
+        JPasswordFieldContra.setForeground(Color.white);
+        JPasswordFieldContra.setCaretColor(Color.white);
         
         //750,320,200,40
         //Botones de play y pausa
