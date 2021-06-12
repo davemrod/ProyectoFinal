@@ -755,7 +755,8 @@ public class Hotel extends javax.swing.JFrame {
 
     private void jButtonReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReciboActionPerformed
         // TODO add your handling code here:
-        new GenerarRecibo(lista).setVisible(true);
+        //new GenerarRecibo(lista).setVisible(true);
+        new GenerarRecibo().setVisible(true);
         
     }//GEN-LAST:event_jButtonReciboActionPerformed
 
