@@ -16,9 +16,80 @@ public class Habitaciones extends javax.swing.JFrame {
     /**
      * Creates new form Habitaciones
      */
-    public Habitaciones() {
+    String band;
+    public Habitaciones(String band) {
+        this.band = band;
         initComponents();
         this.getContentPane().setBackground(Color.black);
+        
+        if(band=="1") {
+            jRadioButton101.setEnabled(false);
+            jRadioButton102.setEnabled(false);
+            jRadioButton103.setEnabled(false);
+            jRadioButton104.setEnabled(false);
+            jRadioButton105.setEnabled(false);
+            jRadioButton106.setEnabled(false);
+            jRadioButton107.setEnabled(false);
+            jRadioButton108.setEnabled(false);
+            jRadioButton109.setEnabled(false);
+            jRadioButton110.setEnabled(false);
+            jRadioButton111.setEnabled(false);
+            jRadioButton112.setEnabled(false);
+            jRadioButton208.setEnabled(false);
+            jRadioButton209.setEnabled(false);
+            jRadioButton210.setEnabled(false);
+            jRadioButton211.setEnabled(false);
+            jRadioButton212.setEnabled(false);
+            jRadioButton213.setEnabled(false);
+            jRadioButton214.setEnabled(false);
+            jRadioButton215.setEnabled(false);
+        }
+        
+        else if(band=="2") {
+            jRadioButton101.setEnabled(false);
+            jRadioButton102.setEnabled(false);
+            jRadioButton103.setEnabled(false);
+            jRadioButton104.setEnabled(false);
+            jRadioButton105.setEnabled(false);
+            jRadioButton106.setEnabled(false);
+            jRadioButton107.setEnabled(false);
+            jRadioButton113.setEnabled(false);
+            jRadioButton114.setEnabled(false);
+            jRadioButton115.setEnabled(false);
+            jRadioButton201.setEnabled(false);
+            jRadioButton202.setEnabled(false);
+            jRadioButton203.setEnabled(false);
+            jRadioButton204.setEnabled(false);
+            jRadioButton205.setEnabled(false);
+            jRadioButton206.setEnabled(false);
+            jRadioButton207.setEnabled(false);
+            jRadioButton213.setEnabled(false);
+            jRadioButton214.setEnabled(false);
+            jRadioButton215.setEnabled(false);
+        }
+        
+        else if(band=="3") {
+            jRadioButton108.setEnabled(false);
+            jRadioButton109.setEnabled(false);
+            jRadioButton110.setEnabled(false);
+            jRadioButton111.setEnabled(false);
+            jRadioButton112.setEnabled(false);
+            jRadioButton113.setEnabled(false);
+            jRadioButton114.setEnabled(false);
+            jRadioButton115.setEnabled(false);
+            jRadioButton201.setEnabled(false);
+            jRadioButton202.setEnabled(false);
+            jRadioButton203.setEnabled(false);
+            jRadioButton204.setEnabled(false);
+            jRadioButton205.setEnabled(false);
+            jRadioButton206.setEnabled(false);
+            jRadioButton207.setEnabled(false);
+            jRadioButton208.setEnabled(false);
+            jRadioButton209.setEnabled(false);
+            jRadioButton210.setEnabled(false);
+            jRadioButton211.setEnabled(false);
+            jRadioButton212.setEnabled(false);
+        }
     }
 
     /**
@@ -424,41 +495,41 @@ public class Habitaciones extends javax.swing.JFrame {
         
         dispose();
     }//GEN-LAST:event_jButtonSeleccionarHabitacionActionPerformed
-
+    
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Habitaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Habitaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Habitaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Habitaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Habitaciones().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(Habitaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(Habitaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(Habitaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(Habitaciones.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new Habitaciones().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupPisos;
