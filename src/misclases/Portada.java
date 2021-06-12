@@ -1,6 +1,7 @@
 
 package misclases;
 
+import java.awt.Color;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,7 +18,7 @@ public class Portada extends JFrame {
     private ImageIcon imagen;
     private Icon icono;
     private JLabel label;
-    private JButton botoncito;
+    private JButton JButtonLogin;
 
     public Portada() {
 
@@ -36,11 +37,14 @@ public class Portada extends JFrame {
         super.setSize(800, 800);
         super.setLayout(null);
 
-        botoncito = new JButton("LOG IN");//boton local
-        botoncito.setBounds(650, 700, 100, 30);
-        this.add(botoncito);
+        JButtonLogin = new JButton("LOG IN");//boton local
+        JButtonLogin.setBounds(650, 700, 100, 30);
+        JButtonLogin.setBackground(Color.black);
+        JButtonLogin.setForeground(new java.awt.Color(184, 148, 79));
+        JButtonLogin.setFocusable(false);
+        this.add(JButtonLogin);
         
-        botoncito.addActionListener(new ActionListener(){
+        JButtonLogin.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
                 //Imprimimos en consola
