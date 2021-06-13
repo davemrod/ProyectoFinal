@@ -17,7 +17,7 @@ import misclases.Constructores;
 public class GenerarRecibo extends JFrame {
     private ImageIcon imagen;
     private Icon icono;
-    private JLabel label, jLabelHuesped, jLabelCiudad, jLabelFechas, jLabelFechal, jLabelHabi, jLabelTipo, jLabelOcu, jLabelPiso, jLabelLimi, jLabelTipoG, jLabelHabiG, jLabelPrecioG;
+    private JLabel label, jLabelHuesped, jLabelCiudad, jLabelFechas, jLabelFechal, jLabelHabi, jLabelTipo, jLabelOcu, jLabelPiso, jLabelLimi, jLabelExtra, jLabelTipoG, jLabelHabiG, jLabelPrecioG, jLabelTotalDes;
     private JButton JButtonIngresar;
     private JTextField JTextFieldUsuario;
     
@@ -29,9 +29,11 @@ public class GenerarRecibo extends JFrame {
     String fechal="15-05-2021";
     String tipo="Sencilla";
     String ocupa="5";
-    String piso1="1";
+    String piso1="Pu";
     String piso2="2";
-    String limi="3";
+    String limis="1 persona";
+    String limid="2 personas";
+    String limit="3 personas";
     String sencillaG = "Habitación sencilla";
     String dobleG = "Habitación doble";
     String tripleG = "Habitación triple";
@@ -80,8 +82,8 @@ public class GenerarRecibo extends JFrame {
         add(jLabelFechas);
         
         // Numero de habitacion
-        int pisoEn = lista.get(0).getHabitacion(); 
-        String aux = Integer.toString(pisoEn);
+        int piso = lista.get(0).getHabitacion(); 
+        String aux = Integer.toString(piso);
         jLabelHabi = new JLabel(aux);     
         jLabelHabi.setBounds(227,707,300,80);
         jLabelHabi.setForeground(Color.RED);
@@ -99,26 +101,22 @@ public class GenerarRecibo extends JFrame {
         jLabelOcu.setForeground(Color.RED);
         add(jLabelOcu);
      
-        int pisoNum = lista.get(0).getPiso(); 
-        String aux3 = Integer.toString(pisoNum);
+        //int pisoNum = lista.get(0).getPiso(); 
+        //String aux3 = Integer.toString(pisoNum);
         
-    if(lista.get(0).getPiso()>115) {
+    if(lista.get(0).getPiso()==1) {
         
-        jLabelPiso = new JLabel(aux3);     
+        jLabelPiso = new JLabel(piso1);     
         jLabelPiso.setBounds(340,707,300,80);
         jLabelPiso.setForeground(Color.RED);
         add(jLabelPiso);
     }
-    else {
-        jLabelPiso = new JLabel(aux3);     
+    else{
+        jLabelPiso = new JLabel(piso2);     
         jLabelPiso.setBounds(340,707,300,80);
         jLabelPiso.setForeground(Color.RED);
         add(jLabelPiso);
     }
-        jLabelLimi = new JLabel(limi);     
-        jLabelLimi.setBounds(350,732,300,80);
-        jLabelLimi.setForeground(Color.RED);
-        add(jLabelLimi);
         
         if(lista.get(0).getTipoHabitacion()=="Sencilla") {
             jLabelTipoG = new JLabel(sencillaG);     
@@ -131,7 +129,20 @@ public class GenerarRecibo extends JFrame {
             jLabelPrecioG.setBounds(440,450,300,80);
             jLabelPrecioG.setForeground(Color.RED);
             jLabelPrecioG.setFont(new java.awt.Font("Lucida Fax", 1, 16));
-            add(jLabelPrecioG);  
+            add(jLabelPrecioG);
+            
+            jLabelLimi = new JLabel(limis);     
+            jLabelLimi.setBounds(350,732,300,80);
+            jLabelLimi.setForeground(Color.RED);
+            add(jLabelLimi);
+         
+            if(lista.get(0).getTotalPersonas()==2)
+                jLabelExtra = new JLabel(limis);
+            else if(lista.get(0).getTotalPersonas()==3)
+                jLabelExtra = new JLabel(limid); 
+            jLabelExtra.setBounds(355,752,300,80);
+            jLabelExtra.setForeground(Color.RED);
+            add(jLabelExtra); 
         }
         else if(lista.get(0).getTipoHabitacion()=="Doble") {
             jLabelTipoG = new JLabel(dobleG);     
@@ -144,7 +155,20 @@ public class GenerarRecibo extends JFrame {
             jLabelPrecioG.setBounds(440,450,300,80);
             jLabelPrecioG.setForeground(Color.RED);
             jLabelPrecioG.setFont(new java.awt.Font("Lucida Fax", 1, 16));
-            add(jLabelPrecioG);  
+            add(jLabelPrecioG);
+            
+            jLabelLimi = new JLabel(limid);     
+            jLabelLimi.setBounds(350,732,300,80);
+            jLabelLimi.setForeground(Color.RED);
+            add(jLabelLimi);
+            
+            if(lista.get(0).getTotalPersonas()==3)
+                jLabelExtra = new JLabel(limis);
+            else if(lista.get(0).getTotalPersonas()==4)
+                jLabelExtra = new JLabel(limid); 
+            jLabelExtra.setBounds(355,752,300,80);
+            jLabelExtra.setForeground(Color.RED);
+            add(jLabelExtra); 
         }
         else if(lista.get(0).getTipoHabitacion()=="Triple") {
             jLabelTipoG = new JLabel(tripleG);     
@@ -157,18 +181,37 @@ public class GenerarRecibo extends JFrame {
             jLabelPrecioG.setBounds(440,450,300,80);
             jLabelPrecioG.setForeground(Color.RED);
             jLabelPrecioG.setFont(new java.awt.Font("Lucida Fax", 1, 16));
-            add(jLabelPrecioG); 
+            add(jLabelPrecioG);
+            
+            jLabelLimi = new JLabel(limit);     
+            jLabelLimi.setBounds(350,732,300,80);
+            jLabelLimi.setForeground(Color.RED);
+            add(jLabelLimi);
+            
+            if(lista.get(0).getTotalPersonas()==4)
+                jLabelExtra = new JLabel(limis);
+            else if(lista.get(0).getTotalPersonas()==5)
+                jLabelExtra = new JLabel(limid); 
+            jLabelExtra.setBounds(355,752,300,80);
+            jLabelExtra.setForeground(Color.RED);
+            add(jLabelExtra); 
         }
-            // Arreglar esto aux3
-            jLabelHabiG = new JLabel(aux3);     
+            // aux = numero de habitacion
+            jLabelHabiG = new JLabel(aux);     
             jLabelHabiG.setBounds(345,450,300,80);
             jLabelHabiG.setForeground(Color.RED);
             jLabelHabiG.setFont(new java.awt.Font("Lucida Fax", 1, 16));
             add(jLabelHabiG);
             
+            int costo = lista.get(0).getTotalsinCargos(); 
+            String total = Integer.toString(costo);
             
-        
-        
+            jLabelTotalDes = new JLabel(total+"€");     
+            jLabelTotalDes.setBounds(560,450,300,80);
+            jLabelTotalDes.setForeground(Color.RED);
+            jLabelTotalDes.setFont(new java.awt.Font("Lucida Fax", 1, 16));
+            add(jLabelTotalDes);
+            
          // Boton Ingresar
         //JButtonIngresar = new JButton("INGRESAR");//boton local
         //JButtonIngresar.setBounds(780,494, 100, 30);
