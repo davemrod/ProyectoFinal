@@ -29,11 +29,12 @@ public class Hotel extends javax.swing.JFrame {
      */
     private MySqlConn conn;
     ArrayList <Constructores> lista = new ArrayList();
+    String diaMos;
     
     public Hotel() {
         
         //simmmm
-
+        
         this.conn = new MySqlConn();
         initComponents();
         this.setLocationRelativeTo(null);
@@ -85,10 +86,20 @@ public class Hotel extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jLabelMostrarCargosExtras = new javax.swing.JLabel();
         jLabelMostrarTotalPago = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        jLabelMostrarDiaSalida = new javax.swing.JLabel();
+        jCheckBoxBar = new javax.swing.JCheckBox();
+        jCheckBoxRestaurante = new javax.swing.JCheckBox();
+        jCheckBoxSpa = new javax.swing.JCheckBox();
+        jCheckBoxPlaya = new javax.swing.JCheckBox();
+        jCheckBoxServicio = new javax.swing.JCheckBox();
+        jCheckBoxGimnasio = new javax.swing.JCheckBox();
+        jCheckBoxEntretenimiento = new javax.swing.JCheckBox();
+        jCheckBoxMascotas = new javax.swing.JCheckBox();
+        jCheckBoxSauna = new javax.swing.JCheckBox();
+        jCheckBoxLavanderia = new javax.swing.JCheckBox();
+        jTextFieldIngresarHabitacion = new javax.swing.JTextField();
+        jButtonBuscarHab = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jButtonGaleria = new javax.swing.JButton();
         jButtonHabitacionesDisponibles = new javax.swing.JButton();
@@ -270,8 +281,18 @@ public class Hotel extends javax.swing.JFrame {
         });
 
         jComboBoxNumDoble.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "108", "109", "110", "111", "112", "208", "209", "210", "211", "212" }));
+        jComboBoxNumDoble.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxNumDobleActionPerformed(evt);
+            }
+        });
 
         jComboBoxNumTriple.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "101", "102", "103", "104", "105", "106", "107", "213", "214", "215" }));
+        jComboBoxNumTriple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxNumTripleActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -396,9 +417,9 @@ public class Hotel extends javax.swing.JFrame {
                                     .addComponent(jLabel5)
                                     .addComponent(jTextFieldDiasHospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(40, 40, 40)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabelSalida))
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelSalida)
+                                    .addComponent(jLabel13))
                                 .addGap(51, 51, 51)))
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -442,54 +463,111 @@ public class Hotel extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Lucida Fax", 1, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(157, 139, 5));
-        jLabel11.setText("Cargos extras:");
-
-        jLabelMostrarCargosExtras.setBackground(new java.awt.Color(21, 19, 19));
-        jLabelMostrarCargosExtras.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabelMostrarCargosExtras.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jLabel11.setText("Cargos extras por día:");
 
         jLabelMostrarTotalPago.setBackground(new java.awt.Color(21, 19, 19));
         jLabelMostrarTotalPago.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
         jLabelMostrarTotalPago.setForeground(new java.awt.Color(255, 255, 255));
         jLabelMostrarTotalPago.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jLabel14.setBackground(new java.awt.Color(21, 19, 19));
-        jLabel14.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jLabelMostrarDiaSalida.setBackground(new java.awt.Color(21, 19, 19));
+        jLabelMostrarDiaSalida.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jLabelMostrarDiaSalida.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelMostrarDiaSalida.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jLabel15.setBackground(new java.awt.Color(21, 19, 19));
-        jLabel15.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jCheckBoxBar.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxBar.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxBar.setText("Bar 20€");
+        jCheckBoxBar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxBarActionPerformed(evt);
+            }
+        });
+
+        jCheckBoxRestaurante.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxRestaurante.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxRestaurante.setText("Restaurante 30€ ");
+
+        jCheckBoxSpa.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxSpa.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxSpa.setText("Spa 40€ ");
+
+        jCheckBoxPlaya.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxPlaya.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxPlaya.setText("Atracciones de playa 80€ ");
+
+        jCheckBoxServicio.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxServicio.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxServicio.setText("Servicio a habitación 50€ ");
+
+        jCheckBoxGimnasio.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxGimnasio.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxGimnasio.setText("Gimnasio 30€ ");
+
+        jCheckBoxEntretenimiento.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxEntretenimiento.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxEntretenimiento.setText("Entretenimiento nocturno 100€ ");
+
+        jCheckBoxMascotas.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxMascotas.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxMascotas.setText("Cuidado de mascotas 20€ ");
+
+        jCheckBoxSauna.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxSauna.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxSauna.setText("Sauna 40€ ");
+
+        jCheckBoxLavanderia.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxLavanderia.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxLavanderia.setText("Lavandaria 35€ ");
+
+        jTextFieldIngresarHabitacion.setBackground(new java.awt.Color(0, 0, 0));
+        jTextFieldIngresarHabitacion.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldIngresarHabitacion.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+
+        jButtonBuscarHab.setText("Buscar");
+        jButtonBuscarHab.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarHabActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE))
+                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
+                        .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelMostrarCargosExtras, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelMostrarDiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel15))
-                .addContainerGap(343, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(431, 431, 431))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBoxBar)
+                            .addComponent(jCheckBoxSpa)
+                            .addComponent(jCheckBoxServicio)
+                            .addComponent(jCheckBoxRestaurante)
+                            .addComponent(jCheckBoxGimnasio))
+                        .addGap(46, 46, 46)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jCheckBoxLavanderia)
+                            .addComponent(jCheckBoxSauna)
+                            .addComponent(jCheckBoxMascotas)
+                            .addComponent(jCheckBoxPlaya)
+                            .addComponent(jCheckBoxEntretenimiento)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jTextFieldIngresarHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(52, 52, 52)
+                        .addComponent(jButtonBuscarHab, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(380, 380, 380))
         );
-
-        jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabel14, jLabel15, jLabelMostrarCargosExtras, jLabelMostrarTotalPago});
-
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
@@ -498,23 +576,41 @@ public class Hotel extends javax.swing.JFrame {
                 .addGap(61, 61, 61)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(jLabel14))
-                .addGap(53, 53, 53)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel15))
-                .addGap(55, 55, 55)
+                    .addComponent(jTextFieldIngresarHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonBuscarHab))
+                .addGap(37, 37, 37)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelMostrarDiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel10))
+                .addGap(71, 71, 71)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(jLabelMostrarCargosExtras, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                    .addComponent(jCheckBoxBar)
+                    .addComponent(jCheckBoxPlaya))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxSpa)
+                    .addComponent(jCheckBoxEntretenimiento))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxServicio)
+                    .addComponent(jCheckBoxMascotas))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxRestaurante)
+                    .addComponent(jCheckBoxSauna))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBoxGimnasio)
+                    .addComponent(jCheckBoxLavanderia))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(jLabelMostrarTotalPago))
                 .addGap(142, 142, 142))
         );
 
-        jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel14, jLabel15, jLabelMostrarCargosExtras, jLabelMostrarTotalPago});
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelMostrarDiaSalida, jLabelMostrarTotalPago});
 
         jTabbedPane1.addTab("Salida", jPanel3);
 
@@ -744,46 +840,37 @@ public class Hotel extends javax.swing.JFrame {
         int aux5;
         aux4 = (String) this.jComboBoxNumSencilla.getSelectedItem();
         aux5 = Integer.parseInt (aux4);
-        if(aux5>=113 && aux5<=115) {
+        if(aux5>=113 && aux5<=115 && this.jRadioButtonSencilla.isSelected())
             piso=1;
-            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 1");
-            }
-        else {
+        else //if(aux5>=113 && aux5<=115)
             piso=2;
-            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 2");
-            }
+        
         String aux6;
         int aux7;
         aux6 = (String) this.jComboBoxNumDoble.getSelectedItem();
         aux7 = Integer.parseInt (aux6);
-        if(aux7>=108 && aux7<=112) {
+        if(aux7>=108 && aux7<=112  && this.jRadioButtonDoble.isSelected())
             piso=1;
-            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 1");
-            }
-        else {
+        else
             piso=2;
-            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 2");
-            }
         
         String aux8;
         int aux9;
         aux8 = (String) this.jComboBoxNumTriple.getSelectedItem();
         aux9 = Integer.parseInt (aux8);
-        if(aux9>=101 && aux9<=107) {
+        if(aux9>=101 && aux9<=107  && this.jRadioButtonTriple.isSelected())
             piso=1;
-            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 1");
-            }
-        else {
+        else
             piso=2;
-            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 2");
-            }
         
         System.out.println(tipoHabitacion + "\n");
         System.out.println(totalPersonas + "\n");
 
         // Obtener fecha
         diasHospedaje = this.jTextFieldDiasHospedaje.getText().trim();
-
+        this.diaMos = diasHospedaje;
+        
+        
         int dia2 = Integer.valueOf(diasHospedaje);
         int d = this.jDateChooserIngresar.getCalendar().get(Calendar.DAY_OF_MONTH);
         int m = this.jDateChooserIngresar.getCalendar().get(Calendar.MONTH);
@@ -807,7 +894,7 @@ public class Hotel extends javax.swing.JFrame {
         String diaSalida2 = diaSalida.format(calendario.getTime());
         
         totalconCargos = 2;
-        totalsinCargos = parcial;
+        totalsinCargos = dia2*parcial;
      
         String parte1 = "Insert into huespedes (nombre, ciudad, fechaingreso, fechasalida, numhabitacion, piso, tipohabitacion, ocupantes, totalsincargos, totalconcargos) VALUES (";
         String parte2 = "'" + huesped + "','" + ciudad + "','" + diaLlegada + "','" + diaSalida2+ "','" + habitacion + "', '" + piso + "', '" + tipoHabitacion + "', '" + totalPersonas + "','" + totalsinCargos + "', '" + totalconCargos + "')";
@@ -831,35 +918,34 @@ public class Hotel extends javax.swing.JFrame {
     private void jRadioButtonTripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonTripleActionPerformed
         // TODO add your handling code here:
         
-        String band;
         this.jComboBoxSencilla.setEnabled(false);
         this.jComboBoxDoble.setEnabled(false);
         this.jComboBoxTriple.setEnabled(true);
-        band="3";
-        new Habitaciones(band).setVisible(true);
+        this.jComboBoxNumTriple.setEnabled(true);
+        this.jComboBoxNumDoble.setEnabled(false);
+        this.jComboBoxNumSencilla.setEnabled(false);
     }//GEN-LAST:event_jRadioButtonTripleActionPerformed
 
     private void jRadioButtonDobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonDobleActionPerformed
         // TODO add your handling code here:
-        
-        String band;
+
         this.jComboBoxSencilla.setEnabled(false);
         this.jComboBoxDoble.setEnabled(true);
         this.jComboBoxTriple.setEnabled(false);
-        band="2";
-        new Habitaciones(band).setVisible(true);
+        this.jComboBoxNumTriple.setEnabled(false);
+        this.jComboBoxNumDoble.setEnabled(true);
+        this.jComboBoxNumSencilla.setEnabled(false);
     }//GEN-LAST:event_jRadioButtonDobleActionPerformed
 
     private void jRadioButtonSencillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButtonSencillaActionPerformed
         // TODO add your handling code here:
         
-        
-        String band;
         this.jComboBoxSencilla.setEnabled(true);
         this.jComboBoxDoble.setEnabled(false);
         this.jComboBoxTriple.setEnabled(false);
-        band="1";
-        new Habitaciones(band).setVisible(true);
+        this.jComboBoxNumTriple.setEnabled(false);
+        this.jComboBoxNumDoble.setEnabled(false);
+        this.jComboBoxNumSencilla.setEnabled(true);
     }//GEN-LAST:event_jRadioButtonSencillaActionPerformed
 
     private void jButtonElegirHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonElegirHabitacionActionPerformed
@@ -898,9 +984,68 @@ public class Hotel extends javax.swing.JFrame {
 
     private void jComboBoxNumSencillaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxNumSencillaActionPerformed
         // TODO add your handling code here:
-       
-      
+        String aux4;
+        int aux5;
+        aux4 = (String) this.jComboBoxNumSencilla.getSelectedItem();
+        aux5 = Integer.parseInt (aux4);
+        if(aux5>=113 && aux5<=115)
+            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 1");           
+        else
+            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 2");
+
     }//GEN-LAST:event_jComboBoxNumSencillaActionPerformed
+
+    private void jComboBoxNumDobleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxNumDobleActionPerformed
+        // TODO add your handling code here:
+        
+        String aux6;
+        int aux7;
+        aux6 = (String) this.jComboBoxNumDoble.getSelectedItem();
+        aux7 = Integer.parseInt (aux6);
+        if(aux7>=108 && aux7<=112)
+            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 1");
+        else
+            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 2");
+            
+    }//GEN-LAST:event_jComboBoxNumDobleActionPerformed
+
+    private void jComboBoxNumTripleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxNumTripleActionPerformed
+        // TODO add your handling code here:
+        
+          String aux8;
+        int aux9;
+        aux8 = (String) this.jComboBoxNumTriple.getSelectedItem();
+        aux9 = Integer.parseInt (aux8);
+        if(aux9>=101 && aux9<=107)
+            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 1");      
+        else
+            JOptionPane.showMessageDialog(null, "La habitación que seleccionó\nesta en el piso 2");
+            
+    }//GEN-LAST:event_jComboBoxNumTripleActionPerformed
+
+    private void jCheckBoxBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxBarActionPerformed
+
+    private void jButtonBuscarHabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHabActionPerformed
+        // TODO add your handling code here:
+            
+        String habiSalir;
+        habiSalir = this.jTextFieldIngresarHabitacion.getText().trim();
+        int habiChecar = Integer.parseInt(habiSalir);
+        
+        for(int i=0; i<lista.size(); i++) {
+            if(lista.get(i).getHabitacion()==habiChecar) {
+                JOptionPane.showMessageDialog(null, "Habitación encontrada");
+                jLabelMostrarDiaSalida.setText(diaMos);
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "Habitación NO encontrada");
+            }
+        
+        }
+        
+    }//GEN-LAST:event_jButtonBuscarHabActionPerformed
 
     /**
      * @param args the command line arguments
@@ -943,6 +1088,7 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonBuscarHab;
     private javax.swing.JButton jButtonElegirHabitacion;
     private javax.swing.JButton jButtonEstatusHabitacion;
     private javax.swing.JButton jButtonGaleria;
@@ -953,6 +1099,16 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JButton jButtonPorcentajeOcupacionActual;
     private javax.swing.JButton jButtonRecibo;
     private javax.swing.JButton jButtonRegistrar;
+    private javax.swing.JCheckBox jCheckBoxBar;
+    private javax.swing.JCheckBox jCheckBoxEntretenimiento;
+    private javax.swing.JCheckBox jCheckBoxGimnasio;
+    private javax.swing.JCheckBox jCheckBoxLavanderia;
+    private javax.swing.JCheckBox jCheckBoxMascotas;
+    private javax.swing.JCheckBox jCheckBoxPlaya;
+    private javax.swing.JCheckBox jCheckBoxRestaurante;
+    private javax.swing.JCheckBox jCheckBoxSauna;
+    private javax.swing.JCheckBox jCheckBoxServicio;
+    private javax.swing.JCheckBox jCheckBoxSpa;
     private javax.swing.JComboBox<String> jComboBoxDoble;
     private javax.swing.JComboBox<String> jComboBoxNumDoble;
     private javax.swing.JComboBox<String> jComboBoxNumSencilla;
@@ -965,8 +1121,6 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -977,7 +1131,7 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelFechaSalida;
-    private javax.swing.JLabel jLabelMostrarCargosExtras;
+    private javax.swing.JLabel jLabelMostrarDiaSalida;
     private javax.swing.JLabel jLabelMostrarTotalPago;
     private javax.swing.JLabel jLabelSalida;
     private javax.swing.JPanel jPanel2;
@@ -991,6 +1145,7 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextFieldCiudadOrigen;
     private javax.swing.JTextField jTextFieldDiasHospedaje;
+    private javax.swing.JTextField jTextFieldIngresarHabitacion;
     private javax.swing.JTextField jTextFieldNombreHuesped;
     // End of variables declaration//GEN-END:variables
 }
