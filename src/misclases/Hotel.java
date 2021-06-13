@@ -510,7 +510,7 @@ public class Hotel extends javax.swing.JFrame {
 
         jCheckBoxMascotas.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBoxMascotas.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxMascotas.setText("Cuidado de mascotas 20€ ");
+        jCheckBoxMascotas.setText("Buseo 20€ ");
 
         jCheckBoxSauna.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBoxSauna.setForeground(new java.awt.Color(255, 255, 255));
@@ -518,7 +518,7 @@ public class Hotel extends javax.swing.JFrame {
 
         jCheckBoxLavanderia.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBoxLavanderia.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxLavanderia.setText("Lavandaria 35€ ");
+        jCheckBoxLavanderia.setText("Area de niños 35€ ");
 
         jTextFieldIngresarHabitacion.setBackground(new java.awt.Color(0, 0, 0));
         jTextFieldIngresarHabitacion.setForeground(new java.awt.Color(255, 255, 255));
@@ -543,7 +543,7 @@ public class Hotel extends javax.swing.JFrame {
                         .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
                         .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelMostrarDiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)

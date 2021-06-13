@@ -772,7 +772,7 @@
                               </Group>
                               <Component id="jLabel9" min="-2" pref="237" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="26" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabelMostrarDiaSalida" alignment="0" min="-2" pref="171" max="-2" attributes="0"/>
                               <Component id="jLabelMostrarTotalPago" min="-2" pref="229" max="-2" attributes="0"/>
@@ -1040,7 +1040,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Cuidado de mascotas 20&#x20ac; "/>
+                    <Property name="text" type="java.lang.String" value="Buseo 20&#x20ac; "/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JCheckBox" name="jCheckBoxSauna">
@@ -1062,7 +1062,7 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Lavandaria 35&#x20ac; "/>
+                    <Property name="text" type="java.lang.String" value="Area de ni&#xf1;os 35&#x20ac; "/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="jTextFieldIngresarHabitacion">
