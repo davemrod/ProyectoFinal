@@ -23,6 +23,7 @@ public class Galeria extends javax.swing.JFrame {
     
     public Galeria() {
         initComponents();
+        this.setLocationRelativeTo(this);
         for (int i = 1; i < 37; i++) {
             Imagen[i]=new ImageIcon(getClass().getResource("/imagenesgaleria/"+i+".jpg"));
         }
