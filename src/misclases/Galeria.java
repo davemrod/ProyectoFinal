@@ -9,13 +9,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import javax.swing.Timer;
+import java.applet.AudioClip;
 
 public class Galeria extends javax.swing.JFrame {
 
+    AudioClip song;
      //colocacion de la cantidad de imagenes
     ImageIcon Imagen[]=new ImageIcon[37];
     // contador
     int contador=1;
+    
     
     
     public Galeria() {
@@ -40,8 +43,8 @@ public class Galeria extends javax.swing.JFrame {
         jButtonIzq = new javax.swing.JButton();
         jButtonPresentacion = new javax.swing.JButton();
         jButtonDere = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonPlay = new javax.swing.JButton();
+        jButtonStop = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,6 +53,9 @@ public class Galeria extends javax.swing.JFrame {
 
         visor1.setBorder(javax.swing.BorderFactory.createMatteBorder(10, 10, 10, 10, new java.awt.Color(157, 139, 5)));
 
+        jButtonIzq.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonIzq.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jButtonIzq.setForeground(new java.awt.Color(157, 139, 5));
         jButtonIzq.setText("Izquierda");
         jButtonIzq.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +63,9 @@ public class Galeria extends javax.swing.JFrame {
             }
         });
 
+        jButtonPresentacion.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonPresentacion.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jButtonPresentacion.setForeground(new java.awt.Color(157, 139, 5));
         jButtonPresentacion.setText("Presentacion Automatica");
         jButtonPresentacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -64,6 +73,9 @@ public class Galeria extends javax.swing.JFrame {
             }
         });
 
+        jButtonDere.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonDere.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jButtonDere.setForeground(new java.awt.Color(157, 139, 5));
         jButtonDere.setText("Derecha");
         jButtonDere.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,16 +83,25 @@ public class Galeria extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Lucida Fax", 0, 10)); // NOI18N
-        jButton1.setText("PLAY");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonPlay.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonPlay.setFont(new java.awt.Font("Lucida Fax", 0, 10)); // NOI18N
+        jButtonPlay.setForeground(new java.awt.Color(157, 139, 5));
+        jButtonPlay.setText("PLAY");
+        jButtonPlay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonPlayActionPerformed(evt);
             }
         });
 
-        jButton2.setFont(new java.awt.Font("Lucida Fax", 0, 10)); // NOI18N
-        jButton2.setText("STOP");
+        jButtonStop.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonStop.setFont(new java.awt.Font("Lucida Fax", 0, 10)); // NOI18N
+        jButtonStop.setForeground(new java.awt.Color(157, 139, 5));
+        jButtonStop.setText("STOP");
+        jButtonStop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonStopActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Lucida Fax", 0, 10)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(157, 139, 5));
@@ -102,9 +123,9 @@ public class Galeria extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(jButtonPlay)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton2))
+                                .addComponent(jButtonStop))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(48, 48, 48))))
@@ -131,8 +152,8 @@ public class Galeria extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2))
+                            .addComponent(jButtonPlay)
+                            .addComponent(jButtonStop))
                         .addGap(16, 16, 16))))
         );
 
@@ -183,10 +204,16 @@ public class Galeria extends javax.swing.JFrame {
         timer.start();
     }//GEN-LAST:event_jButtonPresentacionActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlayActionPerformed
         // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
+        song=java.applet.Applet.newAudioClip(getClass().getResource("/misclases/rolita2.wav"));
+        song.play();
+    }//GEN-LAST:event_jButtonPlayActionPerformed
+
+    private void jButtonStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStopActionPerformed
+        // TODO add your handling code here:
+        song.stop();
+    }//GEN-LAST:event_jButtonStopActionPerformed
 
     /**
      * @param args the command line arguments
@@ -224,11 +251,11 @@ public class Galeria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonDere;
     private javax.swing.JButton jButtonIzq;
+    private javax.swing.JButton jButtonPlay;
     private javax.swing.JButton jButtonPresentacion;
+    private javax.swing.JButton jButtonStop;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel visor1;
