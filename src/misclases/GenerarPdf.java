@@ -24,7 +24,7 @@ public class GenerarPdf extends JFrame {
 //        
 //        nomhuesped="Maria Alejandra";
 //        ciudad="Aguascalientes";
-        
+        //cambio
         crearPDF(); 
     }
     
