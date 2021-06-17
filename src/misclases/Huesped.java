@@ -54,13 +54,10 @@ public class Huesped extends javax.swing.JFrame {
 
         jTableHuesped.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+
             }
         ));
         jScrollPane1.setViewportView(jTableHuesped);
@@ -86,9 +83,9 @@ public class Huesped extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextFieldBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(38, 38, 38)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(307, Short.MAX_VALUE))
+                .addContainerGap(117, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -99,7 +96,7 @@ public class Huesped extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -125,15 +122,15 @@ public class Huesped extends javax.swing.JFrame {
             for(int i=0; i<n; i++) { //n total de registros
                 try {
                     datos[i][0] = this.conn.rs.getString(1);
-                    datos[i][1] = this.conn.rs.getString(2);
-                    datos[i][2] = this.conn.rs.getString(3);
-                    datos[i][3] = this.conn.rs.getString(4);
-                    datos[i][4] = this.conn.rs.getInt(5);
-                    datos[i][5] = this.conn.rs.getInt(6);
-                    datos[i][6] = this.conn.rs.getString(7);
-                    datos[i][7] = this.conn.rs.getInt(8);
-                    datos[i][8] = this.conn.rs.getInt(9);
-                    datos[i][9] = this.conn.rs.getInt(10);
+                    //datos[i][1] = this.conn.rs.getString(2);
+                    //datos[i][2] = this.conn.rs.getString(3);
+                    //datos[i][3] = this.conn.rs.getString(4);
+                    datos[i][1] = this.conn.rs.getInt(5);
+                    datos[i][2] = this.conn.rs.getInt(6);
+                    //datos[i][6] = this.conn.rs.getString(7);
+                    //datos[i][7] = this.conn.rs.getInt(8);
+                    //datos[i][8] = this.conn.rs.getInt(9);
+                    //datos[i][9] = this.conn.rs.getInt(10);
                     //String medico = this.conn.rs.getString(4); //no se usa
                     
                     this.conn.rs.next(); // avanzamos un registro
