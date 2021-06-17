@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -95,9 +96,9 @@ public class Hotel extends javax.swing.JFrame {
         jCheckBoxServicio = new javax.swing.JCheckBox();
         jCheckBoxGimnasio = new javax.swing.JCheckBox();
         jCheckBoxEntretenimiento = new javax.swing.JCheckBox();
-        jCheckBoxMascotas = new javax.swing.JCheckBox();
+        jCheckBoxBuseo = new javax.swing.JCheckBox();
         jCheckBoxSauna = new javax.swing.JCheckBox();
-        jCheckBoxLavanderia = new javax.swing.JCheckBox();
+        jCheckBoxAreaNinos = new javax.swing.JCheckBox();
         jTextFieldIngresarHabitacion = new javax.swing.JTextField();
         jButtonBuscarHab = new javax.swing.JButton();
         jButtonRegistroSalida = new javax.swing.JButton();
@@ -517,20 +518,20 @@ public class Hotel extends javax.swing.JFrame {
         jCheckBoxEntretenimiento.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxEntretenimiento.setText("Entretenimiento nocturno 100€ ");
 
-        jCheckBoxMascotas.setBackground(new java.awt.Color(0, 0, 0));
-        jCheckBoxMascotas.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jCheckBoxMascotas.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxMascotas.setText("Buseo 20€ ");
+        jCheckBoxBuseo.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxBuseo.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jCheckBoxBuseo.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxBuseo.setText("Buseo 20€ ");
 
         jCheckBoxSauna.setBackground(new java.awt.Color(0, 0, 0));
         jCheckBoxSauna.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxSauna.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxSauna.setText("Sauna 40€ ");
 
-        jCheckBoxLavanderia.setBackground(new java.awt.Color(0, 0, 0));
-        jCheckBoxLavanderia.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
-        jCheckBoxLavanderia.setForeground(new java.awt.Color(255, 255, 255));
-        jCheckBoxLavanderia.setText("Area de niños 35€ ");
+        jCheckBoxAreaNinos.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxAreaNinos.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jCheckBoxAreaNinos.setForeground(new java.awt.Color(255, 255, 255));
+        jCheckBoxAreaNinos.setText("Area de niños 35€ ");
 
         jTextFieldIngresarHabitacion.setBackground(new java.awt.Color(0, 0, 0));
         jTextFieldIngresarHabitacion.setForeground(new java.awt.Color(255, 255, 255));
@@ -594,9 +595,9 @@ public class Hotel extends javax.swing.JFrame {
                             .addComponent(jCheckBoxGimnasio))
                         .addGap(46, 46, 46)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBoxLavanderia)
+                            .addComponent(jCheckBoxAreaNinos)
                             .addComponent(jCheckBoxSauna)
-                            .addComponent(jCheckBoxMascotas)
+                            .addComponent(jCheckBoxBuseo)
                             .addComponent(jCheckBoxPlaya)
                             .addComponent(jCheckBoxEntretenimiento)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -643,7 +644,7 @@ public class Hotel extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBoxServicio)
-                    .addComponent(jCheckBoxMascotas))
+                    .addComponent(jCheckBoxBuseo))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBoxRestaurante)
@@ -651,7 +652,7 @@ public class Hotel extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBoxGimnasio)
-                    .addComponent(jCheckBoxLavanderia))
+                    .addComponent(jCheckBoxAreaNinos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -729,6 +730,11 @@ public class Hotel extends javax.swing.JFrame {
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Buscar huesped");
         jButton3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setBackground(new java.awt.Color(21, 19, 19));
         jButton4.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -762,7 +768,7 @@ public class Hotel extends javax.swing.JFrame {
                             .addComponent(jButtonListaHuespedes)
                             .addGap(73, 73, 73)
                             .addComponent(jButtonIngresos))))
-                .addGap(63, 67, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton2, jButton3, jButton4, jButtonEstatusHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresos, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual});
@@ -1083,21 +1089,51 @@ public class Hotel extends javax.swing.JFrame {
     private void jButtonBuscarHabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHabActionPerformed
         // TODO add your handling code here:
             
-        String habiSalir;
-        habiSalir = this.jTextFieldIngresarHabitacion.getText().trim();
-        int habiChecar = Integer.parseInt(habiSalir);
-        
-        for(int i=0; i<lista.size(); i++) {
-            if(lista.get(i).getHabitacion()==habiChecar) {
-                JOptionPane.showMessageDialog(null, "Habitación encontrada");
-                jLabelMostrarDiaSalida.setText(diaMos);
-            }
-            else {
-                JOptionPane.showMessageDialog(null, "Habitación NO encontrada");
-            }
-        
+        String query = "select * from huespedes where numhabitacion = "+"'"+this.jTextFieldIngresarHabitacion.getText().trim() + "'";
+        this.conn.Consult(query);
+        int n = 0;
+        try {
+            this.conn.rs.last(); //se posiciona en el ultimo registro de la tabla
+            n = this.conn.rs.getRow(); //regresa el numero actual del registro
+            this.conn.rs.first();
         }
-        
+        catch (Exception e) {
+            System.out.println("Error#1 ...");
+        }
+        if (n !=0 ) {
+            System.out.println("n "+n);
+            Object datos[][] = new Object[n][9];
+            for(int i=0; i<n; i++) { //n total de registros
+                try {
+                    datos[i][0] = this.conn.rs.getString(1);
+                    datos[i][1] = this.conn.rs.getString(2);
+                    datos[i][2] = this.conn.rs.getString(3);
+                    datos[i][3] = this.conn.rs.getString(4);
+                    datos[i][4] = this.conn.rs.getInt(5);
+                    datos[i][5] = this.conn.rs.getInt(6);
+                    datos[i][6] = this.conn.rs.getString(7);
+                    datos[i][7] = this.conn.rs.getInt(8);
+                    datos[i][8] = this.conn.rs.getInt(9);
+                    datos[i][9] = this.conn.rs.getInt(10);
+                    //String medico = this.conn.rs.getString(4); //no se usa
+                    
+                    this.conn.rs.next(); // avanzamos un registro
+                }
+                catch (Exception e) {
+                    System.out.println("Error#2 ..."+e.getMessage());
+                }
+                //String aux = datos[i][3];
+                //this.jLabelMostrarDiaSalida.setText(aux);
+            }//fin for
+            //String columnas[] = {"Habitacion", "Paciente", "Diagnostico"};
+            //jTableConsulta2.setModel(new DefaultTableModel(datos, columnas));
+            String salida = String.valueOf(datos[0][3]);
+            this.jLabelMostrarDiaSalida.setText(salida);
+                    
+        } // fin if
+        else {
+            JOptionPane.showMessageDialog(this, "No hay datos ...");
+        }
     }//GEN-LAST:event_jButtonBuscarHabActionPerformed
 
     private void jButtonGaleriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGaleriaActionPerformed
@@ -1110,12 +1146,89 @@ public class Hotel extends javax.swing.JFrame {
     private void jButtonRegistroSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistroSalidaActionPerformed
         // TODO add your handling code here:
         
+               int cuentaTotal=0;
+        if( this.jCheckBoxBar.isSelected() )
+            cuentaTotal+=20;
+        if(this.jCheckBoxEntretenimiento.isSelected() )
+            cuentaTotal+=100;
+        if( this.jCheckBoxSpa.isSelected() )
+            cuentaTotal+=40;
+        if( this.jCheckBoxPlaya.isSelected() )
+            cuentaTotal+=80;
+        if( this.jCheckBoxServicio.isSelected() )
+            cuentaTotal+=50;
+        if( this.jCheckBoxBuseo.isSelected() )
+            cuentaTotal+=20;
+        if( this.jCheckBoxRestaurante.isSelected() )
+            cuentaTotal+=30;
+        if( this.jCheckBoxSauna.isSelected() )
+            cuentaTotal+=40;
+        if( this.jCheckBoxGimnasio.isSelected() )
+            cuentaTotal+=30;
+        if( this.jCheckBoxAreaNinos.isSelected() )
+            cuentaTotal+=35;
+        
+        String query = "select * from huespedes where numhabitacion = "+"'"+this.jTextFieldIngresarHabitacion.getText().trim() + "'";
+        this.conn.Consult(query);
+        int n = 0;
+        try {
+            this.conn.rs.last(); //se posiciona en el ultimo registro de la tabla
+            n = this.conn.rs.getRow(); //regresa el numero actual del registro
+            this.conn.rs.first();
+        }
+        catch (Exception e) {
+            System.out.println("Error#1 ...");
+        }
+        if (n !=0 ) {
+            System.out.println("n "+n);
+            Object datos[][] = new Object[n][9];
+            for(int i=0; i<n; i++) { //n total de registros
+                try {
+                    datos[i][0] = this.conn.rs.getString(1);
+                    datos[i][1] = this.conn.rs.getString(2);
+                    datos[i][2] = this.conn.rs.getString(3);
+                    datos[i][3] = this.conn.rs.getString(4);
+                    datos[i][4] = this.conn.rs.getInt(5);
+                    datos[i][5] = this.conn.rs.getInt(6);
+                    datos[i][6] = this.conn.rs.getString(7);
+                    datos[i][7] = this.conn.rs.getInt(8);
+                    datos[i][8] = this.conn.rs.getInt(9);
+                    datos[i][9] = this.conn.rs.getInt(10);
+                    //String medico = this.conn.rs.getString(4); //no se usa
+                    
+                    this.conn.rs.next(); // avanzamos un registro
+                }
+                catch (Exception e) {
+                    System.out.println("Error#2 ..."+e.getMessage());
+                }
+                //String aux = datos[i][3];
+                //this.jLabelMostrarDiaSalida.setText(aux);
+            }//fin for
+            //String columnas[] = {"Habitacion", "Paciente", "Diagnostico"};
+            //jTableConsulta2.setModel(new DefaultTableModel(datos, columnas));
+            String totalsincargos = String.valueOf(datos[0][8]);
+            int totalSC = Integer.parseInt (totalsincargos);
+            int totalFINAL = cuentaTotal + totalSC;
+            String totalMostrar = String.valueOf(totalFINAL); 
+            this.jLabelMostrarTotalPago.setText(totalMostrar);
+                    
+        } // fin if
+        else {
+            JOptionPane.showMessageDialog(this, "No hay datos ...");
+        }
+        
     }//GEN-LAST:event_jButtonRegistroSalidaActionPerformed
 
     private void jButtonPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPDFActionPerformed
         // TODO add your handling code here:
         new GenerarPdf().setVisible(true);
     }//GEN-LAST:event_jButtonPDFActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        
+        new Huesped().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1171,11 +1284,11 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JButton jButtonRecibo;
     private javax.swing.JButton jButtonRegistrar;
     private javax.swing.JButton jButtonRegistroSalida;
+    private javax.swing.JCheckBox jCheckBoxAreaNinos;
     private javax.swing.JCheckBox jCheckBoxBar;
+    private javax.swing.JCheckBox jCheckBoxBuseo;
     private javax.swing.JCheckBox jCheckBoxEntretenimiento;
     private javax.swing.JCheckBox jCheckBoxGimnasio;
-    private javax.swing.JCheckBox jCheckBoxLavanderia;
-    private javax.swing.JCheckBox jCheckBoxMascotas;
     private javax.swing.JCheckBox jCheckBoxPlaya;
     private javax.swing.JCheckBox jCheckBoxRestaurante;
     private javax.swing.JCheckBox jCheckBoxSauna;

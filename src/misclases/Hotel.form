@@ -785,9 +785,9 @@
                                   </Group>
                                   <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jCheckBoxLavanderia" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBoxAreaNinos" min="-2" max="-2" attributes="0"/>
                                       <Component id="jCheckBoxSauna" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jCheckBoxMascotas" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jCheckBoxBuseo" min="-2" max="-2" attributes="0"/>
                                       <Component id="jCheckBoxPlaya" min="-2" max="-2" attributes="0"/>
                                       <Component id="jCheckBoxEntretenimiento" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -843,7 +843,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jCheckBoxServicio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxMascotas" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxBuseo" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
@@ -853,7 +853,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jCheckBoxGimnasio" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jCheckBoxLavanderia" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jCheckBoxAreaNinos" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="50" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -1067,7 +1067,7 @@
                     <Property name="text" type="java.lang.String" value="Entretenimiento nocturno 100&#x20ac; "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxMascotas">
+                <Component class="javax.swing.JCheckBox" name="jCheckBoxBuseo">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
@@ -1095,7 +1095,7 @@
                     <Property name="text" type="java.lang.String" value="Sauna 40&#x20ac; "/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JCheckBox" name="jCheckBoxLavanderia">
+                <Component class="javax.swing.JCheckBox" name="jCheckBoxAreaNinos">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="0" green="0" red="0" type="rgb"/>
@@ -1246,7 +1246,7 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace min="63" pref="67" max="32767" attributes="0"/>
+                          <EmptySpace min="63" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1470,6 +1470,9 @@
                       </Border>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="jButton4">
                   <Properties>
