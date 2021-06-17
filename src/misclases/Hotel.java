@@ -100,6 +100,8 @@ public class Hotel extends javax.swing.JFrame {
         jCheckBoxLavanderia = new javax.swing.JCheckBox();
         jTextFieldIngresarHabitacion = new javax.swing.JTextField();
         jButtonBuscarHab = new javax.swing.JButton();
+        jButtonRegistroSalida = new javax.swing.JButton();
+        jButtonPDF = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jButtonGaleria = new javax.swing.JButton();
         jButtonHabitacionesDisponibles = new javax.swing.JButton();
@@ -476,6 +478,7 @@ public class Hotel extends javax.swing.JFrame {
         jLabelMostrarDiaSalida.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
         jCheckBoxBar.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxBar.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxBar.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxBar.setText("Bar 20€");
         jCheckBoxBar.addActionListener(new java.awt.event.ActionListener() {
@@ -485,49 +488,85 @@ public class Hotel extends javax.swing.JFrame {
         });
 
         jCheckBoxRestaurante.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxRestaurante.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxRestaurante.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxRestaurante.setText("Restaurante 30€ ");
 
         jCheckBoxSpa.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxSpa.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxSpa.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxSpa.setText("Spa 40€ ");
 
         jCheckBoxPlaya.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxPlaya.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxPlaya.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxPlaya.setText("Atracciones de playa 80€ ");
 
         jCheckBoxServicio.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxServicio.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxServicio.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxServicio.setText("Servicio a habitación 50€ ");
 
         jCheckBoxGimnasio.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxGimnasio.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxGimnasio.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxGimnasio.setText("Gimnasio 30€ ");
 
         jCheckBoxEntretenimiento.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxEntretenimiento.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxEntretenimiento.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxEntretenimiento.setText("Entretenimiento nocturno 100€ ");
 
         jCheckBoxMascotas.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxMascotas.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxMascotas.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxMascotas.setText("Buseo 20€ ");
 
         jCheckBoxSauna.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxSauna.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxSauna.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxSauna.setText("Sauna 40€ ");
 
         jCheckBoxLavanderia.setBackground(new java.awt.Color(0, 0, 0));
+        jCheckBoxLavanderia.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
         jCheckBoxLavanderia.setForeground(new java.awt.Color(255, 255, 255));
         jCheckBoxLavanderia.setText("Area de niños 35€ ");
 
         jTextFieldIngresarHabitacion.setBackground(new java.awt.Color(0, 0, 0));
         jTextFieldIngresarHabitacion.setForeground(new java.awt.Color(255, 255, 255));
         jTextFieldIngresarHabitacion.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldIngresarHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
+        jButtonBuscarHab.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonBuscarHab.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jButtonBuscarHab.setForeground(new java.awt.Color(255, 255, 255));
         jButtonBuscarHab.setText("Buscar");
+        jButtonBuscarHab.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
         jButtonBuscarHab.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonBuscarHabActionPerformed(evt);
+            }
+        });
+
+        jButtonRegistroSalida.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonRegistroSalida.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jButtonRegistroSalida.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRegistroSalida.setText("REGISTRAR SALIDA");
+        jButtonRegistroSalida.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
+        jButtonRegistroSalida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistroSalidaActionPerformed(evt);
+            }
+        });
+
+        jButtonPDF.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonPDF.setFont(new java.awt.Font("Lucida Fax", 1, 12)); // NOI18N
+        jButtonPDF.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonPDF.setText("GENERAR RECIBO");
+        jButtonPDF.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
+        jButtonPDF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPDFActionPerformed(evt);
             }
         });
 
@@ -546,7 +585,6 @@ public class Hotel extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelMostrarDiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jCheckBoxBar)
@@ -565,24 +603,35 @@ public class Hotel extends javax.swing.JFrame {
                         .addComponent(jTextFieldIngresarHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(52, 52, 52)
                         .addComponent(jButtonBuscarHab, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(380, 380, 380))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(344, 344, 344)
+                .addComponent(jButtonRegistroSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(198, 198, 198)
+                .addComponent(jButtonPDF)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonPDF, jButtonRegistroSalida});
+
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addComponent(jLabel7)
                 .addGap(61, 61, 61)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jTextFieldIngresarHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonBuscarHab))
-                .addGap(37, 37, 37)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabelMostrarDiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(jTextFieldIngresarHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonBuscarHab))
+                        .addGap(57, 57, 57)
+                        .addComponent(jLabelMostrarDiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel10))
-                .addGap(71, 71, 71)
+                .addGap(51, 51, 51)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jCheckBoxBar)
@@ -603,14 +652,20 @@ public class Hotel extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBoxGimnasio)
                     .addComponent(jCheckBoxLavanderia))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(46, 46, 46)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabelMostrarTotalPago))
-                .addGap(142, 142, 142))
+                    .addComponent(jButtonRegistroSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonPDF))
+                .addGap(31, 31, 31))
         );
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelMostrarDiaSalida, jLabelMostrarTotalPago});
+
+        jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonPDF, jButtonRegistroSalida});
 
         jTabbedPane1.addTab("Salida", jPanel3);
 
@@ -1052,6 +1107,16 @@ public class Hotel extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonGaleriaActionPerformed
 
+    private void jButtonRegistroSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistroSalidaActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jButtonRegistroSalidaActionPerformed
+
+    private void jButtonPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPDFActionPerformed
+        // TODO add your handling code here:
+        new GenerarPdf().setVisible(true);
+    }//GEN-LAST:event_jButtonPDFActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1100,10 +1165,12 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JButton jButtonHabitacionesDisponibles;
     private javax.swing.JButton jButtonIngresos;
     private javax.swing.JButton jButtonListaHuespedes;
+    private javax.swing.JButton jButtonPDF;
     private javax.swing.JButton jButtonPorcentajeOcupacion;
     private javax.swing.JButton jButtonPorcentajeOcupacionActual;
     private javax.swing.JButton jButtonRecibo;
     private javax.swing.JButton jButtonRegistrar;
+    private javax.swing.JButton jButtonRegistroSalida;
     private javax.swing.JCheckBox jCheckBoxBar;
     private javax.swing.JCheckBox jCheckBoxEntretenimiento;
     private javax.swing.JCheckBox jCheckBoxGimnasio;
