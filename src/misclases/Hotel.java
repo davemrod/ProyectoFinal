@@ -106,14 +106,14 @@ public class Hotel extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jButtonGaleria = new javax.swing.JButton();
         jButtonHabitacionesDisponibles = new javax.swing.JButton();
-        jButtonEstatusHabitacion = new javax.swing.JButton();
-        jButtonIngresos = new javax.swing.JButton();
+        jButtonBuscarHabitacion = new javax.swing.JButton();
+        jButtonIngresosActuales = new javax.swing.JButton();
         jButtonListaHuespedes = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonTotalHabitaciones = new javax.swing.JButton();
         jButtonPorcentajeOcupacion = new javax.swing.JButton();
         jButtonPorcentajeOcupacionActual = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButtonBuscarHuesped = new javax.swing.JButton();
+        jButtonCostosHabitacion = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -689,29 +689,34 @@ public class Hotel extends javax.swing.JFrame {
         jButtonHabitacionesDisponibles.setText("Habitaciones disponibles");
         jButtonHabitacionesDisponibles.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButtonEstatusHabitacion.setBackground(new java.awt.Color(21, 19, 19));
-        jButtonEstatusHabitacion.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButtonEstatusHabitacion.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonEstatusHabitacion.setText("Estatus de habitación");
-        jButtonEstatusHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonBuscarHabitacion.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonBuscarHabitacion.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonBuscarHabitacion.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonBuscarHabitacion.setText("Buscar habitación");
+        jButtonBuscarHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButtonIngresos.setBackground(new java.awt.Color(21, 19, 19));
-        jButtonIngresos.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButtonIngresos.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonIngresos.setText("Ingresos");
-        jButtonIngresos.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonIngresosActuales.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonIngresosActuales.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonIngresosActuales.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonIngresosActuales.setText("Ingresos actuales");
+        jButtonIngresosActuales.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
         jButtonListaHuespedes.setBackground(new java.awt.Color(21, 19, 19));
         jButtonListaHuespedes.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jButtonListaHuespedes.setForeground(new java.awt.Color(255, 255, 255));
         jButtonListaHuespedes.setText("Consultar lista de huespedes");
         jButtonListaHuespedes.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonListaHuespedes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonListaHuespedesActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(21, 19, 19));
-        jButton2.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Total de habitaciones");
-        jButton2.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonTotalHabitaciones.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonTotalHabitaciones.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonTotalHabitaciones.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonTotalHabitaciones.setText("Total de habitaciones");
+        jButtonTotalHabitaciones.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
         jButtonPorcentajeOcupacion.setBackground(new java.awt.Color(21, 19, 19));
         jButtonPorcentajeOcupacion.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -725,22 +730,22 @@ public class Hotel extends javax.swing.JFrame {
         jButtonPorcentajeOcupacionActual.setText("Porcentaje de ocupación actual");
         jButtonPorcentajeOcupacionActual.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jButton3.setBackground(new java.awt.Color(21, 19, 19));
-        jButton3.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Buscar huesped");
-        jButton3.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButtonBuscarHuesped.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonBuscarHuesped.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonBuscarHuesped.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonBuscarHuesped.setText("Buscar huesped");
+        jButtonBuscarHuesped.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonBuscarHuesped.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButtonBuscarHuespedActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(21, 19, 19));
-        jButton4.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Costos de habitación");
-        jButton4.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonCostosHabitacion.setBackground(new java.awt.Color(21, 19, 19));
+        jButtonCostosHabitacion.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
+        jButtonCostosHabitacion.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCostosHabitacion.setText("Costos de habitación");
+        jButtonCostosHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -749,17 +754,17 @@ public class Hotel extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonHabitacionesDisponibles)
-                    .addComponent(jButton2))
+                    .addComponent(jButtonTotalHabitaciones))
                 .addGap(50, 50, 50)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButtonGaleria)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addComponent(jButton4)
+                            .addComponent(jButtonCostosHabitacion)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButtonEstatusHabitacion))
+                            .addComponent(jButtonBuscarHabitacion))
                         .addGroup(jPanel4Layout.createSequentialGroup()
                             .addComponent(jButtonPorcentajeOcupacion)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -767,28 +772,28 @@ public class Hotel extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createSequentialGroup()
                             .addComponent(jButtonListaHuespedes)
                             .addGap(73, 73, 73)
-                            .addComponent(jButtonIngresos))))
+                            .addComponent(jButtonIngresosActuales))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton2, jButton3, jButton4, jButtonEstatusHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresos, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual});
+        jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonBuscarHabitacion, jButtonBuscarHuesped, jButtonCostosHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresosActuales, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual, jButtonTotalHabitaciones});
 
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(150, 150, 150)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonListaHuespedes)
-                    .addComponent(jButtonIngresos))
+                    .addComponent(jButtonIngresosActuales))
                 .addGap(128, 128, 128)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonHabitacionesDisponibles)
-                    .addComponent(jButton4)
-                    .addComponent(jButtonEstatusHabitacion))
+                    .addComponent(jButtonCostosHabitacion)
+                    .addComponent(jButtonBuscarHabitacion))
                 .addGap(123, 123, 123)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
+                    .addComponent(jButtonTotalHabitaciones)
                     .addComponent(jButtonPorcentajeOcupacion)
                     .addComponent(jButtonPorcentajeOcupacionActual))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
@@ -796,7 +801,7 @@ public class Hotel extends javax.swing.JFrame {
                 .addGap(87, 87, 87))
         );
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton2, jButton3, jButton4, jButtonEstatusHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresos, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual});
+        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonBuscarHabitacion, jButtonBuscarHuesped, jButtonCostosHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresosActuales, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual, jButtonTotalHabitaciones});
 
         jTabbedPane1.addTab("Consultas", jPanel4);
 
@@ -1224,11 +1229,17 @@ public class Hotel extends javax.swing.JFrame {
         new GenerarPdf().setVisible(true);
     }//GEN-LAST:event_jButtonPDFActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void jButtonBuscarHuespedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHuespedActionPerformed
         // TODO add your handling code here:
         
         new Huesped().setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_jButtonBuscarHuespedActionPerformed
+
+    private void jButtonListaHuespedesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListaHuespedesActionPerformed
+        // TODO add your handling code here:
+        
+        new HabitacionHuesped().setVisible(true);
+    }//GEN-LAST:event_jButtonListaHuespedesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1268,15 +1279,14 @@ public class Hotel extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroupTipoHabitacion;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButtonBuscarHab;
+    private javax.swing.JButton jButtonBuscarHabitacion;
+    private javax.swing.JButton jButtonBuscarHuesped;
+    private javax.swing.JButton jButtonCostosHabitacion;
     private javax.swing.JButton jButtonElegirHabitacion;
-    private javax.swing.JButton jButtonEstatusHabitacion;
     private javax.swing.JButton jButtonGaleria;
     private javax.swing.JButton jButtonHabitacionesDisponibles;
-    private javax.swing.JButton jButtonIngresos;
+    private javax.swing.JButton jButtonIngresosActuales;
     private javax.swing.JButton jButtonListaHuespedes;
     private javax.swing.JButton jButtonPDF;
     private javax.swing.JButton jButtonPorcentajeOcupacion;
@@ -1284,6 +1294,7 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JButton jButtonRecibo;
     private javax.swing.JButton jButtonRegistrar;
     private javax.swing.JButton jButtonRegistroSalida;
+    private javax.swing.JButton jButtonTotalHabitaciones;
     private javax.swing.JCheckBox jCheckBoxAreaNinos;
     private javax.swing.JCheckBox jCheckBoxBar;
     private javax.swing.JCheckBox jCheckBoxBuseo;
