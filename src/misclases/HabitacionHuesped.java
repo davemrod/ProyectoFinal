@@ -5,6 +5,10 @@
  */
 package misclases;
 
+import controlMySql.MySqlConn;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author TheRickbro
@@ -14,8 +18,14 @@ public class HabitacionHuesped extends javax.swing.JFrame {
     /**
      * Creates new form HabitacionHuesped
      */
+    
+    private MySqlConn conn;
+    
     public HabitacionHuesped() {
+        this.conn = new MySqlConn();
         initComponents();
+        this.setLocationRelativeTo(null);
+        listaHuespedes();
     }
 
     /**
@@ -27,17 +37,45 @@ public class HabitacionHuesped extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableListaHuespedes = new javax.swing.JTable();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("Lista de huespedes");
+
+        jTableListaHuespedes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(jTableListaHuespedes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 797, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -46,6 +84,59 @@ public class HabitacionHuesped extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    
+    private void listaHuespedes() {
+        
+        String query = "select * from huespedes ORDER BY nombre ASC";
+        this.conn.Consult(query);
+        int n = 0;
+        try {
+            this.conn.rs.last(); //se posiciona en el ultimo registro de la tabla
+            n = this.conn.rs.getRow(); //regresa el numero actual del registro
+            this.conn.rs.first();
+        }
+        catch (Exception e) {
+            System.out.println("Error#1 ...");
+        }
+        if (n !=0 ) {
+            System.out.println("n "+n);
+            Object datos[][] = new Object[n][9];
+            for(int i=0; i<n; i++) { //n total de registros
+                try {
+                    datos[i][0] = this.conn.rs.getString(1);
+                    datos[i][1] = this.conn.rs.getString(2);
+                    datos[i][2] = this.conn.rs.getString(3);
+                    datos[i][3] = this.conn.rs.getString(4);
+                    datos[i][4] = this.conn.rs.getInt(5);
+                    datos[i][5] = this.conn.rs.getInt(6);
+                    datos[i][6] = this.conn.rs.getString(7);
+                    datos[i][7] = this.conn.rs.getInt(8);
+                    datos[i][8] = this.conn.rs.getInt(9);
+                    //datos[i][9] = this.conn.rs.getInt(10);
+                    //String medico = this.conn.rs.getString(4); //no se usa
+                    
+                    this.conn.rs.next(); // avanzamos un registro
+                }
+                catch (Exception e) {
+                    System.out.println("Error#2 ..."+e.getMessage());
+                }
+                //String aux = datos[i][3];
+                //this.jLabelMostrarDiaSalida.setText(aux);
+            }//fin for
+            String columnas[] = {"Huesped", "Ciudad", "Fecha ingreso", "Fecha salida", "Habitación", "Piso", "Tipo habitación", "Ocupantes", "Total al ingresar"};
+            jTableListaHuespedes.setModel(new DefaultTableModel(datos, columnas));
+            
+            //String totalsincargos = String.valueOf(datos[0][8]);
+            //int totalSC = Integer.parseInt (totalsincargos);
+            //int totalFINAL = cuentaTotal + totalSC;
+            //String totalMostrar = String.valueOf(totalFINAL); 
+            //this.jLabelMostrarTotalPago.setText(totalMostrar);
+                    
+        } // fin if
+        else {
+            JOptionPane.showMessageDialog(this, "No hay datos ...");
+        }
+    }
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -79,5 +170,8 @@ public class HabitacionHuesped extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableListaHuespedes;
     // End of variables declaration//GEN-END:variables
 }
