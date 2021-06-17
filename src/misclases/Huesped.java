@@ -5,6 +5,10 @@
  */
 package misclases;
 
+import controlMySql.MySqlConn;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author TheRickbro
@@ -14,8 +18,13 @@ public class Huesped extends javax.swing.JFrame {
     /**
      * Creates new form Huesped
      */
+    
+    private MySqlConn conn;
+    
     public Huesped() {
+        this.conn = new MySqlConn();
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -30,10 +39,31 @@ public class Huesped extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextFieldBuscarHuesped = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTableHuesped = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setText("Ingresar nombre de huesped:");
+
+        jTextFieldBuscarHuesped.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldBuscarHuespedActionPerformed(evt);
+            }
+        });
+
+        jTableHuesped.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTableHuesped);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -41,10 +71,13 @@ public class Huesped extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextFieldBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(277, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 579, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(jTextFieldBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(78, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -53,7 +86,9 @@ public class Huesped extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jTextFieldBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(307, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -69,6 +104,60 @@ public class Huesped extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextFieldBuscarHuespedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBuscarHuespedActionPerformed
+        // TODO add your handling code here:
+        
+        String query = "select * from huespedes where nombre = "+"'"+this.jTextFieldBuscarHuesped.getText().trim() + "'";
+        this.conn.Consult(query);
+        int n = 0;
+        try {
+            this.conn.rs.last(); //se posiciona en el ultimo registro de la tabla
+            n = this.conn.rs.getRow(); //regresa el numero actual del registro
+            this.conn.rs.first();
+        }
+        catch (Exception e) {
+            System.out.println("Error#1 ...");
+        }
+        if (n !=0 ) {
+            System.out.println("n "+n);
+            Object datos[][] = new Object[n][9];
+            for(int i=0; i<n; i++) { //n total de registros
+                try {
+                    datos[i][0] = this.conn.rs.getString(1);
+                    datos[i][1] = this.conn.rs.getString(2);
+                    datos[i][2] = this.conn.rs.getString(3);
+                    datos[i][3] = this.conn.rs.getString(4);
+                    datos[i][4] = this.conn.rs.getInt(5);
+                    datos[i][5] = this.conn.rs.getInt(6);
+                    datos[i][6] = this.conn.rs.getString(7);
+                    datos[i][7] = this.conn.rs.getInt(8);
+                    datos[i][8] = this.conn.rs.getInt(9);
+                    datos[i][9] = this.conn.rs.getInt(10);
+                    //String medico = this.conn.rs.getString(4); //no se usa
+                    
+                    this.conn.rs.next(); // avanzamos un registro
+                }
+                catch (Exception e) {
+                    System.out.println("Error#2 ..."+e.getMessage());
+                }
+                //String aux = datos[i][3];
+                //this.jLabelMostrarDiaSalida.setText(aux);
+            }//fin for
+            String columnas[] = {"Huesped", "Habitación", "Piso"};
+            jTableHuesped.setModel(new DefaultTableModel(datos, columnas));
+            
+            //String totalsincargos = String.valueOf(datos[0][8]);
+            //int totalSC = Integer.parseInt (totalsincargos);
+            //int totalFINAL = cuentaTotal + totalSC;
+            //String totalMostrar = String.valueOf(totalFINAL); 
+            //this.jLabelMostrarTotalPago.setText(totalMostrar);
+                    
+        } // fin if
+        else {
+            JOptionPane.showMessageDialog(this, "No hay datos ...");
+        }
+    }//GEN-LAST:event_jTextFieldBuscarHuespedActionPerformed
 
     /**
      * @param args the command line arguments
@@ -109,6 +198,8 @@ public class Huesped extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTableHuesped;
     private javax.swing.JTextField jTextFieldBuscarHuesped;
     // End of variables declaration//GEN-END:variables
 }
