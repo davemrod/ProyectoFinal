@@ -694,6 +694,11 @@ public class Hotel extends javax.swing.JFrame {
         jButtonBuscarHabitacion.setForeground(new java.awt.Color(255, 255, 255));
         jButtonBuscarHabitacion.setText("Buscar habitación");
         jButtonBuscarHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonBuscarHabitacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonBuscarHabitacionActionPerformed(evt);
+            }
+        });
 
         jButtonIngresosActuales.setBackground(new java.awt.Color(21, 19, 19));
         jButtonIngresosActuales.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -1240,6 +1245,12 @@ public class Hotel extends javax.swing.JFrame {
         
         new HabitacionHuesped().setVisible(true);
     }//GEN-LAST:event_jButtonListaHuespedesActionPerformed
+
+    private void jButtonBuscarHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHabitacionActionPerformed
+        // TODO add your handling code here:
+        
+        new BuscarHabitacion().setVisible(true);
+    }//GEN-LAST:event_jButtonBuscarHabitacionActionPerformed
 
     /**
      * @param args the command line arguments
