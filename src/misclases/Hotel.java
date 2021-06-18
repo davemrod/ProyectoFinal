@@ -320,31 +320,37 @@ public class Hotel extends javax.swing.JFrame {
 
         jRadioButton101.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton101);
+        jRadioButton101.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton101.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton101.setText("101");
 
         jRadioButton102.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton102);
+        jRadioButton102.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton102.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton102.setText("102");
 
         jRadioButton103.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton103);
+        jRadioButton103.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton103.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton103.setText("103");
 
         jRadioButton104.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton104);
+        jRadioButton104.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton104.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton104.setText("104");
 
         jRadioButton105.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton105);
+        jRadioButton105.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton105.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton105.setText("105");
 
         jRadioButton106.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton106);
+        jRadioButton106.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton106.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton106.setText("106");
         jRadioButton106.addActionListener(new java.awt.event.ActionListener() {
@@ -355,36 +361,43 @@ public class Hotel extends javax.swing.JFrame {
 
         jRadioButton107.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton107);
+        jRadioButton107.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton107.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton107.setText("107");
 
         jRadioButton108.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton108);
+        jRadioButton108.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton108.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton108.setText("108");
 
         jRadioButton109.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton109);
+        jRadioButton109.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton109.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton109.setText("109");
 
         jRadioButton110.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton110);
+        jRadioButton110.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton110.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton110.setText("110");
 
         jRadioButton111.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton111);
+        jRadioButton111.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton111.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton111.setText("111");
 
         jRadioButton112.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton112);
+        jRadioButton112.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton112.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton112.setText("112");
 
         jRadioButton113.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton113);
+        jRadioButton113.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton113.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton113.setText("113");
         jRadioButton113.addActionListener(new java.awt.event.ActionListener() {
@@ -395,36 +408,43 @@ public class Hotel extends javax.swing.JFrame {
 
         jRadioButton114.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton114);
+        jRadioButton114.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton114.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton114.setText("114");
 
         jRadioButton115.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton115);
+        jRadioButton115.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton115.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton115.setText("115");
 
         jRadioButton201.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton201);
+        jRadioButton201.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton201.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton201.setText("201");
 
         jRadioButton202.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton202);
+        jRadioButton202.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton202.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton202.setText("202");
 
         jRadioButton203.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton203);
+        jRadioButton203.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton203.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton203.setText("203");
 
         jRadioButton204.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton204);
+        jRadioButton204.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton204.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton204.setText("204");
 
         jRadioButton205.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton205);
+        jRadioButton205.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton205.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton205.setText("205");
         jRadioButton205.addActionListener(new java.awt.event.ActionListener() {
@@ -435,16 +455,19 @@ public class Hotel extends javax.swing.JFrame {
 
         jRadioButton206.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton206);
+        jRadioButton206.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton206.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton206.setText("206");
 
         jRadioButton207.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton207);
+        jRadioButton207.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton207.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton207.setText("207");
 
         jRadioButton208.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton208);
+        jRadioButton208.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton208.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton208.setText("208");
         jRadioButton208.addActionListener(new java.awt.event.ActionListener() {
@@ -455,21 +478,25 @@ public class Hotel extends javax.swing.JFrame {
 
         jRadioButton209.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton209);
+        jRadioButton209.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton209.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton209.setText("209");
 
         jRadioButton210.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton210);
+        jRadioButton210.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton210.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton210.setText("210");
 
         jRadioButton211.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton211);
+        jRadioButton211.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton211.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton211.setText("211");
 
         jRadioButton212.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton212);
+        jRadioButton212.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton212.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton212.setText("212");
         jRadioButton212.addActionListener(new java.awt.event.ActionListener() {
@@ -480,6 +507,7 @@ public class Hotel extends javax.swing.JFrame {
 
         jRadioButton213.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton213);
+        jRadioButton213.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton213.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton213.setText("213");
         jRadioButton213.addActionListener(new java.awt.event.ActionListener() {
@@ -490,11 +518,13 @@ public class Hotel extends javax.swing.JFrame {
 
         jRadioButton214.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton214);
+        jRadioButton214.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton214.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton214.setText("214");
 
         jRadioButton215.setBackground(new java.awt.Color(0, 0, 0));
         buttonGroupNumeroHabitacion.add(jRadioButton215);
+        jRadioButton215.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jRadioButton215.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton215.setText("215");
 
@@ -1159,7 +1189,7 @@ public class Hotel extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         String huesped, ciudad, tipoHabitacion, diasHospedaje, aux, aux2, aux3;
-        int piso, totalconCargos, totalsinCargos, totalPersonas, habitacion, parcial=0;
+        int piso, totalconCargos, totalsinCargos, totalPersonas, habitacion=0, parcial=0;
 
         String diaLlegada = "" + jDateChooserIngresar.getDate();
         SimpleDateFormat Date_Format = new SimpleDateFormat("yyyy-MM-dd");
@@ -1178,62 +1208,70 @@ public class Hotel extends javax.swing.JFrame {
 	}
 	else
 		this.boton101=true;
-        if( this.jRadioButton101.isSelected() ) {
-		this.jRadioButton101.setEnabled(false);
-		this.boton101=false;
-                habitacion = 101;
+        
+        if( this.jRadioButton102.isSelected() ) {
+		this.jRadioButton102.setEnabled(false);
+		this.boton102=false;
+                habitacion = 102;
 	}
 	else
-		this.boton101=true;
-        if( this.jRadioButton101.isSelected() ) {
-		this.jRadioButton101.setEnabled(false);
-		this.boton101=false;
-                habitacion = 101;
+		this.boton102=true;
+        if( this.jRadioButton103.isSelected() ) {
+		this.jRadioButton103.setEnabled(false);
+		this.boton103=false;
+                habitacion = 103;
 	}
 	else
-		this.boton101=true;
-        if( this.jRadioButton101.isSelected() ) {
-		this.jRadioButton101.setEnabled(false);
-		this.boton101=false;
-                habitacion = 101;
+		this.boton103=true;
+        
+        if( this.jRadioButton104.isSelected() ) {
+		this.jRadioButton104.setEnabled(false);
+		this.boton104=false;
+                habitacion = 104;
 	}
 	else
-		this.boton101=true;
-        if( this.jRadioButton101.isSelected() ) {
-		this.jRadioButton101.setEnabled(false);
-		this.boton101=false;
-                habitacion = 101;
+		this.boton104=true;
+        
+        if( this.jRadioButton105.isSelected() ) {
+		this.jRadioButton105.setEnabled(false);
+		this.boton105=false;
+                habitacion = 105;
 	}
 	else
-		this.boton101=true;
-        if( this.jRadioButton101.isSelected() ) {
-		this.jRadioButton101.setEnabled(false);
-		this.boton101=false;
-                habitacion = 101;
+		this.boton105=true;
+        
+        if( this.jRadioButton106.isSelected() ) {
+		this.jRadioButton106.setEnabled(false);
+		this.boton106=false;
+                habitacion = 106;
 	}
 	else
-		this.boton101=true;
-        if( this.jRadioButton101.isSelected() ) {
-		this.jRadioButton101.setEnabled(false);
-		this.boton101=false;
-                habitacion = 101;
+		this.boton106=true;
+        
+        if( this.jRadioButton107.isSelected() ) {
+		this.jRadioButton107.setEnabled(false);
+		this.boton107=false;
+                habitacion = 107;
 	}
 	else
-		this.boton101=true;
-        if( this.jRadioButton101.isSelected() ) {
-		this.jRadioButton101.setEnabled(false);
-		this.boton101=false;
-                habitacion = 101;
+		this.boton107=true;
+        
+        if( this.jRadioButton108.isSelected() ) {
+		this.jRadioButton108.setEnabled(false);
+		this.boton108=false;
+                habitacion = 108;
 	}
 	else
-		this.boton101=true;
-        if( this.jRadioButton101.isSelected() ) {
-		this.jRadioButton101.setEnabled(false);
-		this.boton101=false;
-                habitacion = 101;
+		this.boton108=true;
+        
+        if( this.jRadioButton109.isSelected() ) {
+		this.jRadioButton109.setEnabled(false);
+		this.boton109=false;
+                habitacion = 109;
 	}
 	else
-		this.boton101=true;
+		this.boton109=true;
+        
         if( this.jRadioButton110.isSelected() ) {
 		this.jRadioButton110.setEnabled(false);
 		this.boton110=false;
@@ -1289,8 +1327,8 @@ public class Hotel extends javax.swing.JFrame {
             tipoHabitacion = "Sencilla";
             parcial+=400;
             
-            aux2 = (String) this.jComboBoxNumSencilla.getSelectedItem();
-            habitacion = Integer.parseInt (aux2);
+//            aux2 = (String) this.jComboBoxNumSencilla.getSelectedItem();
+//            habitacion = Integer.parseInt (aux2);
             
             aux = (String) this.jComboBoxSencilla.getSelectedItem();
             totalPersonas = Integer.parseInt (aux);
@@ -1301,8 +1339,8 @@ public class Hotel extends javax.swing.JFrame {
             tipoHabitacion = "Doble";
             parcial+=500;
             
-            aux2 = (String) this.jComboBoxNumDoble.getSelectedItem();
-            habitacion = Integer.parseInt (aux2);
+//            aux2 = (String) this.jComboBoxNumDoble.getSelectedItem();
+//            habitacion = Integer.parseInt (aux2);
             
             aux = (String) this.jComboBoxDoble.getSelectedItem();
             totalPersonas = Integer.parseInt (aux);
@@ -1312,8 +1350,8 @@ public class Hotel extends javax.swing.JFrame {
             tipoHabitacion = "Triple";
             parcial+=700;
             
-            aux2 = (String) this.jComboBoxNumTriple.getSelectedItem();
-            habitacion = Integer.parseInt (aux2);
+//            aux2 = (String) this.jComboBoxNumTriple.getSelectedItem();
+//            habitacion = Integer.parseInt (aux2);
             
             aux = (String) this.jComboBoxTriple.getSelectedItem();
             totalPersonas = Integer.parseInt (aux);
@@ -1650,7 +1688,10 @@ public class Hotel extends javax.swing.JFrame {
 
     private void jButtonPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPDFActionPerformed
         // TODO add your handling code here:
-        new GenerarPdf().setVisible(true);
+        
+        String aux = this.jTextFieldIngresarHabitacion.getText().trim();
+        int habi = Integer.parseInt (aux);
+        new GenerarPdf(habi).setVisible(false);
     }//GEN-LAST:event_jButtonPDFActionPerformed
 
     private void jButtonBuscarHuespedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHuespedActionPerformed
