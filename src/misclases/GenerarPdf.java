@@ -28,14 +28,16 @@ import javax.swing.table.DefaultTableModel;
 public class GenerarPdf extends JFrame {
     
     private MySqlConn conn;
-    int habitacion;
-    String aux,aux1,aux2,aux3,aux4,aux5,aux6,aux7,aux8,aux9;
+    int habitacion, cuentaTotal, diaHos;
+    String aux,aux1,aux2,aux3,aux4,aux5,aux6,aux7,aux8,aux9, cuentaTo, costo;
     
-    public GenerarPdf(int habitacion) throws FileNotFoundException, DocumentException  {
+    public GenerarPdf(int habitacion, int cuentaTotal, int diaHos, String costo) throws FileNotFoundException, DocumentException  {
         this.conn = new MySqlConn();
         this.habitacion = habitacion;
-        crearPDF();
-        
+        this.cuentaTotal = cuentaTotal;
+        this.diaHos = diaHos;
+        this.costo = costo;
+        crearPDF();  
     }
     
 //    public void main(String[] args) throws FileNotFoundException,DocumentException {
@@ -81,22 +83,27 @@ public class GenerarPdf extends JFrame {
                 System.out.println(aux);
                 aux1=(String) datos[i][1];
                 System.out.println(aux1);
-//                aux2=(String) datos[i][2];
-//                System.out.println(aux2);
-//                aux3=(String) datos[i][3];
-//                System.out.println(aux3);
-//                aux4=(String) datos[i][4];
-//                System.out.println(aux4);
-//                aux5=(String) datos[i][5];
-//                System.out.println(aux5);
-//                aux6=(String) datos[i][6];
-//                System.out.println(aux6);
-//                aux7=(String) datos[i][7];
-//                System.out.println(aux7);
-//                aux8=(String) datos[i][8];
-//                System.out.println(aux8);
-//                aux9=(String) datos[i][9];
-//                System.out.println(aux9);
+                aux2=(String) datos[i][2];
+                System.out.println(aux2);
+                aux3=(String) datos[i][3];
+                System.out.println(aux3);
+                aux4=(String) datos[i][4];
+                System.out.println(aux4);
+                aux5=(String) datos[i][5];
+                System.out.println(aux5);
+                aux6=(String) datos[i][6];
+                System.out.println(aux6);
+                aux7=(String) datos[i][7];
+                System.out.println(aux7);
+                aux8=(String) datos[i][8];
+                
+                int aux81 = Integer.parseInt (aux8);
+                int cuentaT = aux81 + cuentaTotal;
+                cuentaTo = String.valueOf(cuentaT);
+                
+                System.out.println(aux8);
+                aux9=(String) datos[i][9];
+                System.out.println(aux9);
                 //this.jLabelMostrarDiaSalida.setText(aux);
             }//fin for
             //String columnas[] = {"Huesped", "Ciudad", "Fecha ingreso", "Fecha salida", "Habitación", "Piso", "Tipo habitación", "Ocupantes", "Total al ingresar"};
@@ -130,7 +137,7 @@ public class GenerarPdf extends JFrame {
        Paragraph linea1=new Paragraph("_______________________________________________________________________________________",FontFactory.getFont(BaseFont.TIMES_ROMAN,12,Font.BOLD,BaseColor.BLACK));
        linea1.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph fecha=new Paragraph("Fecha del dia: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph fecha=new Paragraph("Fecha del dia: "+this.aux3,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        fecha.setAlignment(Element.ALIGN_LEFT);
        
        Paragraph nomhuesped=new Paragraph("> Nombre del huesped: "+this.aux,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
@@ -139,25 +146,25 @@ public class GenerarPdf extends JFrame {
        Paragraph ciudad=new Paragraph("> Ciudad: "+this.aux1,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        ciudad.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph fechaingreso=new Paragraph("> Fecha de ingreso: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph fechaingreso=new Paragraph("> Fecha de ingreso: "+this.aux2,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        fechaingreso.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph fechasalida=new Paragraph("> Fecha de salida: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph fechasalida=new Paragraph("> Fecha de salida: "+this.aux3,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        fechasalida.setAlignment(Element.ALIGN_LEFT);
        
        Paragraph tipohab=new Paragraph("> Tipo de habitacion: "+this.aux6,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        tipohab.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph costohab=new Paragraph("> Costo de habitacion: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph costohab=new Paragraph("> Costo de habitacion: "+this.costo,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        costohab.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph diasinstancia=new Paragraph("> Dias de instancia: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph diasinstancia=new Paragraph("> Dias de estancia: "+this.diaHos,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        diasinstancia.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph totalsincargos=new Paragraph("> Total sin cargos: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph totalsincargos=new Paragraph("> Total sin cargos: "+this.aux8,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        totalsincargos.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph totalconcargos=new Paragraph("> Total con cargos",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph totalconcargos=new Paragraph("> Total con cargos"+this.cuentaTo,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        totalconcargos.setAlignment(Element.ALIGN_LEFT);
        
        //////////////////////////////////////////
