@@ -144,13 +144,10 @@ public class Hotel extends javax.swing.JFrame {
         jButtonPDF = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jButtonGaleria = new javax.swing.JButton();
-        jButtonHabitacionesDisponibles = new javax.swing.JButton();
         jButtonBuscarHabitacion = new javax.swing.JButton();
-        jButtonIngresosActuales = new javax.swing.JButton();
         jButtonListaHuespedes = new javax.swing.JButton();
         jButtonTotalHabitaciones = new javax.swing.JButton();
         jButtonPorcentajeOcupacion = new javax.swing.JButton();
-        jButtonPorcentajeOcupacionActual = new javax.swing.JButton();
         jButtonBuscarHuesped = new javax.swing.JButton();
         jButtonCostosHabitacion = new javax.swing.JButton();
         jLabelBuscarHuesped = new javax.swing.JLabel();
@@ -160,7 +157,6 @@ public class Hotel extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
-        jLabel23 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jLabel24 = new javax.swing.JLabel();
@@ -1051,12 +1047,6 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
-        jButtonHabitacionesDisponibles.setBackground(new java.awt.Color(21, 19, 19));
-        jButtonHabitacionesDisponibles.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButtonHabitacionesDisponibles.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonHabitacionesDisponibles.setText("Habitaciones disponibles");
-        jButtonHabitacionesDisponibles.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
-
         jButtonBuscarHabitacion.setBackground(new java.awt.Color(21, 19, 19));
         jButtonBuscarHabitacion.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jButtonBuscarHabitacion.setForeground(new java.awt.Color(255, 255, 255));
@@ -1067,12 +1057,6 @@ public class Hotel extends javax.swing.JFrame {
                 jButtonBuscarHabitacionActionPerformed(evt);
             }
         });
-
-        jButtonIngresosActuales.setBackground(new java.awt.Color(21, 19, 19));
-        jButtonIngresosActuales.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButtonIngresosActuales.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonIngresosActuales.setText("Ingresos actuales");
-        jButtonIngresosActuales.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
         jButtonListaHuespedes.setBackground(new java.awt.Color(21, 19, 19));
         jButtonListaHuespedes.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -1090,23 +1074,17 @@ public class Hotel extends javax.swing.JFrame {
         jButtonTotalHabitaciones.setForeground(new java.awt.Color(255, 255, 255));
         jButtonTotalHabitaciones.setText("Total de habitaciones");
         jButtonTotalHabitaciones.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonTotalHabitaciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTotalHabitacionesActionPerformed(evt);
+            }
+        });
 
         jButtonPorcentajeOcupacion.setBackground(new java.awt.Color(21, 19, 19));
         jButtonPorcentajeOcupacion.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jButtonPorcentajeOcupacion.setForeground(new java.awt.Color(255, 255, 255));
         jButtonPorcentajeOcupacion.setText("Porcentaje de ocupación");
         jButtonPorcentajeOcupacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
-
-        jButtonPorcentajeOcupacionActual.setBackground(new java.awt.Color(21, 19, 19));
-        jButtonPorcentajeOcupacionActual.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
-        jButtonPorcentajeOcupacionActual.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonPorcentajeOcupacionActual.setText("Porcentaje de ocupación ");
-        jButtonPorcentajeOcupacionActual.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
-        jButtonPorcentajeOcupacionActual.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonPorcentajeOcupacionActualActionPerformed(evt);
-            }
-        });
 
         jButtonBuscarHuesped.setBackground(new java.awt.Color(21, 19, 19));
         jButtonBuscarHuesped.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -1124,6 +1102,11 @@ public class Hotel extends javax.swing.JFrame {
         jButtonCostosHabitacion.setForeground(new java.awt.Color(255, 255, 255));
         jButtonCostosHabitacion.setText("Costos de habitación");
         jButtonCostosHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonCostosHabitacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCostosHabitacionActionPerformed(evt);
+            }
+        });
 
         jLabelBuscarHuesped.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscarhuesped.png"))); // NOI18N
 
@@ -1140,54 +1123,48 @@ public class Hotel extends javax.swing.JFrame {
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icogaleria.png"))); // NOI18N
 
-        jLabel23.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/ingresos.png"))); // NOI18N
-        jLabel23.setText("jLabel23");
-
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabelBuscarHuesped, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonBuscarHabitacion)
-                    .addComponent(jButtonBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonTotalHabitaciones)
-                    .addComponent(jButtonIngresosActuales)
-                    .addComponent(jButtonPorcentajeOcupacionActual))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
+                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabelBuscarHuesped, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButtonBuscarHabitacion)
+                            .addComponent(jButtonBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonTotalHabitaciones))))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButtonCostosHabitacion)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonGaleria))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButtonListaHuespedes))
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jButtonListaHuespedes)
+                                    .addComponent(jButtonCostosHabitacion)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jButtonPorcentajeOcupacion)))
                         .addGap(76, 76, 76))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButtonHabitacionesDisponibles)
-                        .addGap(88, 88, 88))))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonGaleria)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonBuscarHabitacion, jButtonBuscarHuesped, jButtonCostosHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresosActuales, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual, jButtonTotalHabitaciones});
+        jPanel4Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButtonBuscarHabitacion, jButtonBuscarHuesped, jButtonCostosHabitacion, jButtonGaleria, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonTotalHabitaciones});
 
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1196,15 +1173,19 @@ public class Hotel extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(83, 83, 83)
                         .addComponent(jButtonBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonBuscarHabitacion)
-                            .addComponent(jButtonCostosHabitacion))
-                        .addGap(91, 91, 91)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonTotalHabitaciones)
-                            .addComponent(jButtonPorcentajeOcupacion))
-                        .addGap(59, 59, 59))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonCostosHabitacion)
+                                .addGap(87, 87, 87)
+                                .addComponent(jButtonPorcentajeOcupacion)
+                                .addGap(150, 150, 150))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(99, 99, 99)
+                                .addComponent(jButtonBuscarHabitacion)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButtonTotalHabitaciones)
+                                .addGap(138, 138, 138))))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(54, 54, 54)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1217,25 +1198,23 @@ public class Hotel extends javax.swing.JFrame {
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(31, 31, 31)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(49, 49, 49)
+                                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(102, 102, 102)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButtonIngresosActuales)
-                        .addComponent(jButtonGaleria)
-                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(62, 62, 62)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonPorcentajeOcupacionActual)
-                    .addComponent(jButtonHabitacionesDisponibles))
-                .addGap(336, 336, 336))
+                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jButtonGaleria)))
+                .addGap(181, 181, 181))
         );
 
-        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonBuscarHabitacion, jButtonBuscarHuesped, jButtonCostosHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresosActuales, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual, jButtonTotalHabitaciones});
+        jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonBuscarHabitacion, jButtonBuscarHuesped, jButtonCostosHabitacion, jButtonGaleria, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonTotalHabitaciones});
 
         jTabbedPane1.addTab("Consultas", jPanel4);
 
@@ -2027,17 +2006,23 @@ public class Hotel extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBoxBarActionPerformed
 
-    private void jButtonPorcentajeOcupacionActualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPorcentajeOcupacionActualActionPerformed
-        // TODO add your handling code here:
-        new Graficas().setVisible(true);
-    }//GEN-LAST:event_jButtonPorcentajeOcupacionActualActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
         new Login().setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButtonCostosHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCostosHabitacionActionPerformed
+        // TODO add your handling code here:
+        new CostosHabitaciones().setVisible(true);
+    }//GEN-LAST:event_jButtonCostosHabitacionActionPerformed
+
+    private void jButtonTotalHabitacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTotalHabitacionesActionPerformed
+        // TODO add your handling code here:
+        
+        new Habitaciones().setVisible(true);
+    }//GEN-LAST:event_jButtonTotalHabitacionesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2084,12 +2069,9 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JButton jButtonBuscarHuesped;
     private javax.swing.JButton jButtonCostosHabitacion;
     private javax.swing.JButton jButtonGaleria;
-    private javax.swing.JButton jButtonHabitacionesDisponibles;
-    private javax.swing.JButton jButtonIngresosActuales;
     private javax.swing.JButton jButtonListaHuespedes;
     private javax.swing.JButton jButtonPDF;
     private javax.swing.JButton jButtonPorcentajeOcupacion;
-    private javax.swing.JButton jButtonPorcentajeOcupacionActual;
     private javax.swing.JButton jButtonRecibo;
     private javax.swing.JButton jButtonRegistrar;
     private javax.swing.JButton jButtonRegistroSalida;
@@ -2126,7 +2108,6 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
