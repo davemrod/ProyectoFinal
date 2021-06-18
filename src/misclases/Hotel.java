@@ -1773,7 +1773,7 @@ public class Hotel extends javax.swing.JFrame {
         if( this.jCheckBoxAreaNinos.isSelected() )
             cuentaTotal+=35;
         
-        String query = "select * from huespedes where numhabitacion = "+"'"+this.jTextFieldIngresarHabitacion.getText().trim() + "'";
+        String query = "select * from huespedes where numhabitacion = "+"'"+this.jTextFieldIngresarHabitacion.getText().trim()+ "'";
         this.conn.Consult(query);
         int n = 0;
         try {
@@ -1820,6 +1820,22 @@ public class Hotel extends javax.swing.JFrame {
         } // fin if
         else {
             JOptionPane.showMessageDialog(this, "No hay datos ...");
+        }
+        
+        String hab = this.jTextFieldIngresarHabitacion.getText().trim();
+        int habi = Integer.parseInt(hab);
+        
+        if(hab.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Numero de habitacion vacio");   
+        }
+        else {
+            String query2=" delete from huespedes where numhabitacion ="+"'"+habi+"'"; // Completa sentencia mysql
+            
+            int j=this.conn.Update(query2);
+            if(j>0)
+                JOptionPane.showMessageDialog(this, "Baja realizada");
+            else
+                JOptionPane.showMessageDialog(this, "La baja no se pudo realizar");
         }
         
     }//GEN-LAST:event_jButtonRegistroSalidaActionPerformed
