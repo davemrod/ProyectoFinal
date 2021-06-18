@@ -42,9 +42,13 @@ public class HabitacionHuesped extends javax.swing.JFrame {
         jTableListaHuespedes = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(21, 19, 19));
 
+        jLabel1.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(157, 139, 5));
         jLabel1.setText("Lista de huespedes");
 
+        jTableListaHuespedes.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(157, 139, 5)));
         jTableListaHuespedes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -74,7 +78,7 @@ public class HabitacionHuesped extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
