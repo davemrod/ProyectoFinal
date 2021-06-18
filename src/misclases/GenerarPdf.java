@@ -1,6 +1,7 @@
 
 package misclases;
 
+import controlMySql.MySqlConn;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -21,16 +22,78 @@ import javafx.scene.layout.BackgroundImage;
 import javafx.scene.text.Text;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 
 public class GenerarPdf extends JFrame {
-
-    public static void main(String[] args) throws FileNotFoundException,DocumentException {
-        
+    
+    private MySqlConn conn;
+    int habitacion;
+    String aux;
+    
+    public GenerarPdf(int habitacion) {
+        this.conn = new MySqlConn();
+        this.habitacion = habitacion;
+    }
+    
+    public void main(String[] args) throws FileNotFoundException,DocumentException {   
         crearPDF(); 
     }
     
-    private static void crearPDF() throws FileNotFoundException,DocumentException {
+    private void crearPDF() throws FileNotFoundException,DocumentException {
+           
+       String query = "select * from huespedes where numhabitacion = "+"'"+habitacion + "'";
+        this.conn.Consult(query);
+        int n = 0;
+        try {
+            this.conn.rs.last(); //se posiciona en el ultimo registro de la tabla
+            n = this.conn.rs.getRow(); //regresa el numero actual del registro
+            this.conn.rs.first();
+        }
+        catch (Exception e) {
+            System.out.println("Error#1 ...");
+        }
+        if (n !=0 ) {
+            System.out.println("n "+n);
+            Object datos[][] = new Object[n][9];
+            for(int i=0; i<n; i++) { //n total de registros
+                try {
+                    datos[i][0] = this.conn.rs.getString(1);
+                    datos[i][1] = this.conn.rs.getString(2);
+                    datos[i][2] = this.conn.rs.getString(3);
+                    datos[i][3] = this.conn.rs.getString(4);
+                    datos[i][4] = this.conn.rs.getInt(5);
+                    datos[i][5] = this.conn.rs.getInt(6);
+                    datos[i][6] = this.conn.rs.getString(7);
+                    datos[i][7] = this.conn.rs.getInt(8);
+                    datos[i][8] = this.conn.rs.getInt(9);
+                    //datos[i][9] = this.conn.rs.getInt(10);
+                    //String medico = this.conn.rs.getString(4); //no se usa
+                    
+                    this.conn.rs.next(); // avanzamos un registro
+                }
+                catch (Exception e) {
+                    System.out.println("Error#2 ..."+e.getMessage());
+                }
+                String aux =(String) datos[i][0];
+                //this.jLabelMostrarDiaSalida.setText(aux);
+            }//fin for
+            //String columnas[] = {"Huesped", "Ciudad", "Fecha ingreso", "Fecha salida", "Habitación", "Piso", "Tipo habitación", "Ocupantes", "Total al ingresar"};
+            //jTableListaHuespedes.setModel(new DefaultTableModel(datos, columnas));
+            
+            //String totalsincargos = String.valueOf(datos[0][8]);
+            //int totalSC = Integer.parseInt (totalsincargos);
+            //int totalFINAL = cuentaTotal + totalSC;
+            //String totalMostrar = String.valueOf(totalFINAL); 
+            //this.jLabelMostrarTotalPago.setText(totalMostrar);
+                    
+        } // fin if
+        else {
+            JOptionPane.showMessageDialog(this, "No hay datos ...");
+        }
+     
+        
+        
        Document doc=new Document();
        FileOutputStream ficheroPDF=new FileOutputStream("ReciboAtlantis.pdf");
        PdfWriter.getInstance(doc,ficheroPDF);
@@ -51,7 +114,7 @@ public class GenerarPdf extends JFrame {
        Paragraph fecha=new Paragraph("Fecha del dia: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        fecha.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph nomhuesped=new Paragraph("> Nombre del huesped: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph nomhuesped=new Paragraph("> Nombre del huesped: "+this.aux,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        nomhuesped.setAlignment(Element.ALIGN_LEFT);
        
        Paragraph ciudad=new Paragraph("> Ciudad: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
