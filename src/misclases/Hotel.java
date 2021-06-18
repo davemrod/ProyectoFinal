@@ -117,6 +117,8 @@ public class Hotel extends javax.swing.JFrame {
         jRadioButton213 = new javax.swing.JRadioButton();
         jRadioButton214 = new javax.swing.JRadioButton();
         jRadioButton215 = new javax.swing.JRadioButton();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -532,6 +534,12 @@ public class Hotel extends javax.swing.JFrame {
         jRadioButton215.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton215.setText("215");
 
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("Piso1 ");
+
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Piso 2");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -547,8 +555,13 @@ public class Hotel extends javax.swing.JFrame {
                                     .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 325, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(86, 86, 86)
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addGap(86, 86, 86))
+                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel2Layout.createSequentialGroup()
                                                 .addComponent(jRadioButton105)
@@ -584,7 +597,10 @@ public class Hotel extends javax.swing.JFrame {
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                             .addComponent(jRadioButton201)
                                             .addComponent(jRadioButton202)
-                                            .addComponent(jRadioButton203)
+                                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                                .addComponent(jLabel15)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                .addComponent(jRadioButton203))
                                             .addComponent(jRadioButton204)
                                             .addComponent(jRadioButton205))
                                         .addGap(18, 18, 18)
@@ -613,9 +629,8 @@ public class Hotel extends javax.swing.JFrame {
                                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(jPanel2Layout.createSequentialGroup()
                                                 .addGap(20, 20, 20)
                                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -625,38 +640,34 @@ public class Hotel extends javax.swing.JFrame {
                                                 .addGap(18, 18, 18)
                                                 .addComponent(jRadioButtonSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(47, 47, 47)
-                                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                                        .addComponent(jComboBoxDoble, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                        .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                                        .addComponent(jRadioButtonDoble)
-                                                        .addGap(66, 66, 66)
-                                                        .addComponent(jRadioButtonTriple)))))))))
+                                                .addComponent(jRadioButtonDoble)
+                                                .addGap(66, 66, 66)
+                                                .addComponent(jRadioButtonTriple)))))))
                         .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel12)
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel13))
+                            .addGap(18, 18, 18)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jTextFieldDiasHospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addComponent(jLabel13)
-                                    .addGap(175, 175, 175)
-                                    .addComponent(jLabelSalida))
-                                .addGroup(jPanel2Layout.createSequentialGroup()
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel12))
-                                    .addGap(18, 18, 18)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jTextFieldDiasHospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGap(737, 737, 737)))
+                                    .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(36, 36, 36)
+                                    .addComponent(jComboBoxDoble, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(36, 36, 36)
+                                    .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabelSalida))
+                            .addGap(739, 739, 739)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(493, 493, 493)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(247, 247, 247)
+                        .addGap(243, 243, 243)
                         .addComponent(jButtonRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(176, 176, 176)
+                        .addGap(175, 175, 175)
                         .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
@@ -692,83 +703,92 @@ public class Hotel extends javax.swing.JFrame {
                         .addComponent(jRadioButtonSencilla)
                         .addComponent(jRadioButtonDoble)
                         .addComponent(jRadioButtonTriple)))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(93, 93, 93)
-                        .addComponent(jComboBoxNumSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(93, 93, 93)
+                                .addComponent(jComboBoxNumSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jComboBoxNumDoble, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jComboBoxNumTriple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBoxDoble, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jRadioButton101)
+                                    .addComponent(jRadioButton206)
+                                    .addComponent(jRadioButton111)
+                                    .addComponent(jRadioButton106)
+                                    .addComponent(jRadioButton201)
+                                    .addComponent(jRadioButton211))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jRadioButton102)
+                                    .addComponent(jRadioButton112)
+                                    .addComponent(jRadioButton207)
+                                    .addComponent(jRadioButton107)
+                                    .addComponent(jRadioButton202)
+                                    .addComponent(jRadioButton212))
+                                .addGap(3, 3, 3)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jRadioButton103)
+                                    .addComponent(jRadioButton113)
+                                    .addComponent(jRadioButton208)
+                                    .addComponent(jRadioButton108)
+                                    .addComponent(jRadioButton203)
+                                    .addComponent(jRadioButton213)
+                                    .addComponent(jLabel14)
+                                    .addComponent(jLabel15))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jRadioButton104)
+                                    .addComponent(jRadioButton114)
+                                    .addComponent(jRadioButton209)
+                                    .addComponent(jRadioButton109)
+                                    .addComponent(jRadioButton204)
+                                    .addComponent(jRadioButton214))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jRadioButton105)
+                                    .addComponent(jRadioButton115)
+                                    .addComponent(jRadioButton210)
+                                    .addComponent(jRadioButton110)
+                                    .addComponent(jRadioButton205)
+                                    .addComponent(jRadioButton215))))
+                        .addGap(17, 17, 17)
+                        .addComponent(jLabel12))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBoxNumDoble, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBoxNumTriple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(115, 115, 115)
+                        .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(68, 68, 68)
                         .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(127, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton101)
-                            .addComponent(jRadioButton206)
-                            .addComponent(jRadioButton111)
-                            .addComponent(jRadioButton106)
-                            .addComponent(jRadioButton201)
-                            .addComponent(jRadioButton211))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton102)
-                            .addComponent(jRadioButton112)
-                            .addComponent(jRadioButton207)
-                            .addComponent(jRadioButton107)
-                            .addComponent(jRadioButton202)
-                            .addComponent(jRadioButton212))
-                        .addGap(3, 3, 3)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton103)
-                            .addComponent(jRadioButton113)
-                            .addComponent(jRadioButton208)
-                            .addComponent(jRadioButton108)
-                            .addComponent(jRadioButton203)
-                            .addComponent(jRadioButton213))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton104)
-                            .addComponent(jRadioButton114)
-                            .addComponent(jRadioButton209)
-                            .addComponent(jRadioButton109)
-                            .addComponent(jRadioButton204)
-                            .addComponent(jRadioButton214))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton105)
-                            .addComponent(jRadioButton115)
-                            .addComponent(jRadioButton210)
-                            .addComponent(jRadioButton110)
-                            .addComponent(jRadioButton205)
-                            .addComponent(jRadioButton215))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(jComboBoxSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxDoble, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBoxTriple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel12)
-                            .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(46, 46, 46)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
                             .addComponent(jTextFieldDiasHospedaje, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelSalida, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING))
-                        .addGap(35, 35, 35)
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabelSalida))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonRegistrar))
-                        .addGap(27, 27, 27))))
+                            .addComponent(jButtonRegistrar)
+                            .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(59, 59, 59))))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
@@ -1136,7 +1156,7 @@ public class Hotel extends javax.swing.JFrame {
                     .addComponent(jButtonTotalHabitaciones)
                     .addComponent(jButtonPorcentajeOcupacion)
                     .addComponent(jButtonPorcentajeOcupacionActual))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
                 .addComponent(jButtonGaleria)
                 .addGap(87, 87, 87))
         );
@@ -1155,7 +1175,7 @@ public class Hotel extends javax.swing.JFrame {
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 728, Short.MAX_VALUE)
+            .addGap(0, 796, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Salir", jPanel5);
@@ -1320,7 +1340,125 @@ public class Hotel extends javax.swing.JFrame {
 	else
 		this.boton115=true;
         
+        if( this.jRadioButton201.isSelected() ) {
+		this.jRadioButton201.setEnabled(false);
+		this.boton201=false;
+                habitacion = 201;
+	}
+	else
+		this.boton201=true;
         
+        if( this.jRadioButton202.isSelected() ) {
+		this.jRadioButton202.setEnabled(false);
+		this.boton202=false;
+                habitacion = 202;
+	}
+	else
+		this.boton202=true;
+        
+        if( this.jRadioButton203.isSelected() ) {
+		this.jRadioButton203.setEnabled(false);
+		this.boton203=false;
+                habitacion = 203;
+	}
+	else
+		this.boton203=true;
+        
+        if( this.jRadioButton204.isSelected() ) {
+		this.jRadioButton204.setEnabled(false);
+		this.boton204=false;
+                habitacion = 204;
+	}
+	else
+		this.boton204=true;
+        
+        if( this.jRadioButton205.isSelected() ) {
+		this.jRadioButton205.setEnabled(false);
+		this.boton205=false;
+                habitacion = 205;
+	}
+	else
+		this.boton205=true;
+        
+        if( this.jRadioButton206.isSelected() ) {
+		this.jRadioButton206.setEnabled(false);
+		this.boton206=false;
+                habitacion = 206;
+	}
+	else
+		this.boton206=true;
+        
+        if( this.jRadioButton207.isSelected() ) {
+		this.jRadioButton207.setEnabled(false);
+		this.boton207=false;
+                habitacion = 207;
+	}
+	else
+		this.boton207=true;
+        
+        if( this.jRadioButton208.isSelected() ) {
+		this.jRadioButton208.setEnabled(false);
+		this.boton208=false;
+                habitacion = 208;
+	}
+	else
+		this.boton208=true;
+        
+        if( this.jRadioButton209.isSelected() ) {
+		this.jRadioButton209.setEnabled(false);
+		this.boton209=false;
+                habitacion = 209;
+	}
+	else
+		this.boton209=true;
+        
+        if( this.jRadioButton210.isSelected() ) {
+		this.jRadioButton210.setEnabled(false);
+		this.boton210=false;
+                habitacion = 210;
+	}
+	else
+		this.boton210=true;
+        
+        if( this.jRadioButton211.isSelected() ) {
+		this.jRadioButton211.setEnabled(false);
+		this.boton211=false;
+                habitacion = 211;
+	}
+	else
+		this.boton211=true;
+        
+        if( this.jRadioButton212.isSelected() ) {
+		this.jRadioButton212.setEnabled(false);
+		this.boton212=false;
+                habitacion = 212;
+	}
+	else
+		this.boton212=true;
+        
+        if( this.jRadioButton213.isSelected() ) {
+		this.jRadioButton213.setEnabled(false);
+		this.boton213=false;
+                habitacion = 213;
+	}
+	else
+		this.boton214=true;
+        
+        if( this.jRadioButton214.isSelected() ) {
+		this.jRadioButton214.setEnabled(false);
+		this.boton214=false;
+                habitacion = 214;
+	}
+	else
+		this.boton215=true;
+        
+        if( this.jRadioButton215.isSelected() ) {
+		this.jRadioButton215.setEnabled(false);
+		this.boton215=false;
+                habitacion = 115;
+	}
+	else
+		this.boton215=true;
 
         
         if (this.jRadioButtonSencilla.isSelected()) {
@@ -1821,6 +1959,8 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
