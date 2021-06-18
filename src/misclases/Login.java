@@ -99,10 +99,10 @@ public class Login extends JFrame {
         //750,320,200,40
         //Botones de play y pausa
         JButtonPlay = new JButton("PLAY");
-        JButtonPlay.setBounds(50, 50, 70, 30);
+        JButtonPlay.setBounds(760, 530, 70, 30);
         
         JButtonStop = new JButton("STOP");
-        JButtonStop.setBounds(150, 50, 70, 30);
+        JButtonStop.setBounds(850, 530, 70, 30);
         
         
         this.add(JButtonIngresar);
