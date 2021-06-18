@@ -5,6 +5,7 @@
  */
 package misclases;
 
+import com.itextpdf.text.DocumentException;
 import controlMySql.MySqlConn;
 import misclases.Constructores;
 import java.awt.Dimension;
@@ -12,9 +13,12 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -1687,7 +1691,13 @@ public class Hotel extends javax.swing.JFrame {
         
         String aux = this.jTextFieldIngresarHabitacion.getText().trim();
         int habi = Integer.parseInt (aux);
-        new GenerarPdf(habi).setVisible(false);
+        try {
+            new GenerarPdf(habi).setVisible(false);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DocumentException ex) {
+            Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButtonPDFActionPerformed
 
     private void jButtonBuscarHuespedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHuespedActionPerformed
