@@ -152,9 +152,7 @@ public class Hotel extends javax.swing.JFrame {
         jButtonPorcentajeOcupacionActual = new javax.swing.JButton();
         jButtonBuscarHuesped = new javax.swing.JButton();
         jButtonCostosHabitacion = new javax.swing.JButton();
-        jLabelListaHuespedes = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        jLabelBuscarHuesped = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1110,55 +1108,36 @@ public class Hotel extends javax.swing.JFrame {
         jButtonCostosHabitacion.setText("Costos de habitación");
         jButtonCostosHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
 
-        jLabelListaHuespedes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/listahuespedes.png"))); // NOI18N
-        jLabelListaHuespedes.setText("jLabel18");
-
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscarhabitacion.png"))); // NOI18N
-        jLabel19.setText("jLabel19");
-
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/costoshabitacion.png"))); // NOI18N
-        jLabel20.setText("jLabel20");
+        jLabelBuscarHuesped.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/buscarhuesped.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButtonHabitacionesDisponibles)
-                .addGap(743, 743, 743))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(72, 72, 72)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButtonIngresosActuales)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jButtonTotalHabitaciones)
-                        .addGap(50, 50, 50)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonGaleria)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jButtonPorcentajeOcupacion)
-                                .addGap(73, 73, 73)
-                                .addComponent(jButtonPorcentajeOcupacionActual)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonBuscarHabitacion))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                            .addGap(28, 28, 28)
+                            .addComponent(jLabelBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                            .addComponent(jButtonBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addGap(180, 180, 180)
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButtonBuscarHabitacion)
+                                .addComponent(jButtonTotalHabitaciones)
+                                .addComponent(jButtonIngresosActuales))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jButtonBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(70, 70, 70)
+                        .addGap(162, 162, 162)
+                        .addComponent(jButtonPorcentajeOcupacion)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelListaHuespedes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonHabitacionesDisponibles)
                     .addComponent(jButtonListaHuespedes)
-                    .addComponent(jButtonCostosHabitacion))
+                    .addComponent(jButtonCostosHabitacion)
+                    .addComponent(jButtonPorcentajeOcupacionActual)
+                    .addComponent(jButtonGaleria))
                 .addGap(162, 162, 162))
         );
 
@@ -1169,31 +1148,31 @@ public class Hotel extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabelListaHuespedes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonListaHuespedes))))
-                .addGap(18, 18, 18)
+                            .addComponent(jButtonListaHuespedes))
+                        .addGap(65, 65, 65))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabelBuscarHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonBuscarHabitacion)
-                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonCostosHabitacion))
-                .addGap(184, 184, 184)
-                .addComponent(jButtonHabitacionesDisponibles)
-                .addGap(60, 60, 60)
+                .addGap(134, 134, 134)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonTotalHabitaciones)
-                    .addComponent(jButtonPorcentajeOcupacion)
                     .addComponent(jButtonPorcentajeOcupacionActual))
-                .addGap(42, 42, 42)
-                .addComponent(jButtonIngresosActuales)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
-                .addComponent(jButtonGaleria)
-                .addGap(87, 87, 87))
+                .addGap(91, 91, 91)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonIngresosActuales)
+                    .addComponent(jButtonGaleria))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 87, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonHabitacionesDisponibles)
+                    .addComponent(jButtonPorcentajeOcupacion))
+                .addGap(195, 195, 195))
         );
 
         jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonBuscarHabitacion, jButtonBuscarHuesped, jButtonCostosHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresosActuales, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual, jButtonTotalHabitaciones});
@@ -2013,9 +1992,7 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -2023,8 +2000,8 @@ public class Hotel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelBuscarHuesped;
     private javax.swing.JLabel jLabelFechaSalida;
-    private javax.swing.JLabel jLabelListaHuespedes;
     private javax.swing.JLabel jLabelMostrarDiaSalida;
     private javax.swing.JLabel jLabelMostrarTotalPago;
     private javax.swing.JLabel jLabelSalida;
