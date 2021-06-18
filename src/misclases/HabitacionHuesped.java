@@ -41,7 +41,7 @@ public class HabitacionHuesped extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableListaHuespedes = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(21, 19, 19));
 
         jLabel1.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
