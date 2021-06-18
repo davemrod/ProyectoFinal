@@ -43,7 +43,7 @@ public class BuscarHuesped extends javax.swing.JFrame {
         jTableHuesped = new javax.swing.JTable();
         jButtonBuscarHuesped = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Ingresar nombre de huesped:");
 
