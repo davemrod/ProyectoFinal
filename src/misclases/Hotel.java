@@ -1687,17 +1687,20 @@ public class Hotel extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonRegistroSalidaActionPerformed
 
     private void jButtonPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPDFActionPerformed
-        // TODO add your handling code here:
-        
-        String aux = this.jTextFieldIngresarHabitacion.getText().trim();
-        int habi = Integer.parseInt (aux);
+
+            // TODO add your handling code here:
+            String aux = this.jTextFieldIngresarHabitacion.getText().trim();
+            int habi = Integer.parseInt (aux);
         try {
             new GenerarPdf(habi).setVisible(false);
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
         } catch (DocumentException ex) {
-            Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
+         
     }//GEN-LAST:event_jButtonPDFActionPerformed
 
     private void jButtonBuscarHuespedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHuespedActionPerformed
