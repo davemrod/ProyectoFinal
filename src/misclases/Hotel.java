@@ -1795,7 +1795,7 @@ public class Hotel extends javax.swing.JFrame {
     private void jButtonBuscarHabitacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHabitacionActionPerformed
         // TODO add your handling code here:
         
-        new BuscarHabitacion().setVisible(true);
+        new BuscarHabi().setVisible(true);
     }//GEN-LAST:event_jButtonBuscarHabitacionActionPerformed
 
     private void jRadioButton106ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton106ActionPerformed
