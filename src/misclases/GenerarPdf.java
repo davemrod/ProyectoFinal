@@ -29,7 +29,7 @@ public class GenerarPdf extends JFrame {
     
     private MySqlConn conn;
     int habitacion;
-    String aux,aux1;
+    String aux,aux1,aux2,aux3,aux4,aux5,aux6,aux7,aux8,aux9;
     
     public GenerarPdf(int habitacion) throws FileNotFoundException, DocumentException  {
         this.conn = new MySqlConn();
@@ -81,6 +81,22 @@ public class GenerarPdf extends JFrame {
                 System.out.println(aux);
                 aux1=(String) datos[i][1];
                 System.out.println(aux1);
+//                aux2=(String) datos[i][2];
+//                System.out.println(aux2);
+//                aux3=(String) datos[i][3];
+//                System.out.println(aux3);
+//                aux4=(String) datos[i][4];
+//                System.out.println(aux4);
+//                aux5=(String) datos[i][5];
+//                System.out.println(aux5);
+//                aux6=(String) datos[i][6];
+//                System.out.println(aux6);
+//                aux7=(String) datos[i][7];
+//                System.out.println(aux7);
+//                aux8=(String) datos[i][8];
+//                System.out.println(aux8);
+//                aux9=(String) datos[i][9];
+//                System.out.println(aux9);
                 //this.jLabelMostrarDiaSalida.setText(aux);
             }//fin for
             //String columnas[] = {"Huesped", "Ciudad", "Fecha ingreso", "Fecha salida", "Habitación", "Piso", "Tipo habitación", "Ocupantes", "Total al ingresar"};
@@ -129,7 +145,7 @@ public class GenerarPdf extends JFrame {
        Paragraph fechasalida=new Paragraph("> Fecha de salida: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        fechasalida.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph tipohab=new Paragraph("> Tipo de habitacion: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph tipohab=new Paragraph("> Tipo de habitacion: "+this.aux6,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        tipohab.setAlignment(Element.ALIGN_LEFT);
        
        Paragraph costohab=new Paragraph("> Costo de habitacion: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
