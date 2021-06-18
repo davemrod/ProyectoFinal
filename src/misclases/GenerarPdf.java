@@ -31,14 +31,14 @@ public class GenerarPdf extends JFrame {
     int habitacion;
     String aux;
     
-    public GenerarPdf(int habitacion) throws FileNotFoundException, DocumentException {
+    public GenerarPdf(int habitacion) throws FileNotFoundException, DocumentException  {
         this.conn = new MySqlConn();
         this.habitacion = habitacion;
         crearPDF();
         
     }
     
-//    public void main(String[] args) throws FileNotFoundException,DocumentException {   
+//    public void main(String[] args) throws FileNotFoundException,DocumentException {
 //        crearPDF(); 
 //    }
     
@@ -217,6 +217,8 @@ public class GenerarPdf extends JFrame {
        doc.add( Chunk.NEWLINE );
        doc.add(fecha);
        doc.add( Chunk.NEWLINE );
+       doc.add(nomhuesped);
+       doc.add(ciudad);
        doc.add(fechaingreso);
        doc.add(fechasalida);
        doc.add(tipohab);
@@ -243,7 +245,7 @@ public class GenerarPdf extends JFrame {
        
        try{
            Image firma=Image.getInstance("firmagerente.jpg");
-           firma.scaleToFit(150, 150);
+           firma.scaleToFit(120, 120);
            firma.setAlignment(Chunk.ALIGN_MIDDLE);
            
            doc.add( Chunk.NEWLINE );
