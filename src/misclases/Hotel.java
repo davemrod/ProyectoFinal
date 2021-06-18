@@ -34,7 +34,8 @@ public class Hotel extends javax.swing.JFrame {
      */
     private MySqlConn conn;
     ArrayList <Constructores> lista = new ArrayList();
-    String diaMos;
+    String diaMos, tipo;
+    int diaHos;
     boolean boton101, boton102, boton103, boton104, boton105, boton106, boton107, boton108, boton109, boton110, boton111, boton112, boton113, boton114, boton115; 
     boolean boton201, boton202, boton203, boton204, boton205, boton206, boton207, boton208, boton209, boton210, boton211, boton212, boton213, boton214, boton215; 
     
@@ -552,6 +553,13 @@ public class Hotel extends javax.swing.JFrame {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jComboBoxNumTriple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxNumDoble, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBoxNumSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(600, 600, 600))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -670,21 +678,14 @@ public class Hotel extends javax.swing.JFrame {
                                 .addComponent(jLabelSalida))
                             .addGap(739, 739, 739)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(493, 493, 493)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(243, 243, 243)
+                        .addGap(231, 231, 231)
                         .addComponent(jButtonRegistrar, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(175, 175, 175)
-                        .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(334, 334, 334)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jComboBoxNumTriple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxNumDoble, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBoxNumSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(600, 600, 600))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldNombreHuesped});
@@ -779,11 +780,10 @@ public class Hotel extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jDateChooserIngresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(68, 68, 68)
-                        .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabelFechaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5)
@@ -792,11 +792,11 @@ public class Hotel extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel13)
                             .addComponent(jLabelSalida))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 264, Short.MAX_VALUE)
+                        .addGap(82, 82, 82)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButtonRegistrar)
-                            .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(59, 59, 59))))
+                            .addComponent(jButtonRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(53, Short.MAX_VALUE))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelFechaSalida, jLabelSalida, jTextFieldCiudadOrigen, jTextFieldDiasHospedaje, jTextFieldNombreHuesped});
@@ -939,42 +939,46 @@ public class Hotel extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(79, 79, 79)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
-                        .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelMostrarDiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBoxBar)
-                            .addComponent(jCheckBoxSpa)
-                            .addComponent(jCheckBoxServicio)
-                            .addComponent(jCheckBoxRestaurante)
-                            .addComponent(jCheckBoxGimnasio))
-                        .addGap(46, 46, 46)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
+                                .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jCheckBoxAreaNinos)
-                            .addComponent(jCheckBoxSauna)
-                            .addComponent(jCheckBoxBuseo)
-                            .addComponent(jCheckBoxPlaya)
-                            .addComponent(jCheckBoxEntretenimiento)))
+                            .addComponent(jLabelMostrarDiaSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBoxBar)
+                                    .addComponent(jCheckBoxSpa)
+                                    .addComponent(jCheckBoxServicio)
+                                    .addComponent(jCheckBoxRestaurante)
+                                    .addComponent(jCheckBoxGimnasio))
+                                .addGap(46, 46, 46)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jCheckBoxAreaNinos)
+                                    .addComponent(jCheckBoxSauna)
+                                    .addComponent(jCheckBoxBuseo)
+                                    .addComponent(jCheckBoxPlaya)
+                                    .addComponent(jCheckBoxEntretenimiento)
+                                    .addComponent(jButtonPDF)))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jTextFieldIngresarHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(52, 52, 52)
+                                .addComponent(jButtonBuscarHab, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jTextFieldIngresarHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(52, 52, 52)
-                        .addComponent(jButtonBuscarHab, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(214, 214, 214)))
                 .addGap(380, 380, 380))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(344, 344, 344)
+                .addGap(309, 309, 309)
                 .addComponent(jButtonRegistroSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(198, 198, 198)
-                .addComponent(jButtonPDF)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -983,9 +987,9 @@ public class Hotel extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
+                .addGap(64, 64, 64)
                 .addComponent(jLabel7)
-                .addGap(61, 61, 61)
+                .addGap(60, 60, 60)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1016,15 +1020,15 @@ public class Hotel extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jCheckBoxGimnasio)
                     .addComponent(jCheckBoxAreaNinos))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(51, 51, 51)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabelMostrarTotalPago, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(46, 46, 46)
+                .addGap(74, 74, 74)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonRegistroSalida, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonPDF))
-                .addGap(31, 31, 31))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabelMostrarDiaSalida, jLabelMostrarTotalPago});
@@ -1224,7 +1228,7 @@ public class Hotel extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonPorcentajeOcupacionActual)
                     .addComponent(jButtonHabitacionesDisponibles))
-                .addGap(315, 315, 315))
+                .addGap(336, 336, 336))
         );
 
         jPanel4Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButtonBuscarHabitacion, jButtonBuscarHuesped, jButtonCostosHabitacion, jButtonGaleria, jButtonHabitacionesDisponibles, jButtonIngresosActuales, jButtonListaHuespedes, jButtonPorcentajeOcupacion, jButtonPorcentajeOcupacionActual, jButtonTotalHabitaciones});
@@ -1241,7 +1245,7 @@ public class Hotel extends javax.swing.JFrame {
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 993, Short.MAX_VALUE)
+            .addGap(0, 805, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Salir", jPanel5);
@@ -1254,7 +1258,9 @@ public class Hotel extends javax.swing.JFrame {
         );
         jPanelRegistroLayout.setVerticalGroup(
             jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(jPanelRegistroLayout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 840, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -1529,6 +1535,7 @@ public class Hotel extends javax.swing.JFrame {
         
         if (this.jRadioButtonSencilla.isSelected()) {
             tipoHabitacion = "Sencilla";
+            this.tipo = "400€";
             parcial+=400;
             
 //            aux2 = (String) this.jComboBoxNumSencilla.getSelectedItem();
@@ -1541,6 +1548,7 @@ public class Hotel extends javax.swing.JFrame {
                 parcial+=70*(totalPersonas-1);
         } else if (this.jRadioButtonDoble.isSelected()) {
             tipoHabitacion = "Doble";
+            this.tipo = "500€";
             parcial+=500;
             
 //            aux2 = (String) this.jComboBoxNumDoble.getSelectedItem();
@@ -1552,6 +1560,7 @@ public class Hotel extends javax.swing.JFrame {
                 parcial+=70*(totalPersonas-2);           
         } else {
             tipoHabitacion = "Triple";
+            this.tipo = "700€";
             parcial+=700;
             
 //            aux2 = (String) this.jComboBoxNumTriple.getSelectedItem();
@@ -1596,9 +1605,10 @@ public class Hotel extends javax.swing.JFrame {
         // Obtener fecha
         diasHospedaje = this.jTextFieldDiasHospedaje.getText().trim();
         this.diaMos = diasHospedaje;
-        
+ 
         
         int dia2 = Integer.valueOf(diasHospedaje);
+        this.diaHos = dia2;
         int d = this.jDateChooserIngresar.getCalendar().get(Calendar.DAY_OF_MONTH);
         int m = this.jDateChooserIngresar.getCalendar().get(Calendar.MONTH);
         int a = this.jDateChooserIngresar.getCalendar().get(Calendar.YEAR);
@@ -1753,175 +1763,12 @@ public class Hotel extends javax.swing.JFrame {
             
     }//GEN-LAST:event_jComboBoxNumTripleActionPerformed
 
-    private void jCheckBoxBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxBarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCheckBoxBarActionPerformed
-
-    private void jButtonBuscarHabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHabActionPerformed
-        // TODO add your handling code here:
-            
-        String query = "select * from huespedes where numhabitacion = "+"'"+this.jTextFieldIngresarHabitacion.getText().trim() + "'";
-        this.conn.Consult(query);
-        int n = 0;
-        try {
-            this.conn.rs.last(); //se posiciona en el ultimo registro de la tabla
-            n = this.conn.rs.getRow(); //regresa el numero actual del registro
-            this.conn.rs.first();
-        }
-        catch (Exception e) {
-            System.out.println("Error#1 ...");
-        }
-        if (n !=0 ) {
-            System.out.println("n "+n);
-            Object datos[][] = new Object[n][9];
-            for(int i=0; i<n; i++) { //n total de registros
-                try {
-                    datos[i][0] = this.conn.rs.getString(1);
-                    datos[i][1] = this.conn.rs.getString(2);
-                    datos[i][2] = this.conn.rs.getString(3);
-                    datos[i][3] = this.conn.rs.getString(4);
-                    datos[i][4] = this.conn.rs.getInt(5);
-                    datos[i][5] = this.conn.rs.getInt(6);
-                    datos[i][6] = this.conn.rs.getString(7);
-                    datos[i][7] = this.conn.rs.getInt(8);
-                    datos[i][8] = this.conn.rs.getInt(9);
-                    datos[i][9] = this.conn.rs.getInt(10);
-                    //String medico = this.conn.rs.getString(4); //no se usa
-                    
-                    this.conn.rs.next(); // avanzamos un registro
-                }
-                catch (Exception e) {
-                    System.out.println("Error#2 ..."+e.getMessage());
-                }
-                //String aux = datos[i][3];
-                //this.jLabelMostrarDiaSalida.setText(aux);
-            }//fin for
-            //String columnas[] = {"Habitacion", "Paciente", "Diagnostico"};
-            //jTableConsulta2.setModel(new DefaultTableModel(datos, columnas));
-            String salida = String.valueOf(datos[0][3]);
-            this.jLabelMostrarDiaSalida.setText(salida);
-                    
-        } // fin if
-        else {
-            JOptionPane.showMessageDialog(this, "No hay datos ...");
-        }
-    }//GEN-LAST:event_jButtonBuscarHabActionPerformed
-
     private void jButtonGaleriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGaleriaActionPerformed
         // TODO add your handling code here:
         
         new Galeria().setVisible(true);
         
     }//GEN-LAST:event_jButtonGaleriaActionPerformed
-
-    private void jButtonRegistroSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistroSalidaActionPerformed
-        // TODO add your handling code here:
-        
-               int cuentaTotal=0;
-        if( this.jCheckBoxBar.isSelected() )
-            cuentaTotal+=20;
-        if(this.jCheckBoxEntretenimiento.isSelected() )
-            cuentaTotal+=100;
-        if( this.jCheckBoxSpa.isSelected() )
-            cuentaTotal+=40;
-        if( this.jCheckBoxPlaya.isSelected() )
-            cuentaTotal+=80;
-        if( this.jCheckBoxServicio.isSelected() )
-            cuentaTotal+=50;
-        if( this.jCheckBoxBuseo.isSelected() )
-            cuentaTotal+=20;
-        if( this.jCheckBoxRestaurante.isSelected() )
-            cuentaTotal+=30;
-        if( this.jCheckBoxSauna.isSelected() )
-            cuentaTotal+=40;
-        if( this.jCheckBoxGimnasio.isSelected() )
-            cuentaTotal+=30;
-        if( this.jCheckBoxAreaNinos.isSelected() )
-            cuentaTotal+=35;
-        
-        String query = "select * from huespedes where numhabitacion = "+"'"+this.jTextFieldIngresarHabitacion.getText().trim()+ "'";
-        this.conn.Consult(query);
-        int n = 0;
-        try {
-            this.conn.rs.last(); //se posiciona en el ultimo registro de la tabla
-            n = this.conn.rs.getRow(); //regresa el numero actual del registro
-            this.conn.rs.first();
-        }
-        catch (Exception e) {
-            System.out.println("Error#1 ...");
-        }
-        if (n !=0 ) {
-            System.out.println("n "+n);
-            Object datos[][] = new Object[n][9];
-            for(int i=0; i<n; i++) { //n total de registros
-                try {
-                    datos[i][0] = this.conn.rs.getString(1);
-                    datos[i][1] = this.conn.rs.getString(2);
-                    datos[i][2] = this.conn.rs.getString(3);
-                    datos[i][3] = this.conn.rs.getString(4);
-                    datos[i][4] = this.conn.rs.getInt(5);
-                    datos[i][5] = this.conn.rs.getInt(6);
-                    datos[i][6] = this.conn.rs.getString(7);
-                    datos[i][7] = this.conn.rs.getInt(8);
-                    datos[i][8] = this.conn.rs.getInt(9);
-                    datos[i][9] = this.conn.rs.getInt(10);
-                    //String medico = this.conn.rs.getString(4); //no se usa
-                    
-                    this.conn.rs.next(); // avanzamos un registro
-                }
-                catch (Exception e) {
-                    System.out.println("Error#2 ..."+e.getMessage());
-                }
-                //String aux = datos[i][3];
-                //this.jLabelMostrarDiaSalida.setText(aux);
-            }//fin for
-            //String columnas[] = {"Habitacion", "Paciente", "Diagnostico"};
-            //jTableConsulta2.setModel(new DefaultTableModel(datos, columnas));
-            String totalsincargos = String.valueOf(datos[0][8]);
-            int totalSC = Integer.parseInt (totalsincargos);
-            int totalFINAL = cuentaTotal + totalSC;
-            String totalMostrar = String.valueOf(totalFINAL); 
-            this.jLabelMostrarTotalPago.setText(totalMostrar);
-                    
-        } // fin if
-        else {
-            JOptionPane.showMessageDialog(this, "No hay datos ...");
-        }
-        
-        String hab = this.jTextFieldIngresarHabitacion.getText().trim();
-        int habi = Integer.parseInt(hab);
-        
-        if(hab.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Numero de habitacion vacio");   
-        }
-        else {
-            String query2=" delete from huespedes where numhabitacion ="+"'"+habi+"'"; // Completa sentencia mysql
-            
-            int j=this.conn.Update(query2);
-            if(j>0)
-                JOptionPane.showMessageDialog(this, "Baja realizada");
-            else
-                JOptionPane.showMessageDialog(this, "La baja no se pudo realizar");
-        }
-        
-    }//GEN-LAST:event_jButtonRegistroSalidaActionPerformed
-
-    private void jButtonPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPDFActionPerformed
-
-            // TODO add your handling code here:
-            String aux = this.jTextFieldIngresarHabitacion.getText().trim();
-            int habi = Integer.parseInt (aux);
-        try {
-            new GenerarPdf(habi).setVisible(false);
-        } catch (FileNotFoundException ex) {
-            //Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (DocumentException ex) {
-            //Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        
-         
-    }//GEN-LAST:event_jButtonPDFActionPerformed
 
     private void jButtonBuscarHuespedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHuespedActionPerformed
         // TODO add your handling code here:
@@ -1964,6 +1811,190 @@ public class Hotel extends javax.swing.JFrame {
     private void jRadioButton208ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton208ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton208ActionPerformed
+
+    private void jButtonPDFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPDFActionPerformed
+
+        // TODO add your handling code here:
+        
+        int cuentaTotal=0;
+        if( this.jCheckBoxBar.isSelected() )
+        cuentaTotal+=20;
+        if(this.jCheckBoxEntretenimiento.isSelected() )
+        cuentaTotal+=100;
+        if( this.jCheckBoxSpa.isSelected() )
+        cuentaTotal+=40;
+        if( this.jCheckBoxPlaya.isSelected() )
+        cuentaTotal+=80;
+        if( this.jCheckBoxServicio.isSelected() )
+        cuentaTotal+=50;
+        if( this.jCheckBoxBuseo.isSelected() )
+        cuentaTotal+=20;
+        if( this.jCheckBoxRestaurante.isSelected() )
+        cuentaTotal+=30;
+        if( this.jCheckBoxSauna.isSelected() )
+        cuentaTotal+=40;
+        if( this.jCheckBoxGimnasio.isSelected() )
+        cuentaTotal+=30;
+        if( this.jCheckBoxAreaNinos.isSelected() )
+        cuentaTotal+=35;
+        
+        String aux = this.jTextFieldIngresarHabitacion.getText().trim();
+        int habi = Integer.parseInt (aux);
+        try {
+            new GenerarPdf(habi, cuentaTotal, this.diaHos, this.tipo).setVisible(false);
+        } catch (FileNotFoundException ex) {
+            //Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DocumentException ex) {
+            //Logger.getLogger(Hotel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }//GEN-LAST:event_jButtonPDFActionPerformed
+
+    private void jButtonRegistroSalidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistroSalidaActionPerformed
+        // TODO add your handling code here:
+
+        int cuentaTotal=0;
+        if( this.jCheckBoxBar.isSelected() )
+        cuentaTotal+=20;
+        if(this.jCheckBoxEntretenimiento.isSelected() )
+        cuentaTotal+=100;
+        if( this.jCheckBoxSpa.isSelected() )
+        cuentaTotal+=40;
+        if( this.jCheckBoxPlaya.isSelected() )
+        cuentaTotal+=80;
+        if( this.jCheckBoxServicio.isSelected() )
+        cuentaTotal+=50;
+        if( this.jCheckBoxBuseo.isSelected() )
+        cuentaTotal+=20;
+        if( this.jCheckBoxRestaurante.isSelected() )
+        cuentaTotal+=30;
+        if( this.jCheckBoxSauna.isSelected() )
+        cuentaTotal+=40;
+        if( this.jCheckBoxGimnasio.isSelected() )
+        cuentaTotal+=30;
+        if( this.jCheckBoxAreaNinos.isSelected() )
+        cuentaTotal+=35;
+
+        String query = "select * from huespedes where numhabitacion = "+"'"+this.jTextFieldIngresarHabitacion.getText().trim()+ "'";
+        this.conn.Consult(query);
+        int n = 0;
+        try {
+            this.conn.rs.last(); //se posiciona en el ultimo registro de la tabla
+            n = this.conn.rs.getRow(); //regresa el numero actual del registro
+            this.conn.rs.first();
+        }
+        catch (Exception e) {
+            System.out.println("Error#1 ...");
+        }
+        if (n !=0 ) {
+            System.out.println("n "+n);
+            Object datos[][] = new Object[n][9];
+            for(int i=0; i<n; i++) { //n total de registros
+                try {
+                    datos[i][0] = this.conn.rs.getString(1);
+                    datos[i][1] = this.conn.rs.getString(2);
+                    datos[i][2] = this.conn.rs.getString(3);
+                    datos[i][3] = this.conn.rs.getString(4);
+                    datos[i][4] = this.conn.rs.getInt(5);
+                    datos[i][5] = this.conn.rs.getInt(6);
+                    datos[i][6] = this.conn.rs.getString(7);
+                    datos[i][7] = this.conn.rs.getInt(8);
+                    datos[i][8] = this.conn.rs.getInt(9);
+                    datos[i][9] = this.conn.rs.getInt(10);
+                    //String medico = this.conn.rs.getString(4); //no se usa
+
+                    this.conn.rs.next(); // avanzamos un registro
+                }
+                catch (Exception e) {
+                    System.out.println("Error#2 ..."+e.getMessage());
+                }
+                //String aux = datos[i][3];
+                //this.jLabelMostrarDiaSalida.setText(aux);
+            }//fin for
+            //String columnas[] = {"Habitacion", "Paciente", "Diagnostico"};
+            //jTableConsulta2.setModel(new DefaultTableModel(datos, columnas));
+            String totalsincargos = String.valueOf(datos[0][8]);
+            int totalSC = Integer.parseInt (totalsincargos);
+            int totalFINAL = cuentaTotal + totalSC;
+            String totalMostrar = String.valueOf(totalFINAL);
+            this.jLabelMostrarTotalPago.setText(totalMostrar);
+
+        } // fin if
+        else {
+            JOptionPane.showMessageDialog(this, "No hay datos ...");
+        }
+        
+        String hab = this.jTextFieldIngresarHabitacion.getText().trim();
+        int habita = Integer.parseInt(hab);
+
+        if(hab.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Numero de habitacion vacio");
+        }
+        else {
+            String query2=" delete from huespedes where numhabitacion ="+"'"+habita+"'"; // Completa sentencia mysql
+
+            int j=this.conn.Update(query2);
+            if(j>0)
+            JOptionPane.showMessageDialog(this, "Baja realizada");
+            else
+            JOptionPane.showMessageDialog(this, "La baja no se pudo realizar");
+        }
+
+    }//GEN-LAST:event_jButtonRegistroSalidaActionPerformed
+
+    private void jButtonBuscarHabActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarHabActionPerformed
+        // TODO add your handling code here:
+
+        String query = "select * from huespedes where numhabitacion = "+"'"+this.jTextFieldIngresarHabitacion.getText().trim() + "'";
+        this.conn.Consult(query);
+        int n = 0;
+        try {
+            this.conn.rs.last(); //se posiciona en el ultimo registro de la tabla
+            n = this.conn.rs.getRow(); //regresa el numero actual del registro
+            this.conn.rs.first();
+        }
+        catch (Exception e) {
+            System.out.println("Error#1 ...");
+        }
+        if (n !=0 ) {
+            System.out.println("n "+n);
+            Object datos[][] = new Object[n][9];
+            for(int i=0; i<n; i++) { //n total de registros
+                try {
+                    datos[i][0] = this.conn.rs.getString(1);
+                    datos[i][1] = this.conn.rs.getString(2);
+                    datos[i][2] = this.conn.rs.getString(3);
+                    datos[i][3] = this.conn.rs.getString(4);
+                    datos[i][4] = this.conn.rs.getInt(5);
+                    datos[i][5] = this.conn.rs.getInt(6);
+                    datos[i][6] = this.conn.rs.getString(7);
+                    datos[i][7] = this.conn.rs.getInt(8);
+                    datos[i][8] = this.conn.rs.getInt(9);
+                    datos[i][9] = this.conn.rs.getInt(10);
+                    //String medico = this.conn.rs.getString(4); //no se usa
+
+                    this.conn.rs.next(); // avanzamos un registro
+                }
+                catch (Exception e) {
+                    System.out.println("Error#2 ..."+e.getMessage());
+                }
+                //String aux = datos[i][3];
+                //this.jLabelMostrarDiaSalida.setText(aux);
+            }//fin for
+            //String columnas[] = {"Habitacion", "Paciente", "Diagnostico"};
+            //jTableConsulta2.setModel(new DefaultTableModel(datos, columnas));
+            String salida = String.valueOf(datos[0][3]);
+            this.jLabelMostrarDiaSalida.setText(salida);
+
+        } // fin if
+        else {
+            JOptionPane.showMessageDialog(this, "No hay datos ...");
+        }
+    }//GEN-LAST:event_jButtonBuscarHabActionPerformed
+
+    private void jCheckBoxBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxBarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxBarActionPerformed
 
     /**
      * @param args the command line arguments
