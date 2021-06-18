@@ -1099,8 +1099,13 @@ public class Hotel extends javax.swing.JFrame {
         jButtonPorcentajeOcupacionActual.setBackground(new java.awt.Color(21, 19, 19));
         jButtonPorcentajeOcupacionActual.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
         jButtonPorcentajeOcupacionActual.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonPorcentajeOcupacionActual.setText("Porcentaje de ocupación actual");
+        jButtonPorcentajeOcupacionActual.setText("Porcentaje de ocupación ");
         jButtonPorcentajeOcupacionActual.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonPorcentajeOcupacionActual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPorcentajeOcupacionActualActionPerformed(evt);
+            }
+        });
 
         jButtonBuscarHuesped.setBackground(new java.awt.Color(21, 19, 19));
         jButtonBuscarHuesped.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -1156,7 +1161,7 @@ public class Hotel extends javax.swing.JFrame {
                     .addComponent(jButtonTotalHabitaciones)
                     .addComponent(jButtonIngresosActuales)
                     .addComponent(jButtonPorcentajeOcupacionActual))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -1214,10 +1219,8 @@ public class Hotel extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE)))
-                        .addGap(34, 34, 34)))
+                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jButtonIngresosActuales)
@@ -1995,6 +1998,11 @@ public class Hotel extends javax.swing.JFrame {
     private void jCheckBoxBarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxBarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBoxBarActionPerformed
+
+    private void jButtonPorcentajeOcupacionActualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPorcentajeOcupacionActualActionPerformed
+        // TODO add your handling code here:
+        new Graficas().setVisible(true);
+    }//GEN-LAST:event_jButtonPorcentajeOcupacionActualActionPerformed
 
     /**
      * @param args the command line arguments
