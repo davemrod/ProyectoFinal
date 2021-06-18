@@ -100,9 +100,15 @@ public class Login extends JFrame {
         //Botones de play y pausa
         JButtonPlay = new JButton("PLAY");
         JButtonPlay.setBounds(760, 530, 70, 30);
+        JButtonPlay.setBackground(Color.black);
+        JButtonPlay.setForeground(new java.awt.Color(184, 148, 79));
+        JButtonPlay.setFocusable(false);
         
         JButtonStop = new JButton("STOP");
         JButtonStop.setBounds(850, 530, 70, 30);
+        JButtonStop.setBackground(Color.black);
+        JButtonStop.setForeground(new java.awt.Color(184, 148, 79));
+        JButtonStop.setFocusable(false);
         
         
         this.add(JButtonIngresar);
