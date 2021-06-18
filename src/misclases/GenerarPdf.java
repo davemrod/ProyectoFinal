@@ -31,14 +31,16 @@ public class GenerarPdf extends JFrame {
     int habitacion;
     String aux;
     
-    public GenerarPdf(int habitacion) {
+    public GenerarPdf(int habitacion) throws FileNotFoundException, DocumentException {
         this.conn = new MySqlConn();
         this.habitacion = habitacion;
+        crearPDF();
+        
     }
     
-    public void main(String[] args) throws FileNotFoundException,DocumentException {   
-        crearPDF(); 
-    }
+//    public void main(String[] args) throws FileNotFoundException,DocumentException {   
+//        crearPDF(); 
+//    }
     
     private void crearPDF() throws FileNotFoundException,DocumentException {
            
