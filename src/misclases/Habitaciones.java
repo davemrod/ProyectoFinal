@@ -17,79 +17,10 @@ public class Habitaciones extends javax.swing.JFrame {
      * Creates new form Habitaciones
      */
     String band;
-    public Habitaciones(String band) {
+    public Habitaciones() {
         this.band = band;
         initComponents();
         this.getContentPane().setBackground(Color.black);
-        
-        if(band=="1") {
-            jRadioButton101.setEnabled(false);
-            jRadioButton102.setEnabled(false);
-            jRadioButton103.setEnabled(false);
-            jRadioButton104.setEnabled(false);
-            jRadioButton105.setEnabled(false);
-            jRadioButton106.setEnabled(false);
-            jRadioButton107.setEnabled(false);
-            jRadioButton108.setEnabled(false);
-            jRadioButton109.setEnabled(false);
-            jRadioButton110.setEnabled(false);
-            jRadioButton111.setEnabled(false);
-            jRadioButton112.setEnabled(false);
-            jRadioButton208.setEnabled(false);
-            jRadioButton209.setEnabled(false);
-            jRadioButton210.setEnabled(false);
-            jRadioButton211.setEnabled(false);
-            jRadioButton212.setEnabled(false);
-            jRadioButton213.setEnabled(false);
-            jRadioButton214.setEnabled(false);
-            jRadioButton215.setEnabled(false);
-        }
-        
-        else if(band=="2") {
-            jRadioButton101.setEnabled(false);
-            jRadioButton102.setEnabled(false);
-            jRadioButton103.setEnabled(false);
-            jRadioButton104.setEnabled(false);
-            jRadioButton105.setEnabled(false);
-            jRadioButton106.setEnabled(false);
-            jRadioButton107.setEnabled(false);
-            jRadioButton113.setEnabled(false);
-            jRadioButton114.setEnabled(false);
-            jRadioButton115.setEnabled(false);
-            jRadioButton201.setEnabled(false);
-            jRadioButton202.setEnabled(false);
-            jRadioButton203.setEnabled(false);
-            jRadioButton204.setEnabled(false);
-            jRadioButton205.setEnabled(false);
-            jRadioButton206.setEnabled(false);
-            jRadioButton207.setEnabled(false);
-            jRadioButton213.setEnabled(false);
-            jRadioButton214.setEnabled(false);
-            jRadioButton215.setEnabled(false);
-        }
-        
-        else if(band=="3") {
-            jRadioButton108.setEnabled(false);
-            jRadioButton109.setEnabled(false);
-            jRadioButton110.setEnabled(false);
-            jRadioButton111.setEnabled(false);
-            jRadioButton112.setEnabled(false);
-            jRadioButton113.setEnabled(false);
-            jRadioButton114.setEnabled(false);
-            jRadioButton115.setEnabled(false);
-            jRadioButton201.setEnabled(false);
-            jRadioButton202.setEnabled(false);
-            jRadioButton203.setEnabled(false);
-            jRadioButton204.setEnabled(false);
-            jRadioButton205.setEnabled(false);
-            jRadioButton206.setEnabled(false);
-            jRadioButton207.setEnabled(false);
-            jRadioButton208.setEnabled(false);
-            jRadioButton209.setEnabled(false);
-            jRadioButton210.setEnabled(false);
-            jRadioButton211.setEnabled(false);
-            jRadioButton212.setEnabled(false);
-        }
     }
 
     /**
@@ -101,7 +32,6 @@ public class Habitaciones extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroupPisos = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -301,7 +231,6 @@ public class Habitaciones extends javax.swing.JFrame {
 //    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup buttonGroupPisos;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
