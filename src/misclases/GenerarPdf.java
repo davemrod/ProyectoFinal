@@ -75,7 +75,8 @@ public class GenerarPdf extends JFrame {
                 catch (Exception e) {
                     System.out.println("Error#2 ..."+e.getMessage());
                 }
-                String aux =(String) datos[i][0];
+                aux =(String) datos[i][0];
+                System.out.println(aux);
                 //this.jLabelMostrarDiaSalida.setText(aux);
             }//fin for
             //String columnas[] = {"Huesped", "Ciudad", "Fecha ingreso", "Fecha salida", "Habitación", "Piso", "Tipo habitación", "Ocupantes", "Total al ingresar"};
@@ -92,8 +93,6 @@ public class GenerarPdf extends JFrame {
             JOptionPane.showMessageDialog(this, "No hay datos ...");
         }
      
-        
-        
        Document doc=new Document();
        FileOutputStream ficheroPDF=new FileOutputStream("ReciboAtlantis.pdf");
        PdfWriter.getInstance(doc,ficheroPDF);
