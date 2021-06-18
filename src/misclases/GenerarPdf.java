@@ -29,7 +29,7 @@ public class GenerarPdf extends JFrame {
     
     private MySqlConn conn;
     int habitacion;
-    String aux;
+    String aux,aux1;
     
     public GenerarPdf(int habitacion) throws FileNotFoundException, DocumentException  {
         this.conn = new MySqlConn();
@@ -79,6 +79,8 @@ public class GenerarPdf extends JFrame {
                 }
                 aux =(String) datos[i][0];
                 System.out.println(aux);
+                aux1=(String) datos[i][1];
+                System.out.println(aux1);
                 //this.jLabelMostrarDiaSalida.setText(aux);
             }//fin for
             //String columnas[] = {"Huesped", "Ciudad", "Fecha ingreso", "Fecha salida", "Habitación", "Piso", "Tipo habitación", "Ocupantes", "Total al ingresar"};
@@ -118,7 +120,7 @@ public class GenerarPdf extends JFrame {
        Paragraph nomhuesped=new Paragraph("> Nombre del huesped: "+this.aux,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        nomhuesped.setAlignment(Element.ALIGN_LEFT);
        
-       Paragraph ciudad=new Paragraph("> Ciudad: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
+       Paragraph ciudad=new Paragraph("> Ciudad: "+this.aux1,FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
        ciudad.setAlignment(Element.ALIGN_LEFT);
        
        Paragraph fechaingreso=new Paragraph("> Fecha de ingreso: ",FontFactory.getFont(BaseFont.TIMES_ROMAN,10,Font.BOLDITALIC,BaseColor.BLACK));
