@@ -31,6 +31,8 @@ public class Hotel extends javax.swing.JFrame {
     private MySqlConn conn;
     ArrayList <Constructores> lista = new ArrayList();
     String diaMos;
+    boolean boton101, boton102, boton103, boton104, boton105, boton106, boton107, boton108, boton109, boton110, boton111, boton112, boton113, boton114, boton115; 
+    boolean boton201, boton202, boton203, boton204, boton205, boton206, boton207, boton208, boton209, boton210, boton211, boton212, boton213, boton214, boton215; 
     
     public Hotel() {
         
@@ -51,6 +53,7 @@ public class Hotel extends javax.swing.JFrame {
     private void initComponents() {
 
         buttonGroupTipoHabitacion = new javax.swing.ButtonGroup();
+        buttonGroupNumeroHabitacion = new javax.swing.ButtonGroup();
         jPanelRegistro = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
@@ -315,16 +318,34 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton101.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton101);
+        jRadioButton101.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton101.setText("101");
 
+        jRadioButton102.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton102);
+        jRadioButton102.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton102.setText("102");
 
+        jRadioButton103.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton103);
+        jRadioButton103.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton103.setText("103");
 
+        jRadioButton104.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton104);
+        jRadioButton104.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton104.setText("104");
 
+        jRadioButton105.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton105);
+        jRadioButton105.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton105.setText("105");
 
+        jRadioButton106.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton106);
+        jRadioButton106.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton106.setText("106");
         jRadioButton106.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -332,18 +353,39 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton107.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton107);
+        jRadioButton107.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton107.setText("107");
 
+        jRadioButton108.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton108);
+        jRadioButton108.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton108.setText("108");
 
+        jRadioButton109.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton109);
+        jRadioButton109.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton109.setText("109");
 
+        jRadioButton110.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton110);
+        jRadioButton110.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton110.setText("110");
 
+        jRadioButton111.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton111);
+        jRadioButton111.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton111.setText("111");
 
+        jRadioButton112.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton112);
+        jRadioButton112.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton112.setText("112");
 
+        jRadioButton113.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton113);
+        jRadioButton113.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton113.setText("113");
         jRadioButton113.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -351,18 +393,39 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton114.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton114);
+        jRadioButton114.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton114.setText("114");
 
+        jRadioButton115.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton115);
+        jRadioButton115.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton115.setText("115");
 
+        jRadioButton201.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton201);
+        jRadioButton201.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton201.setText("201");
 
+        jRadioButton202.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton202);
+        jRadioButton202.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton202.setText("202");
 
+        jRadioButton203.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton203);
+        jRadioButton203.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton203.setText("203");
 
+        jRadioButton204.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton204);
+        jRadioButton204.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton204.setText("204");
 
+        jRadioButton205.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton205);
+        jRadioButton205.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton205.setText("205");
         jRadioButton205.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -370,10 +433,19 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton206.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton206);
+        jRadioButton206.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton206.setText("206");
 
+        jRadioButton207.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton207);
+        jRadioButton207.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton207.setText("207");
 
+        jRadioButton208.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton208);
+        jRadioButton208.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton208.setText("208");
         jRadioButton208.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -381,12 +453,24 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton209.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton209);
+        jRadioButton209.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton209.setText("209");
 
+        jRadioButton210.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton210);
+        jRadioButton210.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton210.setText("210");
 
+        jRadioButton211.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton211);
+        jRadioButton211.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton211.setText("211");
 
+        jRadioButton212.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton212);
+        jRadioButton212.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton212.setText("212");
         jRadioButton212.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -394,6 +478,9 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton213.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton213);
+        jRadioButton213.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton213.setText("213");
         jRadioButton213.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -401,8 +488,14 @@ public class Hotel extends javax.swing.JFrame {
             }
         });
 
+        jRadioButton214.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton214);
+        jRadioButton214.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton214.setText("214");
 
+        jRadioButton215.setBackground(new java.awt.Color(0, 0, 0));
+        buttonGroupNumeroHabitacion.add(jRadioButton215);
+        jRadioButton215.setForeground(new java.awt.Color(255, 255, 255));
         jRadioButton215.setText("215");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -1077,6 +1170,121 @@ public class Hotel extends javax.swing.JFrame {
         System.out.println(huesped + "\n");
         System.out.println(ciudad + "\n");
         
+
+	if( this.jRadioButton101.isSelected() ) {
+		this.jRadioButton101.setEnabled(false);
+		this.boton101=false;
+                habitacion = 101;
+	}
+	else
+		this.boton101=true;
+        if( this.jRadioButton101.isSelected() ) {
+		this.jRadioButton101.setEnabled(false);
+		this.boton101=false;
+                habitacion = 101;
+	}
+	else
+		this.boton101=true;
+        if( this.jRadioButton101.isSelected() ) {
+		this.jRadioButton101.setEnabled(false);
+		this.boton101=false;
+                habitacion = 101;
+	}
+	else
+		this.boton101=true;
+        if( this.jRadioButton101.isSelected() ) {
+		this.jRadioButton101.setEnabled(false);
+		this.boton101=false;
+                habitacion = 101;
+	}
+	else
+		this.boton101=true;
+        if( this.jRadioButton101.isSelected() ) {
+		this.jRadioButton101.setEnabled(false);
+		this.boton101=false;
+                habitacion = 101;
+	}
+	else
+		this.boton101=true;
+        if( this.jRadioButton101.isSelected() ) {
+		this.jRadioButton101.setEnabled(false);
+		this.boton101=false;
+                habitacion = 101;
+	}
+	else
+		this.boton101=true;
+        if( this.jRadioButton101.isSelected() ) {
+		this.jRadioButton101.setEnabled(false);
+		this.boton101=false;
+                habitacion = 101;
+	}
+	else
+		this.boton101=true;
+        if( this.jRadioButton101.isSelected() ) {
+		this.jRadioButton101.setEnabled(false);
+		this.boton101=false;
+                habitacion = 101;
+	}
+	else
+		this.boton101=true;
+        if( this.jRadioButton101.isSelected() ) {
+		this.jRadioButton101.setEnabled(false);
+		this.boton101=false;
+                habitacion = 101;
+	}
+	else
+		this.boton101=true;
+        if( this.jRadioButton110.isSelected() ) {
+		this.jRadioButton110.setEnabled(false);
+		this.boton110=false;
+                habitacion = 110;
+	}
+	else
+		this.boton110=true;
+        
+        if( this.jRadioButton111.isSelected() ) {
+		this.jRadioButton111.setEnabled(false);
+		this.boton111=false;
+                habitacion = 111;
+	}
+	else
+		this.boton111=true;
+        
+        if( this.jRadioButton112.isSelected() ) {
+		this.jRadioButton112.setEnabled(false);
+		this.boton112=false;
+                habitacion = 112;
+	}
+	else
+		this.boton112=true;
+        
+        if( this.jRadioButton113.isSelected() ) {
+		this.jRadioButton113.setEnabled(false);
+		this.boton113=false;
+                habitacion = 113;
+	}
+	else
+		this.boton114=true;
+        
+        if( this.jRadioButton114.isSelected() ) {
+		this.jRadioButton114.setEnabled(false);
+		this.boton114=false;
+                habitacion = 114;
+	}
+	else
+		this.boton115=true;
+        
+        if( this.jRadioButton115.isSelected() ) {
+		this.jRadioButton115.setEnabled(false);
+		this.boton115=false;
+                habitacion = 115;
+	}
+	else
+		this.boton115=true;
+        
+        
+
+        
         if (this.jRadioButtonSencilla.isSelected()) {
             tipoHabitacion = "Sencilla";
             parcial+=400;
@@ -1524,6 +1732,7 @@ public class Hotel extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroupNumeroHabitacion;
     private javax.swing.ButtonGroup buttonGroupTipoHabitacion;
     private javax.swing.JButton jButtonBuscarHab;
     private javax.swing.JButton jButtonBuscarHabitacion;
