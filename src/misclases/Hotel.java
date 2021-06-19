@@ -1085,6 +1085,11 @@ public class Hotel extends javax.swing.JFrame {
         jButtonPorcentajeOcupacion.setForeground(new java.awt.Color(255, 255, 255));
         jButtonPorcentajeOcupacion.setText("Porcentaje de ocupación");
         jButtonPorcentajeOcupacion.setBorder(javax.swing.BorderFactory.createMatteBorder(5, 5, 5, 5, new java.awt.Color(157, 139, 5)));
+        jButtonPorcentajeOcupacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPorcentajeOcupacionActionPerformed(evt);
+            }
+        });
 
         jButtonBuscarHuesped.setBackground(new java.awt.Color(21, 19, 19));
         jButtonBuscarHuesped.setFont(new java.awt.Font("Lucida Fax", 1, 18)); // NOI18N
@@ -2023,6 +2028,12 @@ public class Hotel extends javax.swing.JFrame {
         
         new Habitaciones().setVisible(true);
     }//GEN-LAST:event_jButtonTotalHabitacionesActionPerformed
+
+    private void jButtonPorcentajeOcupacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPorcentajeOcupacionActionPerformed
+        // TODO add your handling code here:
+        
+        new Graficas().setVisible(true);
+    }//GEN-LAST:event_jButtonPorcentajeOcupacionActionPerformed
 
     /**
      * @param args the command line arguments
